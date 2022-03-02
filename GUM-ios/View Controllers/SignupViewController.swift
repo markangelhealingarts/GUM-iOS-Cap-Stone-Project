@@ -21,29 +21,19 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
-//        if(makeAccount()){
-            performSegue(withIdentifier: "showSurvey", sender: nil)
-//        } else{
-//            return
-//        }
-    }
-    
-    func makeAccount() -> (Bool) {
-        // make sure they don't have whitespace
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
-        
-        var check = true
 
         // checks if email / password is valid then adds user
         if(email != "" && isValidEmail(emailID: email!) && password != "") {
             
             let docRef = db.collection("Users").document(email!)
             
+            print(docRef)
+            
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
                     print("email exists already!!!")
-                    check = false
                 } else {
                     
                     // add email and password
@@ -57,10 +47,9 @@ class SignupViewController: UIViewController {
                     ]) { (err) in
                         if let err = err {
                             print("Error writing document: \(err)")
-                            check = false
                         } else {
                             print("Document successfully written!")
-                            check = false
+                            self.performSegue(withIdentifier: "showSurvey", sender: nil)
                         }
                     }
                 }
@@ -68,10 +57,7 @@ class SignupViewController: UIViewController {
             
         } else {
             print("didnt work adding")
-            check = false
         }
-        
-        return check
     }
     
     func isValidEmail(emailID:String) -> Bool {
