@@ -17,6 +17,7 @@
 		2230B73827BDF21600CEB996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73727BDF21600CEB996 /* Assets.xcassets */; };
 		2230B73B27BDF21600CEB996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73927BDF21600CEB996 /* LaunchScreen.storyboard */; };
 		224573D027CDF73000812D20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 224573CF27CDF73000812D20 /* GoogleService-Info.plist */; };
+		2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457627D13FB100FA8FCB /* MainPageViewController.swift */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		2230B73A27BDF21600CEB996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2230B73C27BDF21600CEB996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224573CF27CDF73000812D20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2254457627D13FB100FA8FCB /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 				221EAA3027C6FDBC00F8791D /* LoginViewController.swift */,
 				221EAA3227C6FF7700F8791D /* SignupViewController.swift */,
 				221EAA3527C7005700F8791D /* SurveyViewController.swift */,
+				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				221EAA3127C6FDBC00F8791D /* LoginViewController.swift in Sources */,
+				2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */,
 				2230B73327BDF21000CEB996 /* ViewController.swift in Sources */,
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,

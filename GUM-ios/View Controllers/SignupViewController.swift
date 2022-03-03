@@ -21,6 +21,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
+        
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
 
@@ -29,11 +30,13 @@ class SignupViewController: UIViewController {
             
             let docRef = db.collection("Users").document(email!)
             
-            print(docRef)
-            
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    print("email exists already!!!")
+                    
+                    let alert = UIAlertController(title: "Error", message: "Email already exists", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+
                 } else {
                     
                     // add email and password
@@ -56,7 +59,16 @@ class SignupViewController: UIViewController {
             }
             
         } else {
-            print("didnt work adding")
+            
+            if(email == "" || password == ""){
+                let alert = UIAlertController(title: "Error", message: "Email/Password is empty", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let alert = UIAlertController(title: "Error", message: "Not valid email", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
