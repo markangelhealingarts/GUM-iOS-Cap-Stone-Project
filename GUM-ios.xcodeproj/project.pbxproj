@@ -18,6 +18,10 @@
 		2230B73B27BDF21600CEB996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73927BDF21600CEB996 /* LaunchScreen.storyboard */; };
 		224573D027CDF73000812D20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 224573CF27CDF73000812D20 /* GoogleService-Info.plist */; };
 		2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457627D13FB100FA8FCB /* MainPageViewController.swift */; };
+		2254457927D2B3F100FA8FCB /* UnlockAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */; };
+		2254457B27D2B47E00FA8FCB /* UpdateScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */; };
+		2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */; };
+		2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		2230B73C27BDF21600CEB996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224573CF27CDF73000812D20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2254457627D13FB100FA8FCB /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockAvatarViewController.swift; sourceTree = "<group>"; };
+		2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheduleViewController.swift; sourceTree = "<group>"; };
+		2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMovingViewController.swift; sourceTree = "<group>"; };
+		2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewController.swift; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +68,10 @@
 				221EAA3227C6FF7700F8791D /* SignupViewController.swift */,
 				221EAA3527C7005700F8791D /* SurveyViewController.swift */,
 				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
+				2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */,
+				2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */,
+				2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */,
+				2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -231,8 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				221EAA3127C6FDBC00F8791D /* LoginViewController.swift in Sources */,
+				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
+				2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */,
 				2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */,
+				2254457927D2B3F100FA8FCB /* UnlockAvatarViewController.swift in Sources */,
 				2230B73327BDF21000CEB996 /* ViewController.swift in Sources */,
+				2254457B27D2B47E00FA8FCB /* UpdateScheduleViewController.swift in Sources */,
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
 				221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */,
