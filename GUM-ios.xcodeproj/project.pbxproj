@@ -16,7 +16,7 @@
 		2230B73627BDF21000CEB996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73427BDF21000CEB996 /* Main.storyboard */; };
 		2230B73827BDF21600CEB996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73727BDF21600CEB996 /* Assets.xcassets */; };
 		2230B73B27BDF21600CEB996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73927BDF21600CEB996 /* LaunchScreen.storyboard */; };
-		224573D027CDF73000812D20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 224573CF27CDF73000812D20 /* GoogleService-Info.plist */; };
+		5D3CF9E027D940E2002D695A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CF9DF27D940E2002D695A /* GoogleService-Info.plist */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		2230B73727BDF21600CEB996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2230B73A27BDF21600CEB996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2230B73C27BDF21600CEB996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		224573CF27CDF73000812D20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D3CF9DF27D940E2002D695A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +82,7 @@
 		2230B72D27BDF21000CEB996 /* GUM-ios */ = {
 			isa = PBXGroup;
 			children = (
-				224573CF27CDF73000812D20 /* GoogleService-Info.plist */,
+				5D3CF9DF27D940E2002D695A /* GoogleService-Info.plist */,
 				2230B72E27BDF21000CEB996 /* AppDelegate.swift */,
 				2230B73027BDF21000CEB996 /* SceneDelegate.swift */,
 				2230B73427BDF21000CEB996 /* Main.storyboard */,
@@ -173,7 +173,7 @@
 			files = (
 				2230B73B27BDF21600CEB996 /* LaunchScreen.storyboard in Resources */,
 				2230B73827BDF21600CEB996 /* Assets.xcassets in Resources */,
-				224573D027CDF73000812D20 /* GoogleService-Info.plist in Resources */,
+				5D3CF9E027D940E2002D695A /* GoogleService-Info.plist in Resources */,
 				2230B73627BDF21000CEB996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4C8YN7P365;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -410,6 +411,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4C8YN7P365;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
