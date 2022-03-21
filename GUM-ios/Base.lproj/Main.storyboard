@@ -603,9 +603,9 @@
                                     <segue destination="RqE-Z0-q3m" kind="show" identifier="mainToDemo" id="ba8-MG-LTq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67u-9g-th4" userLabel="avatar">
-                                <rect key="frame" x="296" y="56" width="98" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67u-9g-th4" userLabel="avatar">
+                                <rect key="frame" x="296" y="56" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-pM-ubh">
                                 <rect key="frame" x="302" y="167" width="87" height="21"/>
@@ -686,7 +686,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A8J-0X-m3l"/>
+        <segue reference="290-zh-2bg"/>
         <segue reference="UnQ-fd-Vuh"/>
     </inferredMetricsTieBreakers>
     <resources>

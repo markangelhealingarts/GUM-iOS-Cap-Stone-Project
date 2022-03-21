@@ -29,6 +29,10 @@ class MainPageViewController: UIViewController {
                 let pointsStored = data?["Points"]//access points for user
                 
                 let stringPoints = String(pointsStored as! Int)
+                
+                let avatar = data?["AvatarUrl"]
+                
+                self.avatarImageView.image = UIImage(named: avatar as! String)
 
                 self.pointsLabel.text = stringPoints
             }
