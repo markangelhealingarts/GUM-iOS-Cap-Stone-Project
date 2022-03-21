@@ -8,6 +8,8 @@
 import UIKit
 
 class StartMovingViewController: UIViewController {
+    
+    var email: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    var emailInfo: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.becomeFirstResponder()
@@ -32,6 +34,7 @@ class LoginViewController: UIViewController {
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
 
+                    self.emailInfo = email! //send this info to MainViewController
                     let data = document.data() //access the data
                     let passwordStored = data?["Password"] //get password
                     
@@ -75,5 +78,15 @@ class LoginViewController: UIViewController {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if(segue.identifier == "loginToMain"){
+            let destinationVC = (segue.destination as! UINavigationController).topViewController as! MainPageViewController
+            
+            destinationVC.email = emailInfo
+        }
+        
     }
 }

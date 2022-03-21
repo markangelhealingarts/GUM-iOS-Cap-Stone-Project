@@ -1,5 +1,5 @@
 //
-//  UnlockAvatarViewController.swift
+//  VideoDemosViewController.swift
 //  GUM-ios
 //
 //  Created by Tim Johnson on 3/4/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UnlockAvatarViewController: UIViewController {
+class VideoDemosViewController: UIViewController {
     
     var email: String = ""
 
@@ -16,5 +16,4 @@ class UnlockAvatarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
 }
