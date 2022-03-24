@@ -22,6 +22,7 @@
 		2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */; };
 		2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */; };
 		225445AD27D94B8B00FA8FCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225445AC27D94B8B00FA8FCB /* GoogleService-Info.plist */; };
+		22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMovingViewController.swift; sourceTree = "<group>"; };
 		2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewController.swift; sourceTree = "<group>"; };
 		225445AC27D94B8B00FA8FCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoViewController.swift; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */,
 				2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */,
 				2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */,
+				22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
 				221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */,
+				22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */,
 				2230B73127BDF21000CEB996 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
