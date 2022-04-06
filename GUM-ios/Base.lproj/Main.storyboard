@@ -601,22 +601,40 @@
                                 <rect key="frame" x="132" y="623" width="150" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-nd-fa4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-nd-fa4">
                                 <rect key="frame" x="173" y="594" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1l-zy-Avn">
+                                <rect key="frame" x="0.0" y="151" width="414" height="280"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="72p-xt-fdu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1l-zy-Avn" firstAttribute="trailing" secondItem="72p-xt-fdu" secondAttribute="trailing" id="GOq-B4-oyh"/>
+                            <constraint firstItem="o1l-zy-Avn" firstAttribute="top" secondItem="72p-xt-fdu" secondAttribute="top" constant="107" id="ReR-6e-REO"/>
+                            <constraint firstItem="vuO-nd-fa4" firstAttribute="top" secondItem="o1l-zy-Avn" secondAttribute="bottom" constant="163" id="dsG-T1-BQc"/>
+                            <constraint firstItem="o1l-zy-Avn" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" id="rar-uj-eeP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wvF-AX-C2d"/>
+                    <connections>
+                        <outlet property="progressBar" destination="BGb-js-4gQ" id="KCj-VO-28j"/>
+                        <outlet property="videoWebView" destination="o1l-zy-Avn" id="HvH-XY-eyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgS-aK-zMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="3709"/>
+            <point key="canvasLocation" x="331.8840579710145" y="3708.4821428571427"/>
         </scene>
         <!--Video Demos-->
         <scene sceneID="pGZ-0x-C7R">
@@ -699,7 +717,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67u-9g-th4" userLabel="avatar">
-                                <rect key="frame" x="296" y="56" width="100" height="98"/>
+                                <rect key="frame" x="296" y="56" width="100" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-pM-ubh">

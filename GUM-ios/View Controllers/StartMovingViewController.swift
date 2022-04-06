@@ -12,10 +12,10 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     struct Info {
         var email: String = ""
-        var selectedPicker: String = ""
+        var selectedPicker: Int = -1
         var difficulty: String = ""
         
-        init(email: String, selectedPicker: String, difficulty: String){
+        init(email: String, selectedPicker: Int, difficulty: String){
             self.email = email
             self.selectedPicker = selectedPicker
             self.difficulty = difficulty
@@ -36,14 +36,14 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var pickerData: [String] = []
     
     var selectedBtn: Int = -1
-    var selectedPicker: String = ""
+    var selectedPicker: Int = 0
     var selectedInterval: String = ""
     
     var interval: Bool = false
     var difficulty: String = ""
     var selectedType = ""
     
-    var info = Info(email: "", selectedPicker: "", difficulty: "")
+    var info = Info(email: "", selectedPicker: 0, difficulty: "")
     
     
     let db = Firestore.firestore()
@@ -76,7 +76,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPicker = pickerData[row];
+        selectedPicker = row
     }
     
     
@@ -123,7 +123,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
             showAlert(name: "Error", message: "Please choose interval time")
         } else if difficulty == ""{
             showAlert(name: "Error", message: "Please choose a difficulty level")
-        } else if selectedPicker == "" {
+        } else if selectedPicker == -1 {
             showAlert(name: "Error", message: "Please choose a video")
         } else {
             info = Info(email: email, selectedPicker: selectedPicker, difficulty: selectedType)

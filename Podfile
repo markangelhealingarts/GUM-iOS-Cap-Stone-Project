@@ -12,5 +12,6 @@ target 'GUM-ios' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
+  pod 'youtube-ios-player-helper'
 
 end
