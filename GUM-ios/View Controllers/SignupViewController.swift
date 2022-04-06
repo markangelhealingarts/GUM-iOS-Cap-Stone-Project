@@ -21,19 +21,9 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
-//        if(makeAccount()){
-            performSegue(withIdentifier: "showSurvey", sender: nil)
-//        } else{
-//            return
-//        }
-    }
-    
-    func makeAccount() -> (Bool) {
-        // make sure they don't have whitespace
+        
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
-        
-        var check = true
 
         // checks if email / password is valid then adds user
         if(email != "" && isValidEmail(emailID: email!) && password != "") {
@@ -42,8 +32,11 @@ class SignupViewController: UIViewController {
             
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    print("email exists already!!!")
-                    check = false
+                    
+                    let alert = UIAlertController(title: "Error", message: "Email already exists", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+
                 } else {
                     
                     // add email and password
@@ -52,26 +45,32 @@ class SignupViewController: UIViewController {
                         "Points": 0,
                         "Score": 0,
                         "FitnessLvl": " ",
-                        "AvatarUrl": " ",
-                        "UnlockedAvatars": " "
+                        "AvatarUrl": "orange_avatar.png",
+                        "UnlockedAvatars": ["orange_avatar.png"],
+                        "Schedule": ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"]
                     ]) { (err) in
                         if let err = err {
                             print("Error writing document: \(err)")
-                            check = false
                         } else {
                             print("Document successfully written!")
-                            check = false
+                            self.performSegue(withIdentifier: "showSurvey", sender: nil)
                         }
                     }
                 }
             }
             
         } else {
-            print("didnt work adding")
-            check = false
+            
+            if(email == "" || password == ""){
+                let alert = UIAlertController(title: "Error", message: "Email/Password is empty", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let alert = UIAlertController(title: "Error", message: "Not valid email", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
-        
-        return check
     }
     
     func isValidEmail(emailID:String) -> Bool {

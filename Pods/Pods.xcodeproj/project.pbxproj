@@ -9472,7 +9472,7 @@
 		3F5C5ACC6DDD92775B9BEF0B59549FCA /* config_source.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config_source.upb.h; path = "src/core/ext/upb-generated/envoy/api/v2/core/config_source.upb.h"; sourceTree = "<group>"; };
 		3F9649546F531D222F87B9B1AE6D978C /* handshake_server.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = handshake_server.cc; path = src/ssl/handshake_server.cc; sourceTree = "<group>"; };
 		3F9FC5FC5A10AC794465785BB6C18F72 /* status_metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status_metadata.h; path = src/core/lib/transport/status_metadata.h; sourceTree = "<group>"; };
-		3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GUM-ios"; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4006B7ADEC776CF483C7C39E52BE59BF /* FIRVerifyPhoneNumberRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyPhoneNumberRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyPhoneNumberRequest.h; sourceTree = "<group>"; };
 		400DE23C83E9B3D78CC26D0CB561A178 /* reference_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = reference_set.cc; path = Firestore/core/src/local/reference_set.cc; sourceTree = "<group>"; };
 		40262B62A370E0F3860C440F2CA93F2C /* server_chttp2.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = server_chttp2.cc; path = src/core/ext/transport/chttp2/server/insecure/server_chttp2.cc; sourceTree = "<group>"; };
@@ -15193,7 +15193,7 @@
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
 				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */,
+				3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */,
 				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
 			);
 			name = Products;
@@ -18700,7 +18700,7 @@
 			);
 			name = "Pods-GUM-ios";
 			productName = Pods_GUM_ios;
-			productReference = 3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */;
+			productReference = 3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DBA2B63E3A5FE83FE89E731664C9269F /* FirebaseFirestore */ = {
