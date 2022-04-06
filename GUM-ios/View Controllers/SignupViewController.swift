@@ -12,7 +12,6 @@ class SignupViewController: UIViewController {
 
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var passwordTextView: UITextField!
-    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -21,7 +20,19 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
+<<<<<<< Updated upstream
         
+=======
+//        if(makeAccount()){
+            performSegue(withIdentifier: "pickerlevel", sender: nil)
+//        } else{
+//            return
+//        }
+    }
+    
+    func makeAccount() -> (Bool) {
+        // make sure they don't have whitespace
+>>>>>>> Stashed changes
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
 
