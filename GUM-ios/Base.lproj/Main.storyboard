@@ -570,9 +570,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Start Moving" id="RXv-4g-Uuu">
-                        <barButtonItem key="rightBarButtonItem" title="Start" id="8xq-lG-UxC">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="H6u-Jd-SlX">
                             <connections>
-                                <action selector="onStartBtn:" destination="TGd-mE-qot" id="eq0-Rt-MGe"/>
+                                <action selector="startBtn:" destination="TGd-mE-qot" id="oW1-eY-FyZ"/>
+                                <segue destination="bBl-j1-Isj" kind="show" identifier="startToVideo" id="ace-FI-4tq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -582,57 +583,80 @@
                         <outlet property="moderateButton" destination="OiJ-gP-3Uo" id="7pg-al-asE"/>
                         <outlet property="pickerView" destination="7uW-4m-4gW" id="3Mh-e0-slR"/>
                         <outlet property="vigorousButton" destination="HbB-V5-9NH" id="wB4-72-Pfy"/>
-                        <segue destination="bBl-j1-Isj" kind="showDetail" identifier="startToVideo" id="1kb-Ev-HfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHk-fH-76H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="331.8840579710145" y="3002.6785714285711"/>
         </scene>
-        <!--Exercise Video View Controller-->
+        <!--Exercise-->
         <scene sceneID="0xc-7R-Lee">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="bBl-j1-Isj" customClass="ExerciseVideoViewController" customModule="GUM_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EvK-US-rHI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-js-4gQ">
-                                <rect key="frame" x="132" y="623" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-nd-fa4">
-                                <rect key="frame" x="173" y="594" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-nd-fa4">
+                                <rect key="frame" x="119" y="430.5" width="177" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9G8-aW-LeO" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="68" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="kbF-KM-pWz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-70-5sz">
+                                <rect key="frame" x="8" y="380" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <wkWebView contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1l-zy-Avn">
-                                <rect key="frame" x="0.0" y="151" width="414" height="280"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-eD-Fz7">
+                                <rect key="frame" x="119" y="490.5" width="177" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Finish Exercise">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onFinishedExercise:" destination="bBl-j1-Isj" eventType="touchUpInside" id="l4A-UI-YDG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="72p-xt-fdu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o1l-zy-Avn" firstAttribute="trailing" secondItem="72p-xt-fdu" secondAttribute="trailing" id="GOq-B4-oyh"/>
-                            <constraint firstItem="o1l-zy-Avn" firstAttribute="top" secondItem="72p-xt-fdu" secondAttribute="top" constant="107" id="ReR-6e-REO"/>
-                            <constraint firstItem="vuO-nd-fa4" firstAttribute="top" secondItem="o1l-zy-Avn" secondAttribute="bottom" constant="163" id="dsG-T1-BQc"/>
-                            <constraint firstItem="o1l-zy-Avn" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" id="rar-uj-eeP"/>
+                            <constraint firstItem="72p-xt-fdu" firstAttribute="trailing" secondItem="vuO-nd-fa4" secondAttribute="trailing" constant="118" id="0GF-Pq-tY6"/>
+                            <constraint firstItem="vuO-nd-fa4" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" constant="119" id="4g5-Q4-gOK"/>
+                            <constraint firstItem="9G8-aW-LeO" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" id="86O-8D-ALo"/>
+                            <constraint firstItem="AtM-eD-Fz7" firstAttribute="top" secondItem="vuO-nd-fa4" secondAttribute="bottom" constant="12" id="C49-58-nHX"/>
+                            <constraint firstItem="1U9-70-5sz" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" constant="8" id="Dq3-mN-URS"/>
+                            <constraint firstItem="72p-xt-fdu" firstAttribute="trailing" secondItem="1U9-70-5sz" secondAttribute="trailing" constant="8" id="FWM-sF-5iW"/>
+                            <constraint firstItem="AtM-eD-Fz7" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" constant="119" id="J7N-rq-fa0"/>
+                            <constraint firstItem="vuO-nd-fa4" firstAttribute="top" secondItem="1U9-70-5sz" secondAttribute="bottom" constant="30" id="LXG-De-dJB"/>
+                            <constraint firstItem="72p-xt-fdu" firstAttribute="trailing" secondItem="AtM-eD-Fz7" secondAttribute="trailing" constant="118" id="PdM-X2-t0L"/>
+                            <constraint firstItem="72p-xt-fdu" firstAttribute="trailing" secondItem="9G8-aW-LeO" secondAttribute="trailing" id="Y1H-5X-tPW"/>
+                            <constraint firstItem="9G8-aW-LeO" firstAttribute="leading" secondItem="72p-xt-fdu" secondAttribute="leading" id="ebx-h4-V3T"/>
+                            <constraint firstItem="9G8-aW-LeO" firstAttribute="trailing" secondItem="72p-xt-fdu" secondAttribute="trailing" id="fFe-Kb-ZjR"/>
+                            <constraint firstItem="9G8-aW-LeO" firstAttribute="top" secondItem="72p-xt-fdu" secondAttribute="top" constant="12" id="gFR-fZ-aeg"/>
+                            <constraint firstItem="1U9-70-5sz" firstAttribute="top" secondItem="9G8-aW-LeO" secondAttribute="bottom" constant="12" id="t0t-D0-NjQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wvF-AX-C2d"/>
+                    <navigationItem key="navigationItem" title="Exercise" id="wvF-AX-C2d"/>
                     <connections>
-                        <outlet property="progressBar" destination="BGb-js-4gQ" id="KCj-VO-28j"/>
-                        <outlet property="videoWebView" destination="o1l-zy-Avn" id="HvH-XY-eyj"/>
+                        <outlet property="countDown" destination="vuO-nd-fa4" id="eRS-gc-A2I"/>
+                        <outlet property="descriptionLabel" destination="1U9-70-5sz" id="P3Q-Dt-6Rw"/>
+                        <outlet property="finishedBtn" destination="AtM-eD-Fz7" id="RwG-nc-YH7"/>
+                        <outlet property="playerView" destination="9G8-aW-LeO" id="a63-9x-vYG"/>
+                        <segue destination="m1x-NI-Yn6" kind="unwind" identifier="unwindToMain" unwindAction="unwind:" id="ua8-tQ-GRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgS-aK-zMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="m1x-NI-Yn6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="331.8840579710145" y="3708.4821428571427"/>
         </scene>
@@ -686,7 +710,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="cart" catalog="system" title=" Unlock Avatars"/>
                                 <connections>
-                                    <segue destination="AyZ-Mi-YFS" kind="show" identifier="mainToAvatar" id="0Y0-X2-DIW"/>
+                                    <segue destination="AyZ-Mi-YFS" kind="show" identifier="mainToAvatar" id="jIv-hv-2Dj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ3-gd-x6x">
@@ -695,7 +719,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="calendar.badge.plus" catalog="system" title=" Update Schedule"/>
                                 <connections>
-                                    <segue destination="VDP-SP-smh" kind="show" identifier="mainToSchedule" id="j9l-9L-9OQ"/>
+                                    <segue destination="VDP-SP-smh" kind="show" identifier="mainToSchedule" id="J9Q-06-xNc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5C-X6-Ojw">
@@ -704,7 +728,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start Moving"/>
                                 <connections>
-                                    <segue destination="TGd-mE-qot" kind="show" identifier="mainToMove" id="MV5-kb-c2k"/>
+                                    <segue destination="TGd-mE-qot" kind="show" identifier="mainToMove" id="ogf-Hw-K66"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTB-Ph-hn7">
@@ -713,25 +737,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="video" catalog="system" title=" Video Demos"/>
                                 <connections>
-                                    <segue destination="RqE-Z0-q3m" kind="show" identifier="mainToDemo" id="ba8-MG-LTq"/>
+                                    <segue destination="RqE-Z0-q3m" kind="show" identifier="mainToDemo" id="Pt1-Um-VZz"/>
                                 </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67u-9g-th4" userLabel="avatar">
-                                <rect key="frame" x="296" y="56" width="100" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nr-pM-ubh">
-                                <rect key="frame" x="302" y="167" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-Po-TBi">
-                                <rect key="frame" x="133" y="565" width="148" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Message Mark"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsc-0j-CUx"/>
@@ -745,7 +752,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Qde-1p-Upa"/>
                     <connections>
-                        <outlet property="avatarImageView" destination="67u-9g-th4" id="NxT-r1-Hy6"/>
                         <outlet property="pointsLabel" destination="XdX-l0-xWh" id="ugH-eH-3ln"/>
                     </connections>
                 </viewController>
@@ -808,6 +814,9 @@
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="movingIcon" width="512" height="512"/>
         <image name="video" catalog="system" width="128" height="83"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

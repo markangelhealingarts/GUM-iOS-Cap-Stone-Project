@@ -10,41 +10,21 @@ import Firebase
 
 class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    struct Info {
-        var email: String = ""
-        var selectedPicker: Int = -1
-        var difficulty: String = ""
-        
-        init(email: String, selectedPicker: Int, difficulty: String){
-            self.email = email
-            self.selectedPicker = selectedPicker
-            self.difficulty = difficulty
-        }
-    }
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet weak var easyButton: UIButton!
-    
     @IBOutlet weak var moderateButton: UIButton!
-    
     @IBOutlet weak var vigorousButton: UIButton!
-    
     @IBOutlet weak var intervalButton: UIButton!
     
     var email: String = ""
     var pickerData: [String] = []
     
     var selectedBtn: Int = -1
-    var selectedPicker: Int = 0
+    var selectedPicker: String = ""
     var selectedInterval: String = ""
     
     var interval: Bool = false
-    var difficulty: String = ""
-    var selectedType = ""
-    
-    var info = Info(email: "", selectedPicker: 0, difficulty: "")
-    
+    var selectedType:String = ""
     
     let db = Firestore.firestore()
 
@@ -62,7 +42,6 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.intervalButton.backgroundColor = UIColor.blue
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
@@ -76,7 +55,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPicker = row
+        selectedPicker = pickerData[row]
     }
     
     
@@ -84,6 +63,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // highlight button and save which button has been pressed
         
         selectedBtn = easyButton.tag
+        selectedType = "Beginner"
         highlightBtn()
         
         showPicker()
@@ -93,6 +73,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // highlight button and save which button has been pressed
         
         selectedBtn = moderateButton.tag
+        selectedType = "Moderate"
         highlightBtn()
         
         showPicker()
@@ -102,6 +83,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // highlight button and save which button has been pressed
         
         selectedBtn = vigorousButton.tag
+        selectedType = "Advance"
         highlightBtn()
         
         showPicker()
@@ -111,36 +93,35 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // highlight button and save which button has been pressed
         
         selectedBtn = intervalButton.tag
+        selectedType = "Interval"
         highlightBtn()
         
         // make a drop down for different times on press
         showPicker()
     }
     
-    @IBAction func onStartBtn(_ sender: Any) {
+    
+    
+    @IBAction func startBtn(_ sender: Any) {
         
-        if difficulty == "interval" && selectedInterval == ""{
+        if selectedType == "Interval" && selectedInterval == ""{
             showAlert(name: "Error", message: "Please choose interval time")
-        } else if difficulty == ""{
+        } else if selectedType == ""{
             showAlert(name: "Error", message: "Please choose a difficulty level")
-        } else if selectedPicker == -1 {
+        } else if selectedPicker == "" {
             showAlert(name: "Error", message: "Please choose a video")
         } else {
-            info = Info(email: email, selectedPicker: selectedPicker, difficulty: selectedType)
-            self.performSegue(withIdentifier: "startToVideo", sender: info)
+            performSegue(withIdentifier: "startToVideo", sender: nil)
         }
-        
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if(segue.identifier == "startToVideo"){
             let destinationVC = segue.destination as! ExerciseVideoViewController
-            destinationVC.email = info.email
-            destinationVC.selectedPicker = info.selectedPicker
-            destinationVC.difficulty = info.difficulty
+            destinationVC.email = email
+            destinationVC.selectedPicker = selectedPicker
+            destinationVC.difficulty = selectedType
         }
     }
     
@@ -153,26 +134,23 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         if easyButton.tag == selectedBtn {
             self.easyButton.tintColor = UIColor.green
-            
-            difficulty = "easy"
+            selectedType = "Beginner"
             interval = false
             
         } else if moderateButton.tag == selectedBtn {
             self.moderateButton.tintColor = UIColor.yellow
             
-            difficulty = "moderate"
+            selectedType = "Moderate"
             interval = false
             
         } else if vigorousButton.tag == selectedBtn {
             self.vigorousButton.tintColor = UIColor.red
-            
-            difficulty = "hard"
+            selectedType = "Advance"
             interval = false
             
         } else {
             self.intervalButton.tintColor = UIColor.black
-            
-            difficulty = "interval"
+            selectedType = "Interval"
             interval = true
         }
         
@@ -180,24 +158,19 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func showPicker () {
         
-        if selectedBtn == 0 {
-            selectedType = "Beginner"
-        } else if selectedBtn == 1 {
-            selectedType = "Intermediate"
-        } else {
-            selectedType = "Advance"
-        }
+        let docRef = db.collection("StartMoving").document(selectedType)
         
-        let docRef = db.collection("Videos").document(selectedType)
+        print(selectedType)
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let data = document.data() //access the data
-                let video_description = data?["video_description"] as! NSArray
+                let data = document.data()
+                
+                let videos = data!["Titles"] as! NSArray
                 
                 self.pickerData = []
-                
-                self.pickerData += video_description as! [String]
+                self.pickerData += videos as! [String]
+                self.selectedPicker = self.pickerData[0]
                 self.pickerView.reloadAllComponents()
 
             } else {

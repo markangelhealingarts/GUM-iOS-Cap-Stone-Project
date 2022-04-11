@@ -13,7 +13,6 @@ class MainPageViewController: UIViewController {
     var email: String = "" // this is the users email that will be used to pull info about them
     
     @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var avatarImageView: UIImageView!
     
     let db = Firestore.firestore()
     
@@ -29,16 +28,31 @@ class MainPageViewController: UIViewController {
                 let pointsStored = data?["Points"]//access points for user
                 
                 let stringPoints = String(pointsStored as! Int)
-                
-                let avatar = data?["AvatarUrl"]
-                
-                self.avatarImageView.image = UIImage(named: avatar as! String)
 
                 self.pointsLabel.text = stringPoints
             }
             
         }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let docRef = db.collection("Users").document(email)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+
+                let data = document.data()
+                let pointsStored = data?["Points"]//access points for user
+                
+                let stringPoints = String(pointsStored as! Int)
+
+                self.pointsLabel.text = stringPoints
+            }
+            
+        }
     }
     
     
@@ -58,7 +72,9 @@ class MainPageViewController: UIViewController {
             let destinationVC = segue.destination as! VideoDemosViewController
             destinationVC.email = email
         }
-        
+    }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
         
     }
 
