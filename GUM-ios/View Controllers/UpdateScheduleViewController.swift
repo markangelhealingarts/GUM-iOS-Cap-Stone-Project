@@ -177,9 +177,7 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
         } else {
             showAlert(name: "Error", message: "Your 1st must be spaced out by at least 1 hour!")
         }
-        
-        
-        
+
         //if checks are okay, add times into Firebase
         
         if(check){
@@ -196,15 +194,67 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
                     
                     self.showAlert(name: "Success", message: "Your schedule has been updated")
 
+                    let center = UNUserNotificationCenter.current()
+                    center.removeAllPendingNotificationRequests()
+                    
+                    for time in self.workouts{
+                        let randomIdentifier = UUID().uuidString
+                        
+                        var dateComponents = DateComponents()
+                        dateComponents.calendar = Calendar.current
+
+                        let temp = time
+                        if temp.count == 7 {
+                            var hour = Int(temp[0])
+                            let minute = Int(temp[2..<4])
+                            
+                            
+                            if temp[5..<7] == "PM" {
+                                hour! = hour! + 12
+                            }
+
+                            print("\(temp):   \(String(describing: hour))")
+                            print("\(temp):   \(String(describing: minute))")
+                            dateComponents.hour = hour
+                            dateComponents.minute = minute
+                        } else {
+                            var hour = Int(temp[0..<2])
+                            let minute = Int(temp[3..<5])
+                            
+                            if temp[6..<8] == "PM" && temp[0..<2] != "12" {
+                                hour! = hour! + 12
+                            }
+                            
+                            print("\(temp):   \(String(describing: hour))")
+                            print("\(temp):   \(String(describing: minute))")
+                            dateComponents.hour = hour
+                            dateComponents.minute = minute
+                        }
+
+
+                        
+                        let content = UNMutableNotificationContent()
+                        content.title = "Get Up and Move"
+                        content.body = "Start your next session!"
+                        content.sound = .default
+
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+                        let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
+                        center.add(request)
+                    }
+                    
+                    center.getPendingNotificationRequests(completionHandler: { requests in
+                        for request in requests {
+                            print(request)
+                        }
+                    })
+
                 } else {
                     print("Error: \(String(describing: error))")
                 }
             }
         }
-        
-        //show alert it worked
-        
-        print(workouts)
     }
     
     
@@ -220,7 +270,7 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
         let minutes = components.minute! > 9 ? "\(components.minute!)" : "0\(components.minute!)"
 
         //this is an if statement if am is > then am is pm if < than it is am.
-        let am = components.hour! > 12 ? "PM" : "AM"
+        let am = components.hour! >= 12 ? "PM" : "AM"
         
         // add to specific work out
         if selectedWorkout == "Workout 1"{
