@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221428482810A8B3005A83F6 /* GroupLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221428472810A8B3005A83F6 /* GroupLandingViewController.swift */; };
+		2214284A2810B282005A83F6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221428492810B282005A83F6 /* CreateGroupViewController.swift */; };
+		2214284C2810B2A4005A83F6 /* JoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214284B2810B2A4005A83F6 /* JoinGroupViewController.swift */; };
+		2214284E2810B2C5005A83F6 /* CurrentGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214284D2810B2C5005A83F6 /* CurrentGroupsViewController.swift */; };
+		221428502810B807005A83F6 /* CreateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214284F2810B807005A83F6 /* CreateDetailViewController.swift */; };
 		221EAA3127C6FDBC00F8791D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAA3027C6FDBC00F8791D /* LoginViewController.swift */; };
 		221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAA3227C6FF7700F8791D /* SignupViewController.swift */; };
 		221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAA3527C7005700F8791D /* SurveyViewController.swift */; };
 		2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230B72E27BDF21000CEB996 /* AppDelegate.swift */; };
 		2230B73127BDF21000CEB996 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230B73027BDF21000CEB996 /* SceneDelegate.swift */; };
-		2230B73327BDF21000CEB996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230B73227BDF21000CEB996 /* ViewController.swift */; };
 		2230B73627BDF21000CEB996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73427BDF21000CEB996 /* Main.storyboard */; };
 		2230B73827BDF21600CEB996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73727BDF21600CEB996 /* Assets.xcassets */; };
 		2230B73B27BDF21600CEB996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2230B73927BDF21600CEB996 /* LaunchScreen.storyboard */; };
 		2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457627D13FB100FA8FCB /* MainPageViewController.swift */; };
-		2254457927D2B3F100FA8FCB /* UnlockAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */; };
 		2254457B27D2B47E00FA8FCB /* UpdateScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */; };
 		2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */; };
 		2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */; };
@@ -29,19 +32,22 @@
 /* Begin PBXFileReference section */
 		00ADA8AC582E9969F958835F /* Pods-GUM-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.debug.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		221428472810A8B3005A83F6 /* GroupLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupLandingViewController.swift; sourceTree = "<group>"; };
+		221428492810B282005A83F6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		2214284B2810B2A4005A83F6 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupViewController.swift; sourceTree = "<group>"; };
+		2214284D2810B2C5005A83F6 /* CurrentGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGroupsViewController.swift; sourceTree = "<group>"; };
+		2214284F2810B807005A83F6 /* CreateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDetailViewController.swift; sourceTree = "<group>"; };
 		221EAA3027C6FDBC00F8791D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		221EAA3227C6FF7700F8791D /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		221EAA3527C7005700F8791D /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		2230B72B27BDF21000CEB996 /* GUM-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GUM-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2230B72E27BDF21000CEB996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2230B73027BDF21000CEB996 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2230B73227BDF21000CEB996 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2230B73527BDF21000CEB996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2230B73727BDF21600CEB996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2230B73A27BDF21600CEB996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2230B73C27BDF21600CEB996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2254457627D13FB100FA8FCB /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockAvatarViewController.swift; sourceTree = "<group>"; };
 		2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheduleViewController.swift; sourceTree = "<group>"; };
 		2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMovingViewController.swift; sourceTree = "<group>"; };
 		2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewController.swift; sourceTree = "<group>"; };
@@ -65,16 +71,19 @@
 		221EAA3427C6FFAA00F8791D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2230B73227BDF21000CEB996 /* ViewController.swift */,
 				221EAA3027C6FDBC00F8791D /* LoginViewController.swift */,
 				221EAA3227C6FF7700F8791D /* SignupViewController.swift */,
 				221EAA3527C7005700F8791D /* SurveyViewController.swift */,
 				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
-				2254457827D2B3F100FA8FCB /* UnlockAvatarViewController.swift */,
 				2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */,
 				2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */,
 				2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */,
 				22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */,
+				221428472810A8B3005A83F6 /* GroupLandingViewController.swift */,
+				221428492810B282005A83F6 /* CreateGroupViewController.swift */,
+				2214284B2810B2A4005A83F6 /* JoinGroupViewController.swift */,
+				2214284D2810B2C5005A83F6 /* CurrentGroupsViewController.swift */,
+				2214284F2810B807005A83F6 /* CreateDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -247,15 +256,18 @@
 			files = (
 				221EAA3127C6FDBC00F8791D /* LoginViewController.swift in Sources */,
 				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
+				221428502810B807005A83F6 /* CreateDetailViewController.swift in Sources */,
 				2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */,
 				2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */,
-				2254457927D2B3F100FA8FCB /* UnlockAvatarViewController.swift in Sources */,
-				2230B73327BDF21000CEB996 /* ViewController.swift in Sources */,
+				2214284E2810B2C5005A83F6 /* CurrentGroupsViewController.swift in Sources */,
 				2254457B27D2B47E00FA8FCB /* UpdateScheduleViewController.swift in Sources */,
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
+				2214284A2810B282005A83F6 /* CreateGroupViewController.swift in Sources */,
+				221428482810A8B3005A83F6 /* GroupLandingViewController.swift in Sources */,
 				221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */,
 				22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */,
+				2214284C2810B2A4005A83F6 /* JoinGroupViewController.swift in Sources */,
 				2230B73127BDF21000CEB996 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

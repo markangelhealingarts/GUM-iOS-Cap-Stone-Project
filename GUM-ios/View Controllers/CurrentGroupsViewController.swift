@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  CurrentGroupsViewController.swift
 //  GUM-ios
 //
-//  Created by Tim Johnson on 2/16/22.
+//  Created by Tim Johnson on 4/20/22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrentGroupsViewController: UIViewController {
+    
+    var email: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-

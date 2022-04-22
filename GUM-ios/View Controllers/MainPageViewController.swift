@@ -76,9 +76,6 @@ class MainPageViewController: UIViewController {
                         if temp[5..<7] == "PM" {
                             hour! = hour! + 12
                         }
-
-                        print("\(temp):   \(String(describing: hour))")
-                        print("\(temp):   \(String(describing: minute))")
                         dateComponents.hour = hour
                         dateComponents.minute = minute
                     } else {
@@ -88,9 +85,6 @@ class MainPageViewController: UIViewController {
                         if temp[6..<8] == "PM" && temp[0..<2] != "12" {
                             hour! = hour! + 12
                         }
-                        
-                        print("\(temp):   \(String(describing: hour))")
-                        print("\(temp):   \(String(describing: minute))")
                         dateComponents.hour = hour
                         dateComponents.minute = minute
                     }
@@ -107,12 +101,6 @@ class MainPageViewController: UIViewController {
                     let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
                     center.add(request)
                 }
-                
-//                center.getPendingNotificationRequests(completionHandler: { requests in
-//                    for request in requests {
-//                        print(request)
-//                    }
-//                })
             }
             
         }
@@ -141,8 +129,8 @@ class MainPageViewController: UIViewController {
     //send email to other viewControllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "mainToAvatar" {
-            let destinationVC = segue.destination as! UnlockAvatarViewController
+        if segue.identifier == "mainToGroup" {
+            let destinationVC = segue.destination as! GroupLandingViewController
             destinationVC.email = email
         } else if segue.identifier == "mainToSchedule" {
             let destinationVC = segue.destination as! UpdateScheduleViewController

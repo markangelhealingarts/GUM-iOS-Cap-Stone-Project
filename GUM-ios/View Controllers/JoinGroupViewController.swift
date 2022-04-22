@@ -1,13 +1,13 @@
 //
-//  UnlockAvatarViewController.swift
+//  JoinGroupViewController.swift
 //  GUM-ios
 //
-//  Created by Tim Johnson on 3/4/22.
+//  Created by Tim Johnson on 4/20/22.
 //
 
 import UIKit
 
-class UnlockAvatarViewController: UIViewController {
+class JoinGroupViewController: UIViewController {
     
     var email: String = ""
 
@@ -16,5 +16,4 @@ class UnlockAvatarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
 }
