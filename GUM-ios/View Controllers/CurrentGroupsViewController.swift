@@ -17,9 +17,11 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
     let db = Firestore.firestore()
 
     var groups: [String] = []
-    
+    var lead: [String] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonControl.addTarget(self, action: #selector(CurrentGroupsViewController.indexChanged(_:)), for: .valueChanged)
         
         let docRef = db.collection("Users").document(email)
         
@@ -27,25 +29,88 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
             if let document = document, document.exists {
                 
                 let data = document.data()
-                self.groups = data!["Groups"] as! [String]
+                let groupTemp = data!["Groups"] as! NSArray
+                
+                for group in groupTemp {
+                    self.groups.append(group as! String)
+                }
+                
+                self.db.collection("Groups").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            
+                            let data = document.data()
+                            if data["Leader Name"] as! String == self.email {
+                                self.lead.append("\(document.documentID)")
+                            }
+                        }
+                    }
+                }
+
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
 
             } else {
                 print("ERROR: \(String(describing: error))")
             }
         }
-
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
+    @objc func indexChanged(_ sender: UISegmentedControl) {
+        if buttonControl.selectedSegmentIndex == 0 {
+            tableView.reloadData()
+        } else if buttonControl.selectedSegmentIndex == 1 {
+            tableView.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        if buttonControl.selectedSegmentIndex == 0 {
+            return groups.count
+        } else {
+            return lead.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as! GroupCell
         
+        if buttonControl.selectedSegmentIndex == 0 {
+            let docRef = db.collection("Groups").document(groups[indexPath.row])
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    cell.groupNameLabel.text = data!["Group Name"] as? String
+                    
+                    let members = data!["Members"] as! NSArray
+                    cell.membersLabel.text = "\(members.count)"
+
+                } else {
+                    print("ERROR: \(String(describing: error))")
+                }
+            }
+        } else {
+            let docRef = db.collection("Groups").document(lead[indexPath.row])
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    
+                    if data!["Leader Name"] as! String == self.email {
+                        cell.groupNameLabel.text = data!["Group Name"] as? String
+                        
+                        let members = data!["Members"] as! NSArray
+                        cell.membersLabel.text = "\(members.count)"
+                    }
+                } else {
+                    print("ERROR: \(String(describing: error))")
+                }
+            }
+            
+        }
         return cell
     }
     

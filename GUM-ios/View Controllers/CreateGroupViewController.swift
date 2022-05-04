@@ -14,11 +14,7 @@ class CreateGroupViewController: UIViewController {
     var randomCode: String = ""
     
     @IBOutlet weak var groupNameTextField: UITextField!
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var pointGoalTextField: UITextField!
     
     let db = Firestore.firestore()
@@ -33,7 +29,6 @@ class CreateGroupViewController: UIViewController {
     @IBAction func onCreateGroup(_ sender: Any) {
         let groupName = groupNameTextField.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
-        let name = nameTextField.text?.trimmingCharacters(in: .whitespaces)
         let goal = (pointGoalTextField.text?.trimmingCharacters(in: .whitespaces))!
         
         
@@ -43,10 +38,6 @@ class CreateGroupViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else if password == "" {
             let alert = UIAlertController(title: "Error", message: "Enter password!", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        } else if name == "" {
-            let alert = UIAlertController(title: "Error", message: "Enter your name!", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else if goal == "" {
@@ -60,7 +51,7 @@ class CreateGroupViewController: UIViewController {
             
             db.collection("Groups").document(documentNum).setData([
                 "Group Name": groupName!,
-                "Leader Name": name!,
+                "Leader Name": email,
                 "Password": password!,
                 "Point Goal": Int(goal)!,
                 "Members": [email]
