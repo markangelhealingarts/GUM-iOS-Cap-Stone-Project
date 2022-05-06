@@ -30,23 +30,25 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
                 
                 let data = document.data()
                 let groupTemp = data!["Groups"] as! NSArray
-                
+
                 for group in groupTemp {
-                    self.groups.append(group as! String)
-                }
-                
-                self.db.collection("Groups").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
+                    
+                    let groupRef = self.db.collection("Groups").document(group as! String)
+                    groupRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
                             
-                            let data = document.data()
-                            if data["Leader Name"] as! String == self.email {
+                            let data1 = document.data()
+                            if data1!["Leader Name"] as! String == self.email {
                                 self.lead.append("\(document.documentID)")
+                            } else {
+                                self.groups.append("\(document.documentID)")
                             }
+
+                        } else {
+                            print("ERROR: \(String(describing: error))")
                         }
                     }
+
                 }
 
                 self.tableView.delegate = self
@@ -85,8 +87,18 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
                     let data = document.data()
                     cell.groupNameLabel.text = data!["Group Name"] as? String
                     
-                    let members = data!["Members"] as! NSArray
-                    cell.membersLabel.text = "\(members.count)"
+                    
+                    let memberRef = self.db.collection("Groups").document(self.groups[indexPath.row]).collection(self.groups[indexPath.row]).document("Info")
+                    
+                    memberRef.getDocument { (memberDoc, error) in
+                        if let memberDoc = memberDoc, memberDoc.exists {
+                            let memberData = memberDoc.data()
+                            
+                            let members = memberData!["Members"] as! NSArray
+                            cell.membersLabel.text = "\(members.count)"
+                        }
+                        
+                    }
 
                 } else {
                     print("ERROR: \(String(describing: error))")
@@ -102,8 +114,17 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
                     if data!["Leader Name"] as! String == self.email {
                         cell.groupNameLabel.text = data!["Group Name"] as? String
                         
-                        let members = data!["Members"] as! NSArray
-                        cell.membersLabel.text = "\(members.count)"
+                        let memberRef = self.db.collection("Groups").document(self.lead[indexPath.row]).collection(self.lead[indexPath.row]).document("Info")
+                        
+                        memberRef.getDocument { (memberDoc, error) in
+                            if let memberDoc = memberDoc, memberDoc.exists {
+                                let memberData = memberDoc.data()
+                                
+                                let members = memberData!["Members"] as! NSArray
+                                cell.membersLabel.text = "\(members.count)"
+                            }
+                            
+                        }
                     }
                 } else {
                     print("ERROR: \(String(describing: error))")
@@ -114,5 +135,25 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "groupToDetail", sender: indexPath.row)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "groupToDetail" {
+            if buttonControl.selectedSegmentIndex == 0 {
+                let destinationVC = segue.destination as! ClickedGroupViewController
+                destinationVC.email = email
+                destinationVC.groupName = groups[sender as! Int]
+                destinationVC.isLeader = false
+            } else if buttonControl.selectedSegmentIndex == 1 {
+                let destinationVC = segue.destination as! ClickedGroupViewController
+                destinationVC.email = email
+                destinationVC.groupName = lead[sender as! Int]
+                destinationVC.isLeader = true
+            }
+
+        }
+    }
 }

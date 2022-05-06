@@ -38,7 +38,7 @@ class JoinGroupViewController: UIViewController {
         } else {
             
             
-            let docRef = db.collection("Groups").document(code!)
+            let docRef = db.collection("Groups").document(code!).collection(code!).document("Info")
             
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
@@ -48,6 +48,21 @@ class JoinGroupViewController: UIViewController {
                     let passwordStored = data!["Password"] as! String
                     
                     if passwordStored == password {
+                        
+                        let originalMembers = data!["Members"] as! NSArray
+                        
+                        var members: [String] = []
+                        for member in originalMembers {
+                            members.append(member as! String)
+                        }
+                        members.append(self.email)
+                        
+                        // add username to members
+                        self.db.collection("Groups").document(code!).collection(code!).document("Info").updateData([
+                            "Members": members
+                        ])
+                        
+                        // add group into user
                         self.addUser()
                     } else {
                         let alert = UIAlertController(title: "Error", message: "Password is incorrect", preferredStyle: UIAlertController.Style.alert)

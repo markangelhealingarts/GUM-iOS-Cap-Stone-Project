@@ -26,6 +26,8 @@
 		2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */; };
 		225445AD27D94B8B00FA8FCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225445AC27D94B8B00FA8FCB /* GoogleService-Info.plist */; };
 		22D8F35528204D99003A9452 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8F35428204D99003A9452 /* GroupCell.swift */; };
+		22DD3B6D282335490022B7D1 /* ClickedGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */; };
+		22DD3B6F282438BE0022B7D1 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD3B6E282438BE0022B7D1 /* MemberCell.swift */; };
 		22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewController.swift; sourceTree = "<group>"; };
 		225445AC27D94B8B00FA8FCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		22D8F35428204D99003A9452 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedGroupViewController.swift; sourceTree = "<group>"; };
+		22DD3B6E282438BE0022B7D1 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoViewController.swift; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 				2214284B2810B2A4005A83F6 /* JoinGroupViewController.swift */,
 				2214284D2810B2C5005A83F6 /* CurrentGroupsViewController.swift */,
 				2214284F2810B807005A83F6 /* CreateDetailViewController.swift */,
+				22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				22D8F35428204D99003A9452 /* GroupCell.swift */,
+				22DD3B6E282438BE0022B7D1 /* MemberCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				221EAA3127C6FDBC00F8791D /* LoginViewController.swift in Sources */,
+				22DD3B6F282438BE0022B7D1 /* MemberCell.swift in Sources */,
+				22DD3B6D282335490022B7D1 /* ClickedGroupViewController.swift in Sources */,
 				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
 				221428502810B807005A83F6 /* CreateDetailViewController.swift in Sources */,
 				2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */,
