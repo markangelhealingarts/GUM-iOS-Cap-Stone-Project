@@ -17,6 +17,7 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
     var members: [String] = []
     
     var pointGoal: Int = 0
+    var userPoints: Int = 0
     
     let db = Firestore.firestore()
     
@@ -24,6 +25,8 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var memberPointsTitle: UILabel!
     @IBOutlet weak var memberPointsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leaveGroupBtn: UIBarButtonItem!
+    
     
     
     override func viewDidLoad() {
@@ -33,6 +36,19 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
             //only show for member of group not the leader
             memberPointsTitle.layer.opacity = 0
             memberPointsLabel.layer.opacity = 0
+            leaveGroupBtn.tintColor = UIColor.clear
+        } else {
+            let personRef = self.db.collection("Users").document(self.email)
+            personRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    self.userPoints = data!["Points"] as! Int
+
+                } else {
+                    print("ERROR: \(String(describing: error))")
+                }
+            }
         }
         
         let docRef = db.collection("Groups").document(groupName)
@@ -43,27 +59,18 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
                 let data = document.data()
                 self.groupNameLabel.text = data!["Group Name"] as? String
                 self.pointGoal = data!["Point Goal"] as! Int
+                self.memberPointsLabel.text = "\(self.userPoints)/\(self.pointGoal)"
                 
-                let memberRef = self.db.collection("Groups").document(self.groupName).collection(self.groupName).document("Info")
-                
-                memberRef.getDocument { (memberDoc, error) in
-                    if let memberDoc = memberDoc, memberDoc.exists {
-                        let memberData = memberDoc.data()
-                        
-                        let members = memberData!["Members"] as! NSArray
-                        for member in members {
-                            self.members.append(member as! String)
-                        }
-                        
-                        print(self.members)
-                        
-                        self.tableView.delegate = self
-                        self.tableView.dataSource = self
-                    } else {
-                        print("ERROR: \(String(describing: error))")
-                    }
+                let members = data!["Members"] as! NSArray
+                for member in members {
+                    self.members.append(member as! String)
                 }
                 
+                print(self.members)
+                
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+
             } else {
                 print("ERROR: \(String(describing: error))")
             }
@@ -95,4 +102,73 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
+    
+    
+    @IBAction func onLeaveGroup(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Leave Group", message: "Are you sure?", preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            let docRef = self.db.collection("Groups").document(self.groupName)
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    let membersTemp = data!["Members"] as! NSArray
+                    
+                    var newMembers: [String] = []
+                    
+                    for member in membersTemp {
+                        if member as! String != self.email {
+                            newMembers.append(member as! String)
+                        }
+                    }
+                    
+                    self.db.collection("Groups").document(self.groupName).updateData([
+                        "Members": newMembers
+                    ])
+
+                } else {
+                    print("ERROR: \(String(describing: error))")
+                }
+            }
+            
+            let personRef = self.db.collection("Users").document(self.email)
+            personRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    let groupsTemp = data!["Groups"] as! NSArray
+                    
+                    var newGroups: [String] = []
+                    
+                    for group in groupsTemp {
+                        if group as! String != self.groupName {
+                            newGroups.append(group as! String)
+                        }
+                    }
+                    
+                    self.db.collection("Users").document(self.email).updateData([
+                        "Groups": newGroups
+                    ])
+
+                    self.performSegue(withIdentifier: "groupToMain", sender: nil)
+                    self.showAlert(name: "Success", message: "Successfully Left Group!")
+
+                } else {
+                    print("ERROR: \(String(describing: error))")
+                }
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle response here.
+        }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }

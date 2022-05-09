@@ -86,19 +86,9 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
                     
                     let data = document.data()
                     cell.groupNameLabel.text = data!["Group Name"] as? String
-                    
-                    
-                    let memberRef = self.db.collection("Groups").document(self.groups[indexPath.row]).collection(self.groups[indexPath.row]).document("Info")
-                    
-                    memberRef.getDocument { (memberDoc, error) in
-                        if let memberDoc = memberDoc, memberDoc.exists {
-                            let memberData = memberDoc.data()
-                            
-                            let members = memberData!["Members"] as! NSArray
-                            cell.membersLabel.text = "\(members.count)"
-                        }
-                        
-                    }
+
+                    let members = data!["Members"] as! NSArray
+                    cell.membersLabel.text = "\(members.count)"
 
                 } else {
                     print("ERROR: \(String(describing: error))")
@@ -113,18 +103,10 @@ class CurrentGroupsViewController: UIViewController, UITableViewDataSource, UITa
                     
                     if data!["Leader Name"] as! String == self.email {
                         cell.groupNameLabel.text = data!["Group Name"] as? String
-                        
-                        let memberRef = self.db.collection("Groups").document(self.lead[indexPath.row]).collection(self.lead[indexPath.row]).document("Info")
-                        
-                        memberRef.getDocument { (memberDoc, error) in
-                            if let memberDoc = memberDoc, memberDoc.exists {
-                                let memberData = memberDoc.data()
-                                
-                                let members = memberData!["Members"] as! NSArray
-                                cell.membersLabel.text = "\(members.count)"
-                            }
-                            
-                        }
+
+                        let members = data!["Members"] as! NSArray
+                        cell.membersLabel.text = "\(members.count)"
+
                     }
                 } else {
                     print("ERROR: \(String(describing: error))")

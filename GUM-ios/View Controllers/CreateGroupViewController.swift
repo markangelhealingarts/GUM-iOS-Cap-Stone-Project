@@ -49,16 +49,13 @@ class CreateGroupViewController: UIViewController {
             
             randomCode = documentNum
             
-            db.collection("Groups").document(documentNum).collection(documentNum).document("Info").setData([
-                "Members": [],
-                "Password": password!
-            ])
-            
             db.collection("Groups").document(documentNum).setData([
                 "Group": Int(documentNum)!,
                 "Group Name": groupName!,
                 "Leader Name": email,
                 "Point Goal": Int(goal)!,
+                "Members": [],
+                "Password": password!
             ])
             
             let docRef = db.collection("Users").document(email)

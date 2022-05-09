@@ -1,0 +1,41 @@
+//
+//  FinishedExerciseViewController.swift
+//  GUM-ios
+//
+//  Created by Tim Johnson on 5/8/22.
+//
+
+import UIKit
+import Firebase
+
+class FinishedExerciseViewController: UIViewController {
+    
+    var email: String = ""
+    let db = Firestore.firestore()
+
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let docRef = db.collection("Users").document(email)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+
+                let data = document.data()
+                let pointsStored = data?["Points"]
+                
+                let stringPoints = String(pointsStored as! Int)
+
+                self.pointsLabel.text = stringPoints
+
+            }
+            
+        }
+    }
+
+    @IBAction func onMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "exerciseToMain", sender: nil)
+    }
+}

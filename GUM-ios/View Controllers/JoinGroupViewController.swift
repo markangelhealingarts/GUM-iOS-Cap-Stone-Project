@@ -38,7 +38,7 @@ class JoinGroupViewController: UIViewController {
         } else {
             
             
-            let docRef = db.collection("Groups").document(code!).collection(code!).document("Info")
+            let docRef = db.collection("Groups").document(code!)
             
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
@@ -58,7 +58,7 @@ class JoinGroupViewController: UIViewController {
                         members.append(self.email)
                         
                         // add username to members
-                        self.db.collection("Groups").document(code!).collection(code!).document("Info").updateData([
+                        self.db.collection("Groups").document(code!).updateData([
                             "Members": members
                         ])
                         

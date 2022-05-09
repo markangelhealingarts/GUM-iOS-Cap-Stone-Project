@@ -28,6 +28,7 @@
 		22D8F35528204D99003A9452 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8F35428204D99003A9452 /* GroupCell.swift */; };
 		22DD3B6D282335490022B7D1 /* ClickedGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */; };
 		22DD3B6F282438BE0022B7D1 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD3B6E282438BE0022B7D1 /* MemberCell.swift */; };
+		22DD3B712828B5710022B7D1 /* FinishedExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD3B702828B5700022B7D1 /* FinishedExerciseViewController.swift */; };
 		22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */; };
 		F25C7FE9C544AC7CA51C090E /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14F40F5D1FB91632B3565F /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		22D8F35428204D99003A9452 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedGroupViewController.swift; sourceTree = "<group>"; };
 		22DD3B6E282438BE0022B7D1 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		22DD3B702828B5700022B7D1 /* FinishedExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedExerciseViewController.swift; sourceTree = "<group>"; };
 		22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoViewController.swift; sourceTree = "<group>"; };
 		890AEAEAC428AA92BADC5E30 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				2214284D2810B2C5005A83F6 /* CurrentGroupsViewController.swift */,
 				2214284F2810B807005A83F6 /* CreateDetailViewController.swift */,
 				22DD3B6C282335490022B7D1 /* ClickedGroupViewController.swift */,
+				22DD3B702828B5700022B7D1 /* FinishedExerciseViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				2214284A2810B282005A83F6 /* CreateGroupViewController.swift in Sources */,
 				221428482810A8B3005A83F6 /* GroupLandingViewController.swift in Sources */,
 				221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */,
+				22DD3B712828B5710022B7D1 /* FinishedExerciseViewController.swift in Sources */,
 				22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */,
 				2214284C2810B2A4005A83F6 /* JoinGroupViewController.swift in Sources */,
 				2230B73127BDF21000CEB996 /* SceneDelegate.swift in Sources */,

@@ -111,13 +111,21 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 let pointsStored = data?["Points"]
 
                 docRef.updateData([
-                    "Points": pointsStored as! Int + 5
+                    "Points": pointsStored as! Int + 10
                 ])
                 
+                self.performSegue(withIdentifier: "exerciseToFinished", sender: nil)
             }
             
         }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        performSegue(withIdentifier: "unwindToMain", sender: email)
+        if segue.identifier == "exerciseToFinished" {
+            let destinationVC = segue.destination as! FinishedExerciseViewController
+            destinationVC.email = email
+        }
     }
 }
