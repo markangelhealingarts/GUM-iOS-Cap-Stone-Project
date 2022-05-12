@@ -47,27 +47,48 @@ class JoinGroupViewController: UIViewController {
                     
                     let passwordStored = data!["Password"] as! String
                     
-                    if passwordStored == password {
-                        
-                        let originalMembers = data!["Members"] as! NSArray
-                        
-                        var members: [String] = []
-                        for member in originalMembers {
-                            members.append(member as! String)
-                        }
-                        members.append(self.email)
-                        
-                        // add username to members
-                        self.db.collection("Groups").document(code!).updateData([
-                            "Members": members
-                        ])
-                        
-                        // add group into user
-                        self.addUser()
-                    } else {
-                        let alert = UIAlertController(title: "Error", message: "Password is incorrect", preferredStyle: UIAlertController.Style.alert)
+                    let leader = data!["Leader Name"] as! String
+                    
+                    if leader == self.email { // in the case the leader tries to join group
+                        let alert = UIAlertController(title: "Error", message: "You are the leader!", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
+                    } else {
+                    
+                        if passwordStored == password {
+                            
+                            let originalMembers = data!["Members"] as! NSArray
+                            
+                            var check: Bool = false
+                            var members: [String] = []
+                            for member in originalMembers {
+                                members.append(member as! String)
+                                
+                                if member as! String == self.email { //if user is in group already
+                                    check = true
+                                }
+                            }
+                            
+                            if !check { // if user tries to join the same group
+                                members.append(self.email)
+                                
+                                // add username to members
+                                self.db.collection("Groups").document(code!).updateData([
+                                    "Members": members
+                                ])
+                                
+                                // add group into user
+                                self.addUser()
+                            } else {
+                                let alert = UIAlertController(title: "Error", message: "Already Part of Group", preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "Error", message: "Password is incorrect", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     }
                     
                 } else {
