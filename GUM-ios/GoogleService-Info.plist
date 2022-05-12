@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>127778308391-42314jl6vmhdjkkrvfjjbu20a9n8v2i4.apps.googleusercontent.com</string>
+	<string>462866559865-j8gl9eu1m6n1pdlcgvd904mbaracamkk.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.127778308391-42314jl6vmhdjkkrvfjjbu20a9n8v2i4</string>
+	<string>com.googleusercontent.apps.462866559865-j8gl9eu1m6n1pdlcgvd904mbaracamkk</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAwDMhW9C3mdzRI1LBvEnlaQNE44nyQeKQ</string>
+	<string>AIzaSyDPK815LgfVOJP3MjbU-AHXOzaW-VFIKIw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>127778308391</string>
+	<string>462866559865</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>CSUMB.GUM-ios</string>
 	<key>PROJECT_ID</key>
-	<string>gum-ios-1ba3f</string>
+	<string>gum-android</string>
 	<key>STORAGE_BUCKET</key>
-	<string>gum-ios-1ba3f.appspot.com</string>
+	<string>gum-android.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:127778308391:ios:aeda356b03ad776908a902</string>
-	<key>DATABASE_URL</key>
-	<string>https://gum-ios-1ba3f-default-rtdb.firebaseio.com</string>
+	<string>1:462866559865:ios:953e4a7b4f0c079c1db5a8</string>
 </dict>
 </plist>

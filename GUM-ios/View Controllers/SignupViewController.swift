@@ -1,10 +1,3 @@
-//
-//  SignupViewController.swift
-//  GUM-ios
-//
-//  Created by Tim Johnson on 2/23/22.
-//
-
 import UIKit
 import Firebase
 
@@ -18,15 +11,7 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         emailTextView.becomeFirstResponder()
     }
-    
-<<<<<<< HEAD
-    @IBAction func createAccount(_ sender: UIButton) {
-        
-        let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
-        let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
 
-        // checks if email / password is valid then adds user
-=======
     @IBAction func createAccount(_ sender: Any) {
        // makeAccount()
         print("helo")
@@ -35,18 +20,13 @@ class SignupViewController: UIViewController {
         print(email)
         print(password)
       // checks if email / password is valid then adds user
->>>>>>> origin/sophia
         if(email != "" && isValidEmail(emailID: email!) && password != "") {
 
             let docRef = db.collection("Users").document(email!)
 
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-<<<<<<< HEAD
-                    
-=======
 
->>>>>>> origin/sophia
                     let alert = UIAlertController(title: "Error", message: "Email already exists", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
@@ -66,24 +46,6 @@ class SignupViewController: UIViewController {
                             print("Error writing document: \(err)")
                         } else {
                             print("Document successfully written!")
-<<<<<<< HEAD
-                            self.performSegue(withIdentifier: "showSurvey", sender: nil)
-                        }
-                    }
-                }
-            }
-            
-        } else {
-            
-            if(email == "" || password == ""){
-                let alert = UIAlertController(title: "Error", message: "Email/Password is empty", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }else{
-                let alert = UIAlertController(title: "Error", message: "Not valid email", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-=======
                             let doc = self.db.collection("Users").document(email!)
                             doc.getDocument {(document, error) in
                                 if let document = document, document.exists {
@@ -93,9 +55,9 @@ class SignupViewController: UIViewController {
                                 }
                            }
 
-                        
-                        
-                    
+
+
+
                 }
             }
 
@@ -112,7 +74,6 @@ class SignupViewController: UIViewController {
 //            }
 //        }
       //}
->>>>>>> origin/sophia
             }
         }
     }
@@ -121,7 +82,7 @@ class SignupViewController: UIViewController {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "introVideo"){
             let destinationVC = segue.destination as! DemoVideosViewController

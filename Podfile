@@ -8,19 +8,15 @@ target 'GUM-ios' do
   # Pods for GUM-ios
   # Add the pods for the Firebase products you want to use in your app
   # For example, to use Firebase Authentication and Cloud Firestore
+  use_frameworks! :linkage => :static
+
   pod 'Firebase'
   pod 'FirebaseCore'
-  pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
-<<<<<<< HEAD
-  pod 'youtube-ios-player-helper'
-
-=======
-  pod "youtube-ios-player-helper", "~> 0.1.4"
+  pod "youtube-ios-player-helper"
   pod 'youtube-ios-player-helper-swift'
   pod 'YouTubePlayer'
-  pod 'DropDown', '2.3.2'
->>>>>>> origin/sophia
+#  pod 'DropDown', '2.3.2'
 end

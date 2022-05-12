@@ -1,4 +1,4 @@
-module Pods_GUM_ios {
+framework module Pods_GUM_ios {
   umbrella header "Pods-GUM-ios-umbrella.h"
 
   export *

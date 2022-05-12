@@ -6,7 +6,6 @@
 //
 
 import UIKit
-<<<<<<< HEAD
 import UserNotifications
 import Firebase
 
@@ -36,48 +35,36 @@ extension String {
         return String(self[start ..< end])
     }
 }
-=======
-import Firebase
 
->>>>>>> origin/sophia
 class MainPageViewController: UIViewController {
-    
+
     var email: String = "" // this is the users email that will be used to pull info about them
-    
+
     @IBOutlet weak var pointsLabel: UILabel!
-<<<<<<< HEAD
-=======
-    @IBOutlet weak var avatarImageView: UIImageView!
->>>>>>> origin/sophia
-    
+
     let db = Firestore.firestore()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        
-=======
-        print(email)
->>>>>>> origin/sophia
+
         let docRef = db.collection("Users").document(email)
-        
+
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-<<<<<<< HEAD
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
-                
+
                 let stringPoints = String(pointsStored as! Int)
 
                 self.pointsLabel.text = stringPoints
-                
+
                 let schedule = data?["Schedule"] as! NSArray
                 let center = UNUserNotificationCenter.current()
-                
+
                 for time in schedule{
                     let randomIdentifier = UUID().uuidString
-                    
+
                     var dateComponents = DateComponents()
                     dateComponents.calendar = Calendar.current
 
@@ -85,8 +72,8 @@ class MainPageViewController: UIViewController {
                     if temp.count == 7 {
                         var hour = Int(temp[0])
                         let minute = Int(temp[2..<4])
-                        
-                        
+
+
                         if temp[5..<7] == "PM" {
                             hour! = hour! + 12
                         }
@@ -95,7 +82,7 @@ class MainPageViewController: UIViewController {
                     } else {
                         var hour = Int(temp[0..<2])
                         let minute = Int(temp[3..<5])
-                        
+
                         if temp[6..<8] == "PM" && temp[0..<2] != "12" {
                             hour! = hour! + 12
                         }
@@ -104,7 +91,7 @@ class MainPageViewController: UIViewController {
                     }
 
 
-                    
+
                     let content = UNMutableNotificationContent()
                     content.title = "Get Up and Move"
                     content.body = "Start your next session!"
@@ -116,54 +103,34 @@ class MainPageViewController: UIViewController {
                     center.add(request)
                 }
             }
-            
+
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         let docRef = db.collection("Users").document(email)
-        
+
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
-                
+
                 let stringPoints = String(pointsStored as! Int)
-=======
-                let data = document.data()
-                let pointsStored = data?["Points"]//access points for user
-                print(data)
-                let stringPoints = String(pointsStored as! Int)
-                
-                let avatar = data?["AvatarUrl"]
-                
-                self.avatarImageView.image = UIImage(named: avatar as! String)
->>>>>>> origin/sophia
 
                 self.pointsLabel.text = stringPoints
             }
-            
+
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/sophia
     }
-    
-    
+
+
     //send email to other viewControllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-<<<<<<< HEAD
         if segue.identifier == "mainToGroup" {
             let destinationVC = segue.destination as! GroupLandingViewController
-=======
-        if segue.identifier == "mainToAvatar" {
-            let destinationVC = segue.destination as! UnlockAvatarViewController
->>>>>>> origin/sophia
             destinationVC.email = email
         } else if segue.identifier == "mainToSchedule" {
             let destinationVC = segue.destination as! UpdateScheduleViewController
@@ -175,15 +142,8 @@ class MainPageViewController: UIViewController {
             let destinationVC = segue.destination as! VideoDemosViewController
             destinationVC.email = email
         }
-<<<<<<< HEAD
-    }
-    
-    @IBAction func unwind( _ seg: UIStoryboardSegue) {
-    }
-=======
-        
-        
     }
 
->>>>>>> origin/sophia
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
 }
