@@ -177,7 +177,13 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
         } else {
             showAlert(name: "Error", message: "Your 1st must be spaced out by at least 1 hour!")
         }
+<<<<<<< HEAD
 
+=======
+        
+        
+        
+>>>>>>> origin/sophia
         //if checks are okay, add times into Firebase
         
         if(check){
@@ -194,6 +200,7 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
                     
                     self.showAlert(name: "Success", message: "Your schedule has been updated")
 
+<<<<<<< HEAD
                     let center = UNUserNotificationCenter.current()
                     center.removeAllPendingNotificationRequests()
                     
@@ -250,11 +257,20 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
                         }
                     })
 
+=======
+>>>>>>> origin/sophia
                 } else {
                     print("Error: \(String(describing: error))")
                 }
             }
         }
+<<<<<<< HEAD
+=======
+        
+        //show alert it worked
+        
+        print(workouts)
+>>>>>>> origin/sophia
     }
     
     
@@ -270,7 +286,11 @@ class UpdateScheduleViewController: UIViewController, UIPickerViewDelegate, UIPi
         let minutes = components.minute! > 9 ? "\(components.minute!)" : "0\(components.minute!)"
 
         //this is an if statement if am is > then am is pm if < than it is am.
+<<<<<<< HEAD
         let am = components.hour! >= 12 ? "PM" : "AM"
+=======
+        let am = components.hour! > 12 ? "PM" : "AM"
+>>>>>>> origin/sophia
         
         // add to specific work out
         if selectedWorkout == "Workout 1"{

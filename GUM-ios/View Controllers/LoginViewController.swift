@@ -32,8 +32,15 @@ class LoginViewController: UIViewController {
                     let passwordStored = data?["Password"] //get password
                     
                     if(password == passwordStored as? String){
+<<<<<<< HEAD
                         
                         //sends document to main page to access data for user
+=======
+                        print("here")
+                        //sends document to main page to access data for user
+                        print(document)
+                        
+>>>>>>> origin/sophia
                         self.performSegue(withIdentifier: "loginToMain", sender: document)
                         
                     }else{
@@ -41,8 +48,13 @@ class LoginViewController: UIViewController {
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                     }
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> origin/sophia
                 } else {
                     
                     let alert = UIAlertController(title: "Error", message: "Email doesn't exist", preferredStyle: UIAlertController.Style.alert)
@@ -65,6 +77,7 @@ class LoginViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+<<<<<<< HEAD
     }
     
     func isValidEmail(emailID:String) -> Bool {
@@ -73,6 +86,16 @@ class LoginViewController: UIViewController {
         return emailTest.evaluate(with: emailID)
     }
     
+=======
+    }
+    
+    func isValidEmail(emailID:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: emailID)
+    }
+    
+>>>>>>> origin/sophia
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if(segue.identifier == "loginToMain"){

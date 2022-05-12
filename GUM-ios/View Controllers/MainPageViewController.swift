@@ -6,6 +6,7 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import UserNotifications
 import Firebase
 
@@ -35,21 +36,34 @@ extension String {
         return String(self[start ..< end])
     }
 }
+=======
+import Firebase
+
+>>>>>>> origin/sophia
 class MainPageViewController: UIViewController {
     
     var email: String = "" // this is the users email that will be used to pull info about them
     
     @IBOutlet weak var pointsLabel: UILabel!
+<<<<<<< HEAD
+=======
+    @IBOutlet weak var avatarImageView: UIImageView!
+>>>>>>> origin/sophia
     
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
+=======
+        print(email)
+>>>>>>> origin/sophia
         let docRef = db.collection("Users").document(email)
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
+<<<<<<< HEAD
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
@@ -118,19 +132,38 @@ class MainPageViewController: UIViewController {
                 let pointsStored = data?["Points"]//access points for user
                 
                 let stringPoints = String(pointsStored as! Int)
+=======
+                let data = document.data()
+                let pointsStored = data?["Points"]//access points for user
+                print(data)
+                let stringPoints = String(pointsStored as! Int)
+                
+                let avatar = data?["AvatarUrl"]
+                
+                self.avatarImageView.image = UIImage(named: avatar as! String)
+>>>>>>> origin/sophia
 
                 self.pointsLabel.text = stringPoints
             }
             
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/sophia
     }
     
     
     //send email to other viewControllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+<<<<<<< HEAD
         if segue.identifier == "mainToGroup" {
             let destinationVC = segue.destination as! GroupLandingViewController
+=======
+        if segue.identifier == "mainToAvatar" {
+            let destinationVC = segue.destination as! UnlockAvatarViewController
+>>>>>>> origin/sophia
             destinationVC.email = email
         } else if segue.identifier == "mainToSchedule" {
             let destinationVC = segue.destination as! UpdateScheduleViewController
@@ -142,8 +175,15 @@ class MainPageViewController: UIViewController {
             let destinationVC = segue.destination as! VideoDemosViewController
             destinationVC.email = email
         }
+<<<<<<< HEAD
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
+=======
+        
+        
+    }
+
+>>>>>>> origin/sophia
 }
