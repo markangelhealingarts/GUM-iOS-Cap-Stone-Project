@@ -206,6 +206,7 @@
 		066DD06929F0A27EF850A063FB2CF6D9 /* resolve_address_posix.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 17FCB43A4C857AB1E3BD166D8EBB36A8 /* resolve_address_posix.h */; };
 		0674855DC85234CE9F8F98CAC3122B39 /* xds_common_types.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF0B876F2C7DF70D8159B7697802B57 /* xds_common_types.h */; };
 		0680A70F4B5999117702CE4EEA471048 /* msg_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB923B7B86C899A8FC2486A8DF1D787 /* msg_internal.h */; };
+		068673F0CAC45DB13523FDEE16F0E1FF /* YTPlayerView-iframe-playerIPAD.html in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD842D49AEE600F763988277DEF737 /* YTPlayerView-iframe-playerIPAD.html */; };
 		06B8C07E7ABE1B8A504A948235201021 /* FBLPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 88803B159CEA35B314FD47E1A09B75B5 /* FBLPromise.m */; };
 		06C45797EFB095CDB25990B80DC6D591 /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 71D2C20CA7D8C465F6DBE4ACB3B21E9D /* engine.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		06CA472E1AC130412C74A669B567AF55 /* xds_channel_creds.cc in Sources */ = {isa = PBXBuildFile; fileRef = A2627ED29091F5ABB9EDED4B785C9A1C /* xds_channel_creds.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
@@ -541,6 +542,7 @@
 		14864743107215A5FF8F3738BB85FF5C /* endpoint_components.upbdefs.c in Sources */ = {isa = PBXBuildFile; fileRef = D3EFAB99818FD00814F65818ADDF4E6D /* endpoint_components.upbdefs.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		1492475F0AAFC6E745A00549F73D08A0 /* curve25519_tables.h in Copy crypto/curve25519 Private Headers */ = {isa = PBXBuildFile; fileRef = F34349A810CA481D62FBF5198C62892A /* curve25519_tables.h */; };
 		14A079E093360DBE48CE74E5FE2F328C /* duration.upbdefs.c in Sources */ = {isa = PBXBuildFile; fileRef = 91208FD9B4058CEE3AEEB1408C6CCBBA /* duration.upbdefs.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
+		14AA3FF1D0BDA84B44E7AFAD7517A615 /* youtube-ios-player-helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D3463AB067F8BF3F2C5EFF03AA4E24 /* youtube-ios-player-helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AEFAD89045C120722253310CF9E6E0 /* priority.cc in Sources */ = {isa = PBXBuildFile; fileRef = CB5B8F47FBD454C1C5F0353FAFFB42EF /* priority.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		14B371842AD07EA377291794CB9F64A4 /* ssl_utils_config.h in Copy src/core/lib/security/security_connector Private Headers */ = {isa = PBXBuildFile; fileRef = B0E0C8C7F0301178154731C6CF76700D /* ssl_utils_config.h */; };
 		14B460638A14EC9769C4FBAE74873885 /* fork.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FBC35FCFC6E3284B27270005D06CF4 /* fork.h */; };
@@ -1269,6 +1271,7 @@
 		32A62F76036468942E80FB243638DAB8 /* function_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = 814BACA23738361E9A48B8736BCEF9C1 /* function_ref.h */; };
 		32ABE4B8754B3B7731D351EC7B7B481F /* xds_routing.cc in Sources */ = {isa = PBXBuildFile; fileRef = A7C4D52815347C681462045CFB3A689E /* xds_routing.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		32ACB823C589DDC70BAFDC72AE083C44 /* resource.upbdefs.h in Copy src/core/ext/upbdefs-generated/envoy/annotations Private Headers */ = {isa = PBXBuildFile; fileRef = FD264BCF2D20F576CF02F7AFB30FE20D /* resource.upbdefs.h */; };
+		32B7F8F1699CF343BC10C18DBB228373 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 4280B19C3F69DB0868F6F74127B1A04F /* YTPlayerView-iframe-player.html */; };
 		32BBD681AFB9F900C32C375804E57DC0 /* lb_policy_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB99018FDD42F2A04D3FF31CA626A56 /* lb_policy_factory.h */; };
 		32D53D3CD3C5BD0E1F999E0D9D3D4B86 /* GDTCORDirectorySizeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA7057FC3F362857BDCE6F3F028797 /* GDTCORDirectorySizeTracker.m */; };
 		32DC241FC9754DC227764F7A10B5EC6C /* pollset.h in Headers */ = {isa = PBXBuildFile; fileRef = B19A807583331DCA7B51FD696ED5F42E /* pollset.h */; };
@@ -1512,7 +1515,6 @@
 		3D71A3C64FF23894A02E2078757839CA /* pcy_cache.c in Sources */ = {isa = PBXBuildFile; fileRef = F242CD209E7EFFC67F7B09C024CB7882 /* pcy_cache.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		3D72332395233BD560B8547184273DA2 /* getrandom_fillin.h in Headers */ = {isa = PBXBuildFile; fileRef = 690656324AC00598F3A03FADB2F059B0 /* getrandom_fillin.h */; };
 		3DBD945727D86CAEA1994C6F783BD946 /* FIRTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9ADD755EA9E90C6891D6DBE1F297B6 /* FIRTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DCED55B4ACD647E9225074C2FF47A35 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 4280B19C3F69DB0868F6F74127B1A04F /* YTPlayerView-iframe-player.html */; };
 		3DD25A464B310683CCE938A7E5C4127B /* route.upb.h in Copy src/core/ext/upb-generated/envoy/config/route/v3 Private Headers */ = {isa = PBXBuildFile; fileRef = 5CF5D2950182082AF057064F8704D882 /* route.upb.h */; };
 		3DDB930CF0B3B1677E86775549C41B61 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E29DAB778726F7F2FA2D6296B117A7D /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E0B016F690EE0934352353D59E9FB81 /* FChange.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7BED3124EDD9A9D644F0E896D96A29 /* FChange.m */; };
@@ -1846,7 +1848,6 @@
 		4B14DCA0DBF942A05993ED954BA48B6C /* resolved_address_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC13635368FA6FD7DC0A62D5DEEA281 /* resolved_address_internal.h */; };
 		4B24A374848D8792AF3F2362D20BACED /* statusor.cc in Sources */ = {isa = PBXBuildFile; fileRef = BF5EDF2032E6054E65E280626960A604 /* statusor.cc */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		4B2848693FBE3DF76AD5AFE6757E24FC /* FIRConfigurationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = F774F1F4AA053F6B7FF7C8D62F3301FF /* FIRConfigurationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4B34F546D192F95D8C75AEE9283FE452 /* YTPlayerView-iframe-playerIPAD.html in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD842D49AEE600F763988277DEF737 /* YTPlayerView-iframe-playerIPAD.html */; };
 		4B41A939ADB7B1537E24020698748580 /* lrs.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D910BB0939813F9462099EB841769E /* lrs.upb.h */; };
 		4B42312FDC70676FC387F82941356E49 /* error_internal.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 6E501E3AF7E7E428C5CC0CA268553590 /* error_internal.h */; };
 		4B48BA2A42B8C5194D1BD5D08B7A49BF /* rpc_service_method.h in Copy impl/codegen Public Headers */ = {isa = PBXBuildFile; fileRef = 97F89B3A86287CC6355D3C91B6E2D335 /* rpc_service_method.h */; };
@@ -2009,6 +2010,7 @@
 		50FD833D8B265D5470BD728A3D21EB3B /* invoke.h in Headers */ = {isa = PBXBuildFile; fileRef = E039F1F9464BADCB61C840B5344AFCF4 /* invoke.h */; };
 		510372A4FB55E7CAAFF6AD6005C94D7E /* FQuerySpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 48057C7346DDF884D2A1D20E10A00AEA /* FQuerySpec.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		510FC31150B53B4CB42B5BA1273114E1 /* promise_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = D492BE1C9B5EBD9A9EB3C2DAAC5A043B /* promise_factory.h */; };
+		51106ABF0A005573FF9532A90758CD2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		5133321F44697A01F8403571100FEAD4 /* migrate.upb.h in Copy src/core/ext/upb-generated/udpa/annotations Private Headers */ = {isa = PBXBuildFile; fileRef = 07A28CE5A6E032C8FE63E5D47075C6E8 /* migrate.upb.h */; };
 		51387978BC70D2B6D935D3685200969C /* verify_mutation.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7DA635CE40054C20E5099F65136F673F /* verify_mutation.cc */; settings = {COMPILER_FLAGS = "$(inherited) -Wreorder -Werror=reorder -Wno-comma -fno-objc-arc"; }; };
 		5143521150E12594F978EA49BF0EF475 /* time_cc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 648F251442545AE1642C8C0278FED307 /* time_cc.cc */; settings = {COMPILER_FLAGS = "-Wno-comma -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
@@ -2129,6 +2131,7 @@
 		566A014D6D0B9538EA4DD4CA88DB1C14 /* fault.upb.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A965BCEE2F70ADCA5A147ED6931AAE2 /* fault.upb.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		5671009809495BD2F33A6C7F0342A381 /* host_port.h in Copy src/core/lib/gprpp Private Headers */ = {isa = PBXBuildFile; fileRef = 5A7B0C3B12527ECB1B1B5CBDF5B34C7C /* host_port.h */; };
 		5676BF8D81E3B0DBB306AE673C3D4218 /* alts_grpc_privacy_integrity_record_protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2469CE460BE127416539AAB694066266 /* alts_grpc_privacy_integrity_record_protocol.h */; };
+		567B74EDDE00C090914C604E75163455 /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C986C8B07C839096B0CE1900075E9 /* youtube-ios-player-helper-dummy.m */; };
 		567E536728B0DCC1C4C0649F998237AF /* typed_struct.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = 600DD9548E92576823CBCF96F1D52DC1 /* typed_struct.upb.h */; };
 		568C1E6AD07CD7B0E7799D0A85C355EF /* ev_posix.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 42E6C2FAF70DE6946FC1FF4EE5CF9218 /* ev_posix.h */; };
 		56946C6C9E0A2489BE4E251C010A7CE3 /* stats.upbdefs.c in Sources */ = {isa = PBXBuildFile; fileRef = 671F759DC3FDC9E016CFCF0FB22105DB /* stats.upbdefs.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
@@ -2677,7 +2680,6 @@
 		6CE62846F66021F89430BC899E584D9B /* http_server_filter.h in Copy src/core/ext/filters/http/server Private Headers */ = {isa = PBXBuildFile; fileRef = E48008C560F8C6DD7B370F09809653E5 /* http_server_filter.h */; };
 		6CF4ABC0DB4E5AFA5710F89A2030ADCC /* siphash.h in Headers */ = {isa = PBXBuildFile; fileRef = B140307D61574B3F5685A36C43ADA00A /* siphash.h */; };
 		6D07E4FC7F32C9E7446B4D16072B1FFB /* FImmutableSortedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B98AF736A6C34BBBF2E9844CDD9F03A /* FImmutableSortedDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6D0A39D0C7754D37CECA745CBF8FE8F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		6D0C00FC84E1B2434DEB5E0E7CDCC576 /* frame_handler.h in Copy src/core/tsi/alts/frame_protector Private Headers */ = {isa = PBXBuildFile; fileRef = D5A236D1BDF561E0BD3AA385521B0D3E /* frame_handler.h */; };
 		6D0E0F76F5B18207BB485DBC828441DD /* stacktrace.h in Headers */ = {isa = PBXBuildFile; fileRef = A6191225F350B4097B430250CB11A7DD /* stacktrace.h */; };
 		6D2C71AABBD34EA13EFA3F7E535C8961 /* callback_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 149321D28F70AA406117ED1E8FC719E2 /* callback_common.h */; };
@@ -3664,7 +3666,6 @@
 		97F1DADCC3CAEA0177C74C6EF3168D92 /* FBLPromise+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = C08BED92223E1F0B3B9E1EB8AB93E953 /* FBLPromise+Catch.m */; };
 		97F56C0F9427D2434E186101FE645177 /* endpoint.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 7A3DB87A47CB2B6EFEE83CD092839D54 /* endpoint.h */; };
 		9803C479444ABB9634A0BBC8ED2D88CC /* cluster.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = CC49EC169C9DF2E1E7305049910B7750 /* cluster.upb.h */; };
-		9811991B4856F590F1598D2285CE54E0 /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C1ED7C0B86DCA3BEFDE91EE488D87 /* youtube-ios-player-helper-dummy.m */; };
 		981D9F2B7363ECAE547EBFC07EB474EF /* upb.hpp in Copy third_party/upb/upb Private Headers */ = {isa = PBXBuildFile; fileRef = E89E8654C4BC44F22E0C6F00563A698F /* upb.hpp */; };
 		981DB743455F0BA335FBAA1AEA003F67 /* x509_set.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E52270A43F6AC752A7AC187C131D987 /* x509_set.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		98209FF838913D199304C3C0AB5F978A /* spinlock.h in Copy base/internal Public Headers */ = {isa = PBXBuildFile; fileRef = 707955A3B798F8AE654CF1BD6DA87DF3 /* spinlock.h */; };
@@ -4194,6 +4195,7 @@
 		AE14EDCA94B7E7DA436324E8B136ECE6 /* kernel_timeout.h in Headers */ = {isa = PBXBuildFile; fileRef = 989B35BC2E6AB3C4610A2ABBDDC8424B /* kernel_timeout.h */; };
 		AE1C0364104C17B5A4D0DB1A45EBD2CC /* GULMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E336D470B9E8B1923E0BC2336866B7B3 /* GULMutableDictionary.m */; };
 		AE363053F4EB1C5A42B540E2D4FA8405 /* rbac.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D7DD54A6510817F6FF410D2DA3944C4 /* rbac.upb.h */; };
+		AE43BA58D1755239A1A3BCD181835CB7 /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D3CDEA947C6FF755CF10388B4D2073 /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE488864C7CCD1ECABD78D92EEBD4406 /* pair.c in Sources */ = {isa = PBXBuildFile; fileRef = 0466450702771537E4812321F227AE2E /* pair.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		AE4CB9A12710C114FECDBA1105A84A21 /* load_system_roots_linux.h in Headers */ = {isa = PBXBuildFile; fileRef = DC751F84B1B771844414AB4714BDD88F /* load_system_roots_linux.h */; };
 		AE4D8F07F911EB4003125140228E6449 /* server_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 26436F7C6FC120398ED9C67356BFFC02 /* server_address.h */; };
@@ -4301,6 +4303,7 @@
 		B28540EEC8F84D235ACADA019D501A14 /* string_view.h in Copy strings Public Headers */ = {isa = PBXBuildFile; fileRef = 97283B93AFE8B1D16A9221C4D0555AA6 /* string_view.h */; };
 		B2A37AD20268465C9AF61E6659719AD0 /* FMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C28BD004EA919ED83A0DE9B9EE79B3 /* FMerge.m */; };
 		B2A8A0AEF702A1435531E53D4ADDACBC /* jacobi.c in Sources */ = {isa = PBXBuildFile; fileRef = C050609967B680F1254D474B27E751F6 /* jacobi.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
+		B2B2055F75C9F855C05E0AC0452E2ED0 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 293A38D2DA9F21CE89E67C19C265144A /* YTPlayerView-iframe-player.html */; };
 		B2C63D06DCF666C7120A0D1800274DC3 /* slice_refcount.cc in Sources */ = {isa = PBXBuildFile; fileRef = 25773CFDDC3371F563C9F19EC4E8F22D /* slice_refcount.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		B2CB776838C759F95DC1F14597BEB455 /* GDTCORClock.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2351C7BB9939934F1D1113A4BB52CD /* GDTCORClock.m */; };
 		B2D3C37641244DC658B4FF7CD90108DE /* derive_key.c in Sources */ = {isa = PBXBuildFile; fileRef = D15FB7FE5F10E0C4C4B80C06C1BAD5C0 /* derive_key.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
@@ -4424,6 +4427,7 @@
 		B81CD2BFD37524C02164478398BAE550 /* FBLPromise+Race.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0DEBC70303DF40D8E8D2029F7FA84 /* FBLPromise+Race.m */; };
 		B82462114434C9423DADBE65AAFAFF94 /* time.h in Copy time Public Headers */ = {isa = PBXBuildFile; fileRef = 736232CE2C5ED2D691C458675655C6A8 /* time.h */; };
 		B82877B11E80131833646489D7E3D08A /* filtered_re2.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C79F6FB3DF8E36EF307D8AE56F02BA /* filtered_re2.h */; };
+		B82CB9821A33474A315196508BE5B83D /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA1069E30633D9904DF2817B1D30933 /* YTPlayerView.m */; };
 		B82E89620D7A1A94D4D916FEF4A75B6E /* resource_name.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = 476476202FC806421336D74CC43A9762 /* resource_name.upb.h */; };
 		B834A532DA55118E437D1E3927EE8320 /* duration.upbdefs.h in Headers */ = {isa = PBXBuildFile; fileRef = D697775153C6EF8CCBB8F36D07CA0836 /* duration.upbdefs.h */; };
 		B83ACB5ADB77F85702CA1AFFFBD7293D /* FIRDatabaseReference_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD20A5C7E038A252C7880C0EF2B7215 /* FIRDatabaseReference_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -4623,7 +4627,6 @@
 		C050CE30D79E6FA82260E1E2D4243B4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		C05C1198992C9A689B23C7F35B089D5F /* channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2ABC63B1FA75CCC9993F4DE1483A5C /* channel.h */; };
 		C05CA430885962E2A6DE9A597CAC3257 /* s3_lib.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B4F48C8D75C31764AD38FE6CE779BDD /* s3_lib.cc */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
-		C060C3A352480D6B4C09F0A146985F95 /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 99B50A413A04393B1C84549136BB8637 /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C06405AB790304939C21323C154BF05B /* tcp_custom.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C050461AE2832FC406659ED1D74F7B5 /* tcp_custom.h */; };
 		C06D40135530C12B20D07111C042E381 /* timestamp.upb.h in Copy src/core/ext/upb-generated/google/protobuf Private Headers */ = {isa = PBXBuildFile; fileRef = FC44E1BE1F13646ADAAADEFCCEEB4B22 /* timestamp.upb.h */; };
 		C07422CBC0F1A52FD03E68AB87F1F8FA /* file_external_account_credentials.h in Headers */ = {isa = PBXBuildFile; fileRef = BFAE422EC2F8A2804E7EF4081BDEEF0A /* file_external_account_credentials.h */; };
@@ -4806,7 +4809,6 @@
 		C79A7E3CAB73039CEFEF9E24E9751B6A /* randen_detect.h in Headers */ = {isa = PBXBuildFile; fileRef = 1420A6CCA8394336C8E7A2598ABDFD45 /* randen_detect.h */; };
 		C79BEED736343F18C2514699511B8681 /* checked.upbdefs.h in Copy src/core/ext/upbdefs-generated/google/api/expr/v1alpha1 Private Headers */ = {isa = PBXBuildFile; fileRef = 4E1CECABAA6ACE21C3E5CD3756B51FA8 /* checked.upbdefs.h */; };
 		C7A29DA11B861DAB9D4C57F31F129222 /* ev_poll_posix.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 86727B3C2888A662FA92D1AC7E269457 /* ev_poll_posix.h */; };
-		C7A6595750213042B027631B6D6545F8 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7785481616DF08F6901C86455D3B7 /* YTPlayerView.m */; };
 		C7AEE045453AE038FACB7B50803FCC2B /* x509_vpm.c in Sources */ = {isa = PBXBuildFile; fileRef = BFFF0A298372AB362DBE62A9F7AFE60C /* x509_vpm.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		C7B05582D122AEE22CC081A6BBFE7A7D /* a_strex.c in Sources */ = {isa = PBXBuildFile; fileRef = C1E5470BC3BC1AAEE8F323C8BA2BD17D /* a_strex.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -DBORINGSSL_PREFIX=GRPC -fno-objc-arc"; }; };
 		C7C504D763A67ADE79E02FF913FE4341 /* empty.upbdefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EBD847F428E3738CCEFFACD171E20A /* empty.upbdefs.h */; };
@@ -5135,7 +5137,6 @@
 		D4A830EE9D82086A7F7B04F96D17876B /* subchannel_interface.h in Copy src/core/ext/filters/client_channel Private Headers */ = {isa = PBXBuildFile; fileRef = C6050A5F8C394FFD4DDC5C964D4A4ACE /* subchannel_interface.h */; };
 		D4AD4F08F13358349D3F305AF0C61A23 /* gethostname_fallback.cc in Sources */ = {isa = PBXBuildFile; fileRef = D81ACFD9CF0ABBD30C68EAC8FD01C918 /* gethostname_fallback.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		D4C9B2C8AFA535004DFB942B71EF6610 /* channel_stack_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6E78117550802C3791F4FDA3D212E96D /* channel_stack_builder.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
-		D4C9DF5CDC79647E91B1EBEB5C132491 /* youtube-ios-player-helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B0E80CC2A8E0FEAC7EF6189078A7B1 /* youtube-ios-player-helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4CE406158B32081C1F76EA5E80C7DE5 /* server_context.cc in Sources */ = {isa = PBXBuildFile; fileRef = F3C075118206A118093947337040E069 /* server_context.cc */; settings = {COMPILER_FLAGS = "-Wno-comma -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		D4E078F7F25BCB854445CE5DC206B67E /* eds.upbdefs.c in Sources */ = {isa = PBXBuildFile; fileRef = A6F595DFC12DCF3F54C6419C12BD6C37 /* eds.upbdefs.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DBORINGSSL_PREFIX=GRPC -Wno-unreachable-code -Wno-shorten-64-to-32 -fno-objc-arc"; }; };
 		D4E357AC5174B6DA901E4B8BEE2BE8E6 /* google_default_credentials.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D724DD3F38BAAAEFFABBC8478E88F39 /* google_default_credentials.h */; };
@@ -6252,13 +6253,6 @@
 			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
 			remoteInfo = GoogleAppMeasurement;
 		};
-		3E0F7B43DB85A53E212EA62FC43CF824 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 77ED297F2F4FCA19034B2BEEBABE669B;
-			remoteInfo = "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift";
-		};
 		412FB65482DDEFB4A70A4903BFA2B428 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -6279,13 +6273,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
-		};
-		483F999D232DAD486B0D686EFC4763E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2213CA2A540DD9598AA3D51E6591493B;
-			remoteInfo = "youtube-ios-player-helper-swift";
 		};
 		4CBBD1FC8E7614610FA18BAE03FA3A36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -6315,6 +6302,13 @@
 			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
 			remoteInfo = nanopb;
 		};
+		55164A27E1F170D8EECD1A6F5679B3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2213CA2A540DD9598AA3D51E6591493B;
+			remoteInfo = "youtube-ios-player-helper-swift";
+		};
 		5A1D4A267E47C04A4655EDD7B834E8E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -6328,6 +6322,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3B8CAC3956E59F928387D0C6310E3B37;
 			remoteInfo = "gRPC-C++-gRPCCertificates-Cpp";
+		};
+		5AC73799C430D4135FE2CB598CD37A71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3820B3D61248CD2A225DA312BC70F110;
+			remoteInfo = "youtube-ios-player-helper-Assets";
 		};
 		62D01AC957DCDA24131275201535AFEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -6503,6 +6504,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
 			remoteInfo = FirebaseCore;
+		};
+		C49B386E27DD28AE54CEB72A486D4126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77ED297F2F4FCA19034B2BEEBABE669B;
+			remoteInfo = "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift";
 		};
 		C739AC63328D345445B7177D0B5F8103 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -12959,6 +12967,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		001E7471A3381B2611C013A7B58D8068 /* youtube-ios-player-helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.release.xcconfig"; sourceTree = "<group>"; };
 		004E602126644DAB4766D5C3BA82C741 /* FIRDatabaseConfig_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseConfig_Private.h; path = FirebaseDatabase/Sources/FIRDatabaseConfig_Private.h; sourceTree = "<group>"; };
 		005E454D3128C29DC38C63C4E6CC0165 /* FIRAuthAPNSTokenType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthAPNSTokenType.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthAPNSTokenType.h; sourceTree = "<group>"; };
 		005FE2B4142FFC5D840ED172F9DEE018 /* format.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = format.cc; path = table/format.cc; sourceTree = "<group>"; };
@@ -13004,6 +13013,7 @@
 		029374AD5FD2044D391A6C178C64BE4C /* lhash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lhash.h; path = src/include/openssl/lhash.h; sourceTree = "<group>"; };
 		0297F336F785B51CDDF7BFFB353D0214 /* port_platform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port_platform.h; path = include/grpc/support/port_platform.h; sourceTree = "<group>"; };
 		02A12DD66EEDE813AF486FBA38030E8A /* status_payload_printer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status_payload_printer.h; path = absl/status/status_payload_printer.h; sourceTree = "<group>"; };
+		02A4186AD27989FF0A643813A460026D /* youtube-ios-player-helper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "youtube-ios-player-helper-Info.plist"; sourceTree = "<group>"; };
 		02ACD192C06B0F354AF2707E75AF457A /* FIRBundleUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRBundleUtil.m; path = FirebaseCore/Sources/FIRBundleUtil.m; sourceTree = "<group>"; };
 		02BE3982AC56ABB9C3A97503787FC859 /* channel_cc.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = channel_cc.cc; path = src/cpp/client/channel_cc.cc; sourceTree = "<group>"; };
 		02BF2B986BC0B29FFD0574A9E37A43E7 /* optimization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = optimization.h; path = absl/base/optimization.h; sourceTree = "<group>"; };
@@ -13029,7 +13039,6 @@
 		03DEB7A9F4F116E7BEAB86BEF92435AC /* context_params.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = context_params.upb.h; path = "src/core/ext/upb-generated/xds/core/v3/context_params.upb.h"; sourceTree = "<group>"; };
 		03E13B5DF1DB1C35D3F8D10111A7306C /* message_allocator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = message_allocator.h; path = include/grpcpp/support/message_allocator.h; sourceTree = "<group>"; };
 		04082F7EB4E560ACB52E10FEC676FB05 /* cpu-ppc64le.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "cpu-ppc64le.c"; path = "src/crypto/cpu-ppc64le.c"; sourceTree = "<group>"; };
-		041C1ED7C0B86DCA3BEFDE91EE488D87 /* youtube-ios-player-helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "youtube-ios-player-helper-dummy.m"; sourceTree = "<group>"; };
 		04460B3C9496328EEDB655B3C601DCC5 /* create_thread_identity.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = create_thread_identity.cc; path = absl/synchronization/internal/create_thread_identity.cc; sourceTree = "<group>"; };
 		044AA64B1B0F0E1053A7BC386847EBE2 /* trust_token.c */ = {isa = PBXFileReference; includeInIndex = 1; name = trust_token.c; path = src/crypto/trust_token/trust_token.c; sourceTree = "<group>"; };
 		045011B0AB91DA3EB737DCBB8D5A1A79 /* polling_entity.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = polling_entity.cc; path = src/core/lib/iomgr/polling_entity.cc; sourceTree = "<group>"; };
@@ -13243,7 +13252,6 @@
 		0F040F2327DDCD673BC14EB01AF6482D /* arg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = arg.h; path = absl/strings/internal/str_format/arg.h; sourceTree = "<group>"; };
 		0F0C1D5B0B6A05FD28BA68B093A87076 /* FParsedUrl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FParsedUrl.m; path = FirebaseDatabase/Sources/Utilities/FParsedUrl.m; sourceTree = "<group>"; };
 		0F0EB94BA57933C9CD2089E523781F0B /* bad_variant_access.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = bad_variant_access.cc; path = absl/types/bad_variant_access.cc; sourceTree = "<group>"; };
-		0F10E693ABAC353109F90AF073B743B1 /* youtube-ios-player-helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.release.xcconfig"; sourceTree = "<group>"; };
 		0F30E6A65EF902264D9540E63750C8AF /* cpu_iphone.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cpu_iphone.cc; path = src/core/lib/gpr/cpu_iphone.cc; sourceTree = "<group>"; };
 		0F475969B115A4041D5E5CB0119314CC /* map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = map.h; path = src/core/lib/promise/map.h; sourceTree = "<group>"; };
 		0F4AD8AFD39396E01369425E38C65EB6 /* udp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = udp.c; path = src/unix/udp.c; sourceTree = "<group>"; };
@@ -13437,8 +13445,8 @@
 		18993BC11252DEA005A949037579A806 /* delocate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = delocate.h; path = src/crypto/fipsmodule/delocate.h; sourceTree = "<group>"; };
 		18A11FC1445DAF1C00ABE5E83DAF1460 /* prog.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = prog.cc; path = third_party/re2/re2/prog.cc; sourceTree = "<group>"; };
 		18A1B289C8F5C9134BC21F846752BF7E /* xds_routing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds_routing.h; path = src/core/ext/xds/xds_routing.h; sourceTree = "<group>"; };
-		18A7785481616DF08F6901C86455D3B7 /* YTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTPlayerView.m; path = Classes/YTPlayerView.m; sourceTree = "<group>"; };
 		18D0C471BDECB3B0D595AA55314C933B /* array_contains_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = array_contains_filter.cc; path = Firestore/core/src/core/array_contains_filter.cc; sourceTree = "<group>"; };
+		18D3CDEA947C6FF755CF10388B4D2073 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Sources/YTPlayerView.h; sourceTree = "<group>"; };
 		18DB091C90E0AE590C33948AB37CE16C /* FIRFirestore.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FIRFirestore.mm; path = Firestore/Source/API/FIRFirestore.mm; sourceTree = "<group>"; };
 		18E50498D8390DE15DF8A15F850F1524 /* FServerValues.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FServerValues.m; path = FirebaseDatabase/Sources/Core/FServerValues.m; sourceTree = "<group>"; };
 		18EBD59279033D9F484B073840148856 /* sync_engine.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = sync_engine.cc; path = Firestore/core/src/core/sync_engine.cc; sourceTree = "<group>"; };
@@ -13593,6 +13601,7 @@
 		216918B317FA842A8798C1A9BB50D6A8 /* sys_epoll_wrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sys_epoll_wrapper.h; path = src/core/lib/iomgr/sys_epoll_wrapper.h; sourceTree = "<group>"; };
 		216E88F5C3A2A1ACE4722B16FFA049F3 /* is_epollexclusive_available.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = is_epollexclusive_available.cc; path = src/core/lib/iomgr/is_epollexclusive_available.cc; sourceTree = "<group>"; };
 		216F19896AD66FEB1BB574C2C1E88FFD /* YTPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTPlayerView.swift; path = "youtube-ios-player-helper-swift/Classes/YTPlayerView.swift"; sourceTree = "<group>"; };
+		21825213BF630457D19FBE53FD8A839C /* ResourceBundle-Assets-youtube-ios-player-helper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Assets-youtube-ios-player-helper-Info.plist"; sourceTree = "<group>"; };
 		218B0675D39DDC0830B2961FC78713BB /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h; sourceTree = "<group>"; };
 		218C99C39F0FFBE1E409491B201A00A9 /* channelz_registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channelz_registry.h; path = src/core/lib/channel/channelz_registry.h; sourceTree = "<group>"; };
 		219526A6FE9F02F333352EF70BD85A6F /* seed_material.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = seed_material.h; path = absl/random/internal/seed_material.h; sourceTree = "<group>"; };
@@ -13717,6 +13726,7 @@
 		28F6A198F938F2FAA602F670B07BFDA9 /* cord_rep_ring.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cord_rep_ring.cc; path = absl/strings/internal/cord_rep_ring.cc; sourceTree = "<group>"; };
 		2902588946272EF5C2B5B2071374E2A3 /* gRPC-C++-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gRPC-C++-prefix.pch"; sourceTree = "<group>"; };
 		29235824BBE23348664982359C6A19C6 /* GoogleUtilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.release.xcconfig; sourceTree = "<group>"; };
+		293A38D2DA9F21CE89E67C19C265144A /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; includeInIndex = 1; name = "YTPlayerView-iframe-player.html"; path = "Sources/Assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		299C18EFD906D0DB966A851D27B4DF14 /* connector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = connector.h; path = src/core/ext/filters/client_channel/connector.h; sourceTree = "<group>"; };
 		29A653BDA5E6BEAE994E603FEA5EF2EC /* GULKeychainStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainStorage.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainStorage.m; sourceTree = "<group>"; };
 		29A7EB10D7E5D7631B883728DFB6F56E /* firestore_version.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = firestore_version.cc; path = Firestore/core/src/firestore_version.cc; sourceTree = "<group>"; };
@@ -14036,7 +14046,6 @@
 		3CD7126A39E68685E2EE66F3E4E8A4D0 /* FPersistenceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPersistenceManager.m; path = FirebaseDatabase/Sources/Persistence/FPersistenceManager.m; sourceTree = "<group>"; };
 		3CDC19A3D1CB4263ED6AA5EA4D37DC93 /* pmbtoken.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pmbtoken.c; path = src/crypto/trust_token/pmbtoken.c; sourceTree = "<group>"; };
 		3CE05E94AE7E99246A07EF5DB062446C /* config_dump.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config_dump.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/admin/v3/config_dump.upbdefs.h"; sourceTree = "<group>"; };
-		3CE48A1AF66F44838B2A0A64E740DA99 /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
 		3CE90BC9425D10E2786BEA1881271328 /* decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = decode.h; path = third_party/upb/upb/decode.h; sourceTree = "<group>"; };
 		3CF7AF45218200D1CA97845B30231B83 /* byte_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = byte_buffer.h; path = include/grpc/byte_buffer.h; sourceTree = "<group>"; };
 		3D0C40129CE5C8AD8BDD0EFEB1BA5602 /* FIRVerifyClientRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyClientRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyClientRequest.h; sourceTree = "<group>"; };
@@ -14251,7 +14260,6 @@
 		48B7647A1FCC95DF8F1E94098C7FA6F0 /* mutation_batch.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = mutation_batch.cc; path = Firestore/core/src/model/mutation_batch.cc; sourceTree = "<group>"; };
 		48D310FF5D89F896CA397AA8A3E97AF3 /* extension.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = extension.upb.h; path = "src/core/ext/upb-generated/envoy/config/core/v3/extension.upb.h"; sourceTree = "<group>"; };
 		492F7293014F3CBA0E23617693520936 /* base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base.h; path = src/include/openssl/base.h; sourceTree = "<group>"; };
-		493543C5494CF5A974EAA5639ADDF441 /* Assets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Assets.bundle; path = "youtube-ios-player-helper/Assets.bundle"; sourceTree = "<group>"; };
 		4938936A059DFC11F2AAEAA56F0371FF /* FTupleTSN.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleTSN.h; path = FirebaseDatabase/Sources/Utilities/Tuples/FTupleTSN.h; sourceTree = "<group>"; };
 		496087A44CB0AB56FE9A3BB4F188E20B /* FIRAuthDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthDispatcher.m; path = FirebaseAuth/Sources/Auth/FIRAuthDispatcher.m; sourceTree = "<group>"; };
 		4972E92F21644E73A5D1001F8543F501 /* FPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPath.h; path = FirebaseDatabase/Sources/Core/Utilities/FPath.h; sourceTree = "<group>"; };
@@ -14400,6 +14408,7 @@
 		5220CD9272971723DD61EDBF44C8C013 /* FIRAuthWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthWebViewController.h; path = FirebaseAuth/Sources/Utilities/FIRAuthWebViewController.h; sourceTree = "<group>"; };
 		522B0277681DAD171419B4167D6A0F3D /* def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = def.h; path = third_party/upb/upb/def.h; sourceTree = "<group>"; };
 		523DC542DAC30E410E5615C884049CCD /* http_proxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = http_proxy.h; path = src/core/ext/filters/client_channel/http_proxy.h; sourceTree = "<group>"; };
+		524BC2D53A874F9B512E77023EA9031E /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
 		52714CA3B4C98812BD0E15A2266EFDA8 /* race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = race.h; path = src/core/lib/promise/race.h; sourceTree = "<group>"; };
 		527B4E31439C530BF941CB74F611E1E3 /* metadata_batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metadata_batch.h; path = src/core/lib/transport/metadata_batch.h; sourceTree = "<group>"; };
 		5280AA430E3F1DEFAE1B6AB97CA197CC /* xds_endpoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds_endpoint.h; path = src/core/ext/xds/xds_endpoint.h; sourceTree = "<group>"; };
@@ -15004,7 +15013,6 @@
 		75AA07630297BF276D9C87AE7ECFABCA /* FIRDataSnapshot_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDataSnapshot_Private.h; path = FirebaseDatabase/Sources/Api/Private/FIRDataSnapshot_Private.h; sourceTree = "<group>"; };
 		75BADEA38721BFD8779C370D2CF24B2C /* p256_64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = p256_64.h; path = src/third_party/fiat/p256_64.h; sourceTree = "<group>"; };
 		75BE126397F16368137B0A37455338C0 /* extension.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = extension.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/config/core/v3/extension.upbdefs.h"; sourceTree = "<group>"; };
-		75D8B066FB6B2B7B942F65E61D0C6EF0 /* youtube-ios-player-helper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "youtube-ios-player-helper-Info.plist"; sourceTree = "<group>"; };
 		75E0B05C65C583775C084FCD74D0D847 /* p256_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = p256_table.h; path = src/crypto/fipsmodule/ec/p256_table.h; sourceTree = "<group>"; };
 		75E4C3DA7C33C3B8F3C092E9AEB8DFE5 /* async_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = async_stream.h; path = include/grpcpp/impl/codegen/async_stream.h; sourceTree = "<group>"; };
 		75FD21F7306D679967FE605EE2C90548 /* cord_rep_btree_navigator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cord_rep_btree_navigator.cc; path = absl/strings/internal/cord_rep_btree_navigator.cc; sourceTree = "<group>"; };
@@ -15306,6 +15314,7 @@
 		87580DA64A7E82C97BB0A7706C2C9A68 /* FAckUserWrite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAckUserWrite.m; path = FirebaseDatabase/Sources/Core/Operation/FAckUserWrite.m; sourceTree = "<group>"; };
 		876519A27A329925E54EEBA6575F07F1 /* memory_eager_reference_delegate.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = memory_eager_reference_delegate.cc; path = Firestore/core/src/local/memory_eager_reference_delegate.cc; sourceTree = "<group>"; };
 		876B1AAD6308677B068E85188444EB2B /* percent.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = percent.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/type/v3/percent.upbdefs.h"; sourceTree = "<group>"; };
+		8774B5A2BA4FAB7BA33E2F01742CB4D3 /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
 		87B468582B421D4B5BD5DEDBE7373B3B /* identity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = identity.h; path = absl/base/internal/identity.h; sourceTree = "<group>"; };
 		87D6776C46C253D4C73E1607C5A408B2 /* grpc_service.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = grpc_service.upb.h; path = "src/core/ext/upb-generated/envoy/config/core/v3/grpc_service.upb.h"; sourceTree = "<group>"; };
 		87E5B2A700773153B365193C9C04C467 /* random.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random.h; path = absl/random/random.h; sourceTree = "<group>"; };
@@ -15620,7 +15629,6 @@
 		995B095E8FFD39434E68A1F2713BC40F /* type_traits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = type_traits.h; path = absl/meta/type_traits.h; sourceTree = "<group>"; };
 		998AC0268BBD4013946FB6ACCF29C7CC /* NSURLSession+GULPromises.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GULPromises.m"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m"; sourceTree = "<group>"; };
 		9999C700DB81328288BE6A6BFF250EAB /* ev_poll_posix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ev_poll_posix.h; path = src/core/lib/iomgr/ev_poll_posix.h; sourceTree = "<group>"; };
-		99B50A413A04393B1C84549136BB8637 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Classes/YTPlayerView.h; sourceTree = "<group>"; };
 		99BD97590B12859599F189B17251FD76 /* stringpiece.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stringpiece.h; path = third_party/re2/re2/stringpiece.h; sourceTree = "<group>"; };
 		99BEA652BC76D8B535FF5C1FB796B4C4 /* FIRFederatedAuthProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFederatedAuthProvider.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRFederatedAuthProvider.h; sourceTree = "<group>"; };
 		99CCB441CCB1D8394844A93D6379B409 /* xds.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds.h; path = src/core/ext/filters/client_channel/lb_policy/xds/xds.h; sourceTree = "<group>"; };
@@ -15725,6 +15733,7 @@
 		9F1FA9726EE839924C4F3A55D2FEE34E /* json_writer.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = json_writer.cc; path = src/core/lib/json/json_writer.cc; sourceTree = "<group>"; };
 		9F212E8202B26AF7C27B7A36E359C9C2 /* json_token.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = json_token.h; path = src/core/lib/security/credentials/jwt/json_token.h; sourceTree = "<group>"; };
 		9F2804FA7D0F5F95BE465BB910293622 /* wrappers.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = wrappers.upbdefs.h; path = "src/core/ext/upbdefs-generated/google/protobuf/wrappers.upbdefs.h"; sourceTree = "<group>"; };
+		9F3C986C8B07C839096B0CE1900075E9 /* youtube-ios-player-helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "youtube-ios-player-helper-dummy.m"; sourceTree = "<group>"; };
 		9F4CEB25885F84D0D099C72B06989EC4 /* socket_utils_posix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socket_utils_posix.h; path = src/core/lib/iomgr/socket_utils_posix.h; sourceTree = "<group>"; };
 		9F510F4102A40F16D4AC2DEB81D459E6 /* credentials.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = credentials.h; path = src/core/lib/security/credentials/credentials.h; sourceTree = "<group>"; };
 		9F56F1759CEAA9BD3FFD903EFDD3311F /* sync.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sync.h; path = src/core/lib/gprpp/sync.h; sourceTree = "<group>"; };
@@ -15778,7 +15787,6 @@
 		A2763DCF1C5F4833AD32ECC7C8E8E3F4 /* jwt_verifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = jwt_verifier.h; path = src/core/lib/security/credentials/jwt/jwt_verifier.h; sourceTree = "<group>"; };
 		A27756FD163E983C5279A46F4FC30F04 /* compression_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compression_types.h; path = include/grpc/impl/codegen/compression_types.h; sourceTree = "<group>"; };
 		A28218C542FEEC547A8B6AD94AB24BD1 /* FIRTransactionResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRTransactionResult.m; path = FirebaseDatabase/Sources/Api/FIRTransactionResult.m; sourceTree = "<group>"; };
-		A28517AE9B13328A0461105CCE683BA3 /* youtube-ios-player-helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.debug.xcconfig"; sourceTree = "<group>"; };
 		A2AA097E76495833792A4C9A622EA263 /* percent.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = percent.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/type/v3/percent.upbdefs.h"; sourceTree = "<group>"; };
 		A2AF59593C76DE30BF3D40D0A92B5BEB /* str_format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = str_format.h; path = absl/strings/str_format.h; sourceTree = "<group>"; };
 		A2C18F56828228219F176CA2BA03AFEE /* error_apple.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = error_apple.mm; path = Firestore/core/src/util/error_apple.mm; sourceTree = "<group>"; };
@@ -16005,6 +16013,7 @@
 		AF89E3E6074EF1994910D1F0D93D6A68 /* route_components.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = route_components.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/config/route/v3/route_components.upbdefs.h"; sourceTree = "<group>"; };
 		AF943AD01A3BEC70A0D5F6A706266226 /* FirebaseAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseAuth-umbrella.h"; sourceTree = "<group>"; };
 		AF9CC0787B1B9608020102026AB47B76 /* FIRFirestore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFirestore.h; path = Firestore/Source/Public/FirebaseFirestore/FIRFirestore.h; sourceTree = "<group>"; };
+		AFA1069E30633D9904DF2817B1D30933 /* YTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTPlayerView.m; path = Sources/YTPlayerView.m; sourceTree = "<group>"; };
 		AFB517629A94347C9D3127E5E7EBF79D /* config_dump.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config_dump.upb.h; path = "src/core/ext/upb-generated/envoy/admin/v3/config_dump.upb.h"; sourceTree = "<group>"; };
 		AFC4C9EF61E720A5BAEA73D3CD60F03B /* metadata_batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metadata_batch.h; path = src/core/lib/transport/metadata_batch.h; sourceTree = "<group>"; };
 		B01BBB999AFFA91AC851822DB6990502 /* metadata.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metadata.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/type/metadata/v3/metadata.upbdefs.h"; sourceTree = "<group>"; };
@@ -16016,7 +16025,6 @@
 		B0A208C382A404EC63415239FD76399B /* FSnapshotHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSnapshotHolder.h; path = FirebaseDatabase/Sources/Core/FSnapshotHolder.h; sourceTree = "<group>"; };
 		B0A68AA20BFBA395CA8488F462FCFDA1 /* stl_type_traits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stl_type_traits.h; path = absl/strings/internal/stl_type_traits.h; sourceTree = "<group>"; };
 		B0A94A0C1829C30C15609DF6B5CD20AE /* util.c */ = {isa = PBXFileReference; includeInIndex = 1; name = util.c; path = src/crypto/fipsmodule/ec/util.c; sourceTree = "<group>"; };
-		B0B0E80CC2A8E0FEAC7EF6189078A7B1 /* youtube-ios-player-helper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-umbrella.h"; sourceTree = "<group>"; };
 		B0C14CC33513F99A0E1908BC3681F454 /* randen_round_keys.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = randen_round_keys.cc; path = absl/random/internal/randen_round_keys.cc; sourceTree = "<group>"; };
 		B0E0C8C7F0301178154731C6CF76700D /* ssl_utils_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl_utils_config.h; path = src/core/lib/security/security_connector/ssl_utils_config.h; sourceTree = "<group>"; };
 		B115E96DB0E0A7E8A8DBDF822CFB9DC5 /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
@@ -16227,7 +16235,6 @@
 		BC8E7D01B36F1EDB793D5BEC0B93BDAF /* spinlock_akaros.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = spinlock_akaros.inc; path = absl/base/internal/spinlock_akaros.inc; sourceTree = "<group>"; };
 		BC9A5F2D1900D0BDB454698AB2270CF0 /* internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal.h; path = src/crypto/trust_token/internal.h; sourceTree = "<group>"; };
 		BCB387A54B10E61CE811D848C597282B /* dtls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dtls1.h; path = src/include/openssl/dtls1.h; sourceTree = "<group>"; };
-		BCBAD8257552F3E4BE9DCB5732E0DA87 /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
 		BCCBA697D6A7AE8A3D15AB613A262AB8 /* e_os2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = e_os2.h; path = src/include/openssl/e_os2.h; sourceTree = "<group>"; };
 		BCCF81C890BF078B3974E6D5BDBA2E8D /* certificate_provider_registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = certificate_provider_registry.h; path = src/core/ext/xds/certificate_provider_registry.h; sourceTree = "<group>"; };
 		BCE0DBCFFE409539CD4B32B1A1F12CE8 /* tls.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tls.upb.h; path = "src/core/ext/upb-generated/envoy/extensions/transport_sockets/tls/v3/tls.upb.h"; sourceTree = "<group>"; };
@@ -16647,6 +16654,7 @@
 		D66CB6CBDDC2D0E38D0613FAC34B33B9 /* timestamp.upbdefs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = timestamp.upbdefs.c; path = "src/core/ext/upbdefs-generated/google/protobuf/timestamp.upbdefs.c"; sourceTree = "<group>"; };
 		D66D721D59ACA45FD77DCF4D133D7E54 /* error_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error_utils.h; path = src/core/lib/transport/error_utils.h; sourceTree = "<group>"; };
 		D6740C350651CD302FE1461B13B84A81 /* server_config_selector.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = server_config_selector.cc; path = src/core/ext/filters/server_config_selector/server_config_selector.cc; sourceTree = "<group>"; };
+		D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "youtube-ios-player-helper-Assets"; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68DBE7BE6835AB295540BADAAD68AA4 /* index_entry.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = index_entry.cc; path = Firestore/core/src/index/index_entry.cc; sourceTree = "<group>"; };
 		D697775153C6EF8CCBB8F36D07CA0836 /* duration.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = duration.upbdefs.h; path = "src/core/ext/upbdefs-generated/google/protobuf/duration.upbdefs.h"; sourceTree = "<group>"; };
 		D69FBD860B335FB6B383ECAC024C7D62 /* global_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = global_config.h; path = src/core/lib/gprpp/global_config.h; sourceTree = "<group>"; };
@@ -16896,6 +16904,7 @@
 		E50950B9E97CE0FB0AA71A24A556CBAD /* city.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = city.h; path = absl/hash/internal/city.h; sourceTree = "<group>"; };
 		E516AA9E6321F141F7927578BEE38F83 /* FIROAuthCredential_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROAuthCredential_Internal.h; path = FirebaseAuth/Sources/AuthProvider/OAuth/FIROAuthCredential_Internal.h; sourceTree = "<group>"; };
 		E519CCD189ECA793ED206C5EA7B89726 /* load_bundle_task.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = load_bundle_task.cc; path = Firestore/core/src/api/load_bundle_task.cc; sourceTree = "<group>"; };
+		E5401E2F67F8964068E4F654EA9ECCB1 /* youtube-ios-player-helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.debug.xcconfig"; sourceTree = "<group>"; };
 		E57D506E244109134802F0EA5D390802 /* method_handler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = method_handler.h; path = include/grpcpp/impl/codegen/method_handler.h; sourceTree = "<group>"; };
 		E5907FECE2A66B0C7947306F59F923C7 /* outlier_detection.upbdefs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = outlier_detection.upbdefs.c; path = "src/core/ext/upbdefs-generated/envoy/config/cluster/v3/outlier_detection.upbdefs.c"; sourceTree = "<group>"; };
 		E59E9DA5DE218F8B43483E36A277CB86 /* futex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = futex.h; path = absl/synchronization/internal/futex.h; sourceTree = "<group>"; };
@@ -17229,6 +17238,7 @@
 		F8B7A746C1FE8B14EABE8F3A8CC21E2B /* resolver.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = resolver.upb.h; path = "src/core/ext/upb-generated/envoy/config/core/v3/resolver.upb.h"; sourceTree = "<group>"; };
 		F8BC2A2CCC6D686018ED469F9702CB71 /* FirebaseCoreInternal-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FirebaseCoreInternal-Info.plist"; sourceTree = "<group>"; };
 		F8CA1259DC9C6420272AA32B1CC52B7B /* Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.debug.xcconfig; sourceTree = "<group>"; };
+		F8D3463AB067F8BF3F2C5EFF03AA4E24 /* youtube-ios-player-helper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-umbrella.h"; sourceTree = "<group>"; };
 		F90848E8955D32E724DBB467115CB47C /* atm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = atm.h; path = include/grpc/support/atm.h; sourceTree = "<group>"; };
 		F92214AF4DD2B5D9F14B06821933C413 /* retry_filter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = retry_filter.h; path = src/core/ext/filters/client_channel/retry_filter.h; sourceTree = "<group>"; };
 		F9413E64A10FFDDA33159FE088035D79 /* fuchsia.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fuchsia.c; path = src/crypto/rand_extra/fuchsia.c; sourceTree = "<group>"; };
@@ -17361,10 +17371,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02D2FC9D7F51C25FE0274E1655310527 /* Frameworks */ = {
+		041BB8AF0D1C2675122E6653A7F6B0B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51106ABF0A005573FF9532A90758CD2A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -17373,6 +17384,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BBFEF0988E9DC6F3E22E40B8587DBDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		256728420598A8C9DDB0A4CEA0D7D2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -17456,11 +17474,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95B293D35F455FFA8E115A4EE6B854AC /* Frameworks */ = {
+		9D8045F5CF2FD5C6DC6C4BCB20AAA973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0A39D0C7754D37CECA745CBF8FE8F4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -17554,14 +17571,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0029E13FA404E0C757551B3B714C66A5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				493543C5494CF5A974EAA5639ADDF441 /* Assets.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		02B141CD80337626B2031D44F874ADC3 /* FirebaseCoreInternal */ = {
 			isa = PBXGroup;
 			children = (
@@ -17695,6 +17704,22 @@
 				E0EDFFF5CCDE50CB05C80C4F6D1262B7 /* hash.h */,
 			);
 			name = hash;
+			sourceTree = "<group>";
+		};
+		0B5A76CBB497A051B916FB01B42C81E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				21825213BF630457D19FBE53FD8A839C /* ResourceBundle-Assets-youtube-ios-player-helper-Info.plist */,
+				8774B5A2BA4FAB7BA33E2F01742CB4D3 /* youtube-ios-player-helper.modulemap */,
+				9F3C986C8B07C839096B0CE1900075E9 /* youtube-ios-player-helper-dummy.m */,
+				02A4186AD27989FF0A643813A460026D /* youtube-ios-player-helper-Info.plist */,
+				524BC2D53A874F9B512E77023EA9031E /* youtube-ios-player-helper-prefix.pch */,
+				F8D3463AB067F8BF3F2C5EFF03AA4E24 /* youtube-ios-player-helper-umbrella.h */,
+				E5401E2F67F8964068E4F654EA9ECCB1 /* youtube-ios-player-helper.debug.xcconfig */,
+				001E7471A3381B2611C013A7B58D8068 /* youtube-ios-player-helper.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
 		0C006367EE8C7C02E050D8764956416D /* AppDelegateSwizzler */ = {
@@ -18175,37 +18200,6 @@
 				38A8BCB03912DEBA654409BADC2B4612 /* randen_traits.h */,
 			);
 			name = platform;
-			sourceTree = "<group>";
-		};
-		197B520B8B60899178419A543BE1DED7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF96B57ADE05E8909F823BDF6868B3E3 /* abseil */,
-				514D7742C6CBB0BDBD9984AEE97DDFDE /* BoringSSL-GRPC */,
-				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth */,
-				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
-				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics */,
-				148D0F9E8C7373FEAF40D800FC5F1BAA /* FirebaseCoreInternal */,
-				51671C73F008B5C0C3751B3855999213 /* FirebaseDatabase */,
-				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore */,
-				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */,
-				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */,
-				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
-				1911113E0FBF13CFF9132E5FF7685228 /* gRPC-C++ */,
-				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */,
-				B471867C535B02FA55D87E260F6480F8 /* gRPC-Core */,
-				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
-				0A9F46A999C47653013D3AD854352507 /* leveldb-library */,
-				6BC54C3D03DEBF9C3A40965E69CAE039 /* Libuv-gRPC */,
-				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
-				3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */,
-				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
-				8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */,
-				D1B9006797130CCA0509E62885056FF4 /* youtube-ios-player-helper-swift */,
-				CE9794097617C061A1F5788DF89644AE /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */,
-				1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1AD7FB568642FFA74DD4C78E656D8BE1 /* endian */ = {
@@ -19301,6 +19295,14 @@
 			name = distributions;
 			sourceTree = "<group>";
 		};
+		665C8E4B058747497BB4A9BF27E28DCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				293A38D2DA9F21CE89E67C19C265144A /* YTPlayerView-iframe-player.html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6670D8EBEB5BDA0CEF93169D6A5A8261 /* hashtablez_sampler */ = {
 			isa = PBXGroup;
 			children = (
@@ -19434,6 +19436,38 @@
 				219526A6FE9F02F333352EF70BD85A6F /* seed_material.h */,
 			);
 			name = seed_material;
+			sourceTree = "<group>";
+		};
+		6EAA551FBE5774A81601687CAAC8FC1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF96B57ADE05E8909F823BDF6868B3E3 /* abseil */,
+				514D7742C6CBB0BDBD9984AEE97DDFDE /* BoringSSL-GRPC */,
+				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth */,
+				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
+				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics */,
+				148D0F9E8C7373FEAF40D800FC5F1BAA /* FirebaseCoreInternal */,
+				51671C73F008B5C0C3751B3855999213 /* FirebaseDatabase */,
+				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore */,
+				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */,
+				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
+				1911113E0FBF13CFF9132E5FF7685228 /* gRPC-C++ */,
+				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */,
+				B471867C535B02FA55D87E260F6480F8 /* gRPC-Core */,
+				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
+				0A9F46A999C47653013D3AD854352507 /* leveldb-library */,
+				6BC54C3D03DEBF9C3A40965E69CAE039 /* Libuv-gRPC */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
+				3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */,
+				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
+				8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */,
+				D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */,
+				D1B9006797130CCA0509E62885056FF4 /* youtube-ios-player-helper-swift */,
+				CE9794097617C061A1F5788DF89644AE /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */,
+				1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6F12ABEAD3B68AE7943D0E322F7C02F4 /* Support Files */ = {
@@ -20032,7 +20066,7 @@
 				336120590319A82C98CD60FBE9293B4A /* Libuv-gRPC */,
 				36DD89520A4F13CF67BE8F3C6AFBA3C7 /* nanopb */,
 				9FB9F06866900E6F1D0EE2EC95E835EC /* PromisesObjC */,
-				E04B64D37A545FFAFD0076009913039D /* youtube-ios-player-helper */,
+				D89B163AD51F934AB3AF996000863D87 /* youtube-ios-player-helper */,
 				B7040CDB906EEDACD344A81CB0832B86 /* youtube-ios-player-helper-swift */,
 				54C0336B5443BF3B017376E48228DABE /* YouTubePlayer */,
 			);
@@ -22928,21 +22962,6 @@
 			name = distribution_caller;
 			sourceTree = "<group>";
 		};
-		CA09E535001661814C2DBA51E379E498 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BCBAD8257552F3E4BE9DCB5732E0DA87 /* youtube-ios-player-helper.modulemap */,
-				041C1ED7C0B86DCA3BEFDE91EE488D87 /* youtube-ios-player-helper-dummy.m */,
-				75D8B066FB6B2B7B942F65E61D0C6EF0 /* youtube-ios-player-helper-Info.plist */,
-				3CE48A1AF66F44838B2A0A64E740DA99 /* youtube-ios-player-helper-prefix.pch */,
-				B0B0E80CC2A8E0FEAC7EF6189078A7B1 /* youtube-ios-player-helper-umbrella.h */,
-				A28517AE9B13328A0461105CCE683BA3 /* youtube-ios-player-helper.debug.xcconfig */,
-				0F10E693ABAC353109F90AF073B743B1 /* youtube-ios-player-helper.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/youtube-ios-player-helper";
-			sourceTree = "<group>";
-		};
 		CA64BCC29EAF02D8CC6FFC5E29389EB3 /* type_traits */ = {
 			isa = PBXGroup;
 			children = (
@@ -23021,7 +23040,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				8D7EFEB1599E7EA367F4BBAAA0CA8004 /* Pods */,
-				197B520B8B60899178419A543BE1DED7 /* Products */,
+				6EAA551FBE5774A81601687CAAC8FC1D /* Products */,
 				F17B101C7A39E592C8F0C0F2B8BBA128 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -23123,6 +23142,18 @@
 			name = pretty_function;
 			sourceTree = "<group>";
 		};
+		D89B163AD51F934AB3AF996000863D87 /* youtube-ios-player-helper */ = {
+			isa = PBXGroup;
+			children = (
+				18D3CDEA947C6FF755CF10388B4D2073 /* YTPlayerView.h */,
+				AFA1069E30633D9904DF2817B1D30933 /* YTPlayerView.m */,
+				665C8E4B058747497BB4A9BF27E28DCC /* Resources */,
+				0B5A76CBB497A051B916FB01B42C81E0 /* Support Files */,
+			);
+			name = "youtube-ios-player-helper";
+			path = "youtube-ios-player-helper";
+			sourceTree = "<group>";
+		};
 		DCB9B52B274F87BB391F4BF791107717 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -23144,18 +23175,6 @@
 				A6A6A6E52CB753098E03459A9ECD97EF /* fastmath.h */,
 			);
 			name = fastmath;
-			sourceTree = "<group>";
-		};
-		E04B64D37A545FFAFD0076009913039D /* youtube-ios-player-helper */ = {
-			isa = PBXGroup;
-			children = (
-				99B50A413A04393B1C84549136BB8637 /* YTPlayerView.h */,
-				18A7785481616DF08F6901C86455D3B7 /* YTPlayerView.m */,
-				0029E13FA404E0C757551B3B714C66A5 /* Resources */,
-				CA09E535001661814C2DBA51E379E498 /* Support Files */,
-			);
-			name = "youtube-ios-player-helper";
-			path = "youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
 		E1D22ACD69F5F4E3C5FBACEAE274B490 /* MethodSwizzler */ = {
@@ -25735,15 +25754,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAB36061DF24C26A06DE81BB42A96617 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4C9DF5CDC79647E91B1EBEB5C132491 /* youtube-ios-player-helper-umbrella.h in Headers */,
-				C060C3A352480D6B4C09F0A146985F95 /* YTPlayerView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AC0CD26439192F7B344EFA16D55361F9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -26043,6 +26053,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E6D5066CAC71D890B9CE58CCF2878C /* youtube-ios-player-helper-swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B3C59A2A2EFA540E988BD0EFCA124E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AA3FF1D0BDA84B44E7AFAD7517A615 /* youtube-ios-player-helper-umbrella.h in Headers */,
+				AE43BA58D1755239A1A3BCD181835CB7 /* YTPlayerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26457,7 +26476,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F5FCA8D3F0D816D520D38F69E0710A5D /* PBXTargetDependency */,
+				8BCAB41A98D983EE2C855D829122B511 /* PBXTargetDependency */,
 			);
 			name = "youtube-ios-player-helper-swift";
 			productName = youtube_ios_player_helper_swift;
@@ -26500,6 +26519,23 @@
 			productName = FBLPromises;
 			productReference = 3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */;
 			productType = "com.apple.product-type.framework";
+		};
+		3820B3D61248CD2A225DA312BC70F110 /* youtube-ios-player-helper-Assets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E37AC643893613D431087501ECC3A17 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-Assets" */;
+			buildPhases = (
+				FD0CFC5A3E02CF7D612B7F1E9E1A4119 /* Sources */,
+				9D8045F5CF2FD5C6DC6C4BCB20AAA973 /* Frameworks */,
+				0180555CE59030FC4A305F335EDEA9E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "youtube-ios-player-helper-Assets";
+			productName = Assets;
+			productReference = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */;
+			productType = "com.apple.product-type.bundle";
 		};
 		3B8CAC3956E59F928387D0C6310E3B37 /* gRPC-C++-gRPCCertificates-Cpp */ = {
 			isa = PBXNativeTarget;
@@ -26975,11 +27011,11 @@
 		};
 		77ED297F2F4FCA19034B2BEEBABE669B /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98CCC2D4DD1A843C54BFE7885C7ADE65 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift" */;
+			buildConfigurationList = EA2E1BA691C152285DB054C4407DF20C /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift" */;
 			buildPhases = (
-				73E04553B522DDA5873937D4C774E3FE /* Sources */,
-				02D2FC9D7F51C25FE0274E1655310527 /* Frameworks */,
-				BF18DEBF67E9267E3773DC9AD48C295D /* Resources */,
+				597A2C2FECD643D920CCD9850D6168E8 /* Sources */,
+				256728420598A8C9DDB0A4CEA0D7D2B7 /* Frameworks */,
+				AE96FEA5E0FE027CA21D9CA3D843E490 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -27050,16 +27086,17 @@
 		};
 		D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A68232E4AE67F87A4E9B07D1FF3400A6 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */;
+			buildConfigurationList = A279C8CE9165B9B6C7C41C38A2B1921E /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */;
 			buildPhases = (
-				AAB36061DF24C26A06DE81BB42A96617 /* Headers */,
-				8762B299F010E93171567403C509058F /* Sources */,
-				95B293D35F455FFA8E115A4EE6B854AC /* Frameworks */,
-				AC423B449FD339C6C9C20930F84D1834 /* Resources */,
+				D3B3C59A2A2EFA540E988BD0EFCA124E /* Headers */,
+				821A0F33815D6ACC637828833347A0A0 /* Sources */,
+				041BB8AF0D1C2675122E6653A7F6B0B2 /* Frameworks */,
+				93FC52C3EA0122F66C4DA6D0BE767A09 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A0A7573ABC7E472EFC57C93CC8937596 /* PBXTargetDependency */,
 			);
 			name = "youtube-ios-player-helper";
 			productName = youtube_ios_player_helper;
@@ -27137,7 +27174,7 @@
 				D3E2E4C7237AB8AC4482FB45FC415E46 /* PBXTargetDependency */,
 				86B96A7CC34979A1744346C65E4B92DE /* PBXTargetDependency */,
 				926562CA29F893A8DD35279E9D7438DB /* PBXTargetDependency */,
-				0574AC5EEB248A9443462324DAB942E9 /* PBXTargetDependency */,
+				D7D6A7A6EFD4466F6BD56508E779DE4C /* PBXTargetDependency */,
 			);
 			name = "Pods-GUM-ios";
 			productName = Pods_GUM_ios;
@@ -27185,7 +27222,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 197B520B8B60899178419A543BE1DED7 /* Products */;
+			productRefGroup = 6EAA551FBE5774A81601687CAAC8FC1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -27213,6 +27250,7 @@
 				D938D21F23374FBB5C8E5B182F1A9D72 /* Pods-GUM-ios */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
 				D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */,
+				3820B3D61248CD2A225DA312BC70F110 /* youtube-ios-player-helper-Assets */,
 				2213CA2A540DD9598AA3D51E6591493B /* youtube-ios-player-helper-swift */,
 				77ED297F2F4FCA19034B2BEEBABE669B /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */,
 				6273C43DC7FF94E93DBFF580DB584296 /* YouTubePlayer */,
@@ -27221,6 +27259,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0180555CE59030FC4A305F335EDEA9E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B2055F75C9F855C05E0AC0452E2ED0 /* YTPlayerView-iframe-player.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		034274FFA7EE6E5F2E916FE636537854 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -27313,10 +27359,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC423B449FD339C6C9C20930F84D1834 /* Resources */ = {
+		93FC52C3EA0122F66C4DA6D0BE767A09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE96FEA5E0FE027CA21D9CA3D843E490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B7F8F1699CF343BC10C18DBB228373 /* YTPlayerView-iframe-player.html in Resources */,
+				068673F0CAC45DB13523FDEE16F0E1FF /* YTPlayerView-iframe-playerIPAD.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27331,15 +27386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF18DEBF67E9267E3773DC9AD48C295D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DCED55B4ACD647E9225074C2FF47A35 /* YTPlayerView-iframe-player.html in Resources */,
-				4B34F546D192F95D8C75AEE9283FE452 /* YTPlayerView-iframe-playerIPAD.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -28320,6 +28366,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		597A2C2FECD643D920CCD9850D6168E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		618C33AF54043B6E75621759CC9760CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -28396,13 +28449,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73E04553B522DDA5873937D4C774E3FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74504637D5C6CACF2F6CE3C4192D7A79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -28425,12 +28471,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8762B299F010E93171567403C509058F /* Sources */ = {
+		821A0F33815D6ACC637828833347A0A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9811991B4856F590F1598D2285CE54E0 /* youtube-ios-player-helper-dummy.m in Sources */,
-				C7A6595750213042B027631B6D6545F8 /* YTPlayerView.m in Sources */,
+				567B74EDDE00C090914C604E75163455 /* youtube-ios-player-helper-dummy.m in Sources */,
+				B82CB9821A33474A315196508BE5B83D /* YTPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29525,6 +29571,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD0CFC5A3E02CF7D612B7F1E9E1A4119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -29539,12 +29592,6 @@
 			name = GoogleUtilities;
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 640513B7D2DDEB2926FBE58601C93BB3 /* PBXContainerItemProxy */;
-		};
-		0574AC5EEB248A9443462324DAB942E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "youtube-ios-player-helper-swift";
-			target = 2213CA2A540DD9598AA3D51E6591493B /* youtube-ios-player-helper-swift */;
-			targetProxy = 483F999D232DAD486B0D686EFC4763E4 /* PBXContainerItemProxy */;
 		};
 		06D16691F6CFB9BAF070A7460081F20C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -29732,6 +29779,12 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 683A9EE0D19C3BA30553BCD9EB3AAEBC /* PBXContainerItemProxy */;
 		};
+		8BCAB41A98D983EE2C855D829122B511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift";
+			target = 77ED297F2F4FCA19034B2BEEBABE669B /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */;
+			targetProxy = C49B386E27DD28AE54CEB72A486D4126 /* PBXContainerItemProxy */;
+		};
 		8BCEDBC2B449BCCFCE2959B13656E7C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
@@ -29767,6 +29820,12 @@
 			name = FirebaseInstallations;
 			target = 87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */;
 			targetProxy = F151F36734D553C64C331E9BE3C779B6 /* PBXContainerItemProxy */;
+		};
+		A0A7573ABC7E472EFC57C93CC8937596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "youtube-ios-player-helper-Assets";
+			target = 3820B3D61248CD2A225DA312BC70F110 /* youtube-ios-player-helper-Assets */;
+			targetProxy = 5AC73799C430D4135FE2CB598CD37A71 /* PBXContainerItemProxy */;
 		};
 		A9A170607492EE5854A5C9388E951F55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -29846,6 +29905,12 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = F3D1D9D0688E0D93AFCC77C97D5EBDA2 /* PBXContainerItemProxy */;
 		};
+		D7D6A7A6EFD4466F6BD56508E779DE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "youtube-ios-player-helper-swift";
+			target = 2213CA2A540DD9598AA3D51E6591493B /* youtube-ios-player-helper-swift */;
+			targetProxy = 55164A27E1F170D8EECD1A6F5679B3FA /* PBXContainerItemProxy */;
+		};
 		DDE34045EDCE66F0A76795575975FEEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FirebaseCoreInternal;
@@ -29924,12 +29989,6 @@
 			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
 			targetProxy = D9369715CF96AAD34E27DAEF070D27CA /* PBXContainerItemProxy */;
 		};
-		F5FCA8D3F0D816D520D38F69E0710A5D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift";
-			target = 77ED297F2F4FCA19034B2BEEBABE669B /* youtube-ios-player-helper-swift-youtube-ios-player-helper-swift */;
-			targetProxy = 3E0F7B43DB85A53E212EA62FC43CF824 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -30003,42 +30062,6 @@
 			};
 			name = Debug;
 		};
-		0715DCC541C66A346F8DB4680983B67B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F10E693ABAC353109F90AF073B743B1 /* youtube-ios-player-helper.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
-				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
-				PRODUCT_NAME = youtube_ios_player_helper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		0A3F415DA38D7B0AFC74ECA083DC5C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40BDB35C14872C2EA538CE72DA634ECE /* FirebaseFirestore.debug.xcconfig */;
@@ -30068,41 +30091,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0F0AEAF7AA03B7EB65A390330152FD52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A28517AE9B13328A0461105CCE683BA3 /* youtube-ios-player-helper.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
-				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
-				PRODUCT_NAME = youtube_ios_player_helper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -30301,6 +30289,42 @@
 			};
 			name = Debug;
 		};
+		2E1DEC506F41A6C4AA1FF74187EC302A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5401E2F67F8964068E4F654EA9ECCB1 /* youtube-ios-player-helper.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
+				PRODUCT_NAME = youtube_ios_player_helper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2E8CFF225A6BEE3C66EC27E835AF6D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB609A9FC28D8B3FE3574CEDDCF90B6B /* youtube-ios-player-helper-swift.release.xcconfig */;
@@ -30409,6 +30433,38 @@
 			};
 			name = Release;
 		};
+		3457024AFC636FE9CAC06387517625D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB609A9FC28D8B3FE3574CEDDCF90B6B /* youtube-ios-player-helper-swift.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper-swift";
+				IBSC_MODULE = youtube_ios_player_helper_swift;
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper-swift/ResourceBundle-youtube-ios-player-helper-swift-youtube-ios-player-helper-swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "youtube-ios-player-helper-swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3BAAE71C9A1C1C3B0E01BEAC6D56ECA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9482C5A32D1C2685F0FA907031C59489 /* youtube-ios-player-helper-swift.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper-swift";
+				IBSC_MODULE = youtube_ios_player_helper_swift;
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper-swift/ResourceBundle-youtube-ios-player-helper-swift-youtube-ios-player-helper-swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "youtube-ios-player-helper-swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		3C7ED3420DBC2990FABB2CDD9DDC739F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4F85EDE04D2B028D4C1B5D66F368D9E /* BoringSSL-GRPC.debug.xcconfig */;
@@ -30476,22 +30532,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		45E5184315F35DD864984F1C95E5B75E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9482C5A32D1C2685F0FA907031C59489 /* youtube-ios-player-helper-swift.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper-swift";
-				IBSC_MODULE = youtube_ios_player_helper_swift;
-				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper-swift/ResourceBundle-youtube-ios-player-helper-swift-youtube-ios-player-helper-swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = "youtube-ios-player-helper-swift";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -30962,19 +31002,40 @@
 			};
 			name = Release;
 		};
-		A4FF384DDC77E1C46497BD6514ECC94E /* Release */ = {
+		A8F5DE734BC9A6DB1ACB6ED53B9C32AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB609A9FC28D8B3FE3574CEDDCF90B6B /* youtube-ios-player-helper-swift.release.xcconfig */;
+			baseConfigurationReference = 001E7471A3381B2611C013A7B58D8068 /* youtube-ios-player-helper.release.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper-swift";
-				IBSC_MODULE = youtube_ios_player_helper_swift;
-				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper-swift/ResourceBundle-youtube-ios-player-helper-swift-youtube-ios-player-helper-swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = "youtube-ios-player-helper-swift";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
+				PRODUCT_NAME = youtube_ios_player_helper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -31100,6 +31161,22 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1AE1A511E9DB73469E0F5197ED15BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5401E2F67F8964068E4F654EA9ECCB1 /* youtube-ios-player-helper.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+				IBSC_MODULE = youtube_ios_player_helper;
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = Assets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -31713,6 +31790,22 @@
 			};
 			name = Release;
 		};
+		F9647594172EE52951AC72074002E30E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 001E7471A3381B2611C013A7B58D8068 /* youtube-ios-player-helper.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+				IBSC_MODULE = youtube_ios_player_helper;
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = Assets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		F99561A6C67D27E83D85FC560A4EB8ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5BD47D074E6C5F05263933312752185 /* PromisesObjC.debug.xcconfig */;
@@ -31866,6 +31959,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5E37AC643893613D431087501ECC3A17 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-Assets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1AE1A511E9DB73469E0F5197ED15BEF /* Debug */,
+				F9647594172EE52951AC72074002E30E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		61F9344EC119D2350E1976B607D4D9B7 /* Build configuration list for PBXNativeTarget "FirebaseDatabase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -31974,20 +32076,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98CCC2D4DD1A843C54BFE7885C7ADE65 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift" */ = {
+		A279C8CE9165B9B6C7C41C38A2B1921E /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45E5184315F35DD864984F1C95E5B75E /* Debug */,
-				A4FF384DDC77E1C46497BD6514ECC94E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A68232E4AE67F87A4E9B07D1FF3400A6 /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F0AEAF7AA03B7EB65A390330152FD52 /* Debug */,
-				0715DCC541C66A346F8DB4680983B67B /* Release */,
+				2E1DEC506F41A6C4AA1FF74187EC302A /* Debug */,
+				A8F5DE734BC9A6DB1ACB6ED53B9C32AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -32033,6 +32126,15 @@
 			buildConfigurations = (
 				46F1B0C007399F1C001776317F86C69E /* Debug */,
 				1185E72B1F6664F540146469B41DB583 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2E1BA691C152285DB054C4407DF20C /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper-swift-youtube-ios-player-helper-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BAAE71C9A1C1C3B0E01BEAC6D56ECA0 /* Debug */,
+				3457024AFC636FE9CAC06387517625D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -782,7 +782,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
-  - youtube-ios-player-helper (0.1.6)
+  - youtube-ios-player-helper (1.0.4)
   - youtube-ios-player-helper-swift (1.1)
   - YouTubePlayer (0.7.2)
 
@@ -845,7 +845,7 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
-  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
   youtube-ios-player-helper-swift: 51a3c5325317c8271d0c7985c1bbe5a252ffb2fd
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 

@@ -53,7 +53,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="agreementAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYq-OE-DgY"/>
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hjX-Yw-NjO"/>
                                     <segue destination="vdS-KM-ZW0" kind="show" identifier="landingToLogin" id="HZk-X7-1OL"/>
                                 </connections>

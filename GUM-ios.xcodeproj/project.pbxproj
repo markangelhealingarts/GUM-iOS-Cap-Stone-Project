@@ -40,10 +40,11 @@
 		5D4F7B0B2809F49F000B411A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F7B0A2809F49F000B411A /* Question.swift */; };
 		5D4F7B0D2809F4CD000B411A /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F7B0C2809F4CD000B411A /* QuestionBank.swift */; };
 		5DC3376C282BB0F40073F3EF /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3376B282BB0F40073F3EF /* VideoCell.swift */; };
-		FBFDF16632CE4F7740803F6C /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F1D2364474EB9ACA1B98AD /* Pods_GUM_ios.framework */; };
+		EC8A9673827F83D351B32736 /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		221428472810A8B3005A83F6 /* GroupLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupLandingViewController.swift; sourceTree = "<group>"; };
 		221428492810B282005A83F6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		2214284B2810B2A4005A83F6 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +71,7 @@
 		22DD3B6E282438BE0022B7D1 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		22DD3B702828B5700022B7D1 /* FinishedExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedExerciseViewController.swift; sourceTree = "<group>"; };
 		22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoViewController.swift; sourceTree = "<group>"; };
-		43F1D2364474EB9ACA1B98AD /* Pods_GUM_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2658CCB9FAC20FBB9F047A1C /* Pods-GUM-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.debug.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		5D2B34BD28239BC800BFB693 /* agreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agreement.swift; sourceTree = "<group>"; };
 		5D2B34BF2823B66900BFB693 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		5D2B34C128241AE000BFB693 /* SurveryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveryPicker.swift; sourceTree = "<group>"; };
@@ -81,8 +82,7 @@
 		5D4F7B0C2809F4CD000B411A /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		5DC3376B282BB0F40073F3EF /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		5DD50E7F2802BF2D007FEFF1 /* GUM-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GUM-ios.entitlements"; sourceTree = "<group>"; };
-		646937A97C037E5F19874EB0 /* Pods-GUM-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.debug.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		ED8AC71CD0BF1CAAB966D386 /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBFDF16632CE4F7740803F6C /* Pods_GUM_ios.framework in Frameworks */,
+				EC8A9673827F83D351B32736 /* Pods_GUM_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 				2230B72D27BDF21000CEB996 /* GUM-ios */,
 				2230B72C27BDF21000CEB996 /* Products */,
 				8BAF885CA3669625A4BF0FF2 /* Pods */,
-				3B7CFF26EE756F82EF595EB0 /* Frameworks */,
+				E0251DCD4C025BDA65186150 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,21 +173,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3B7CFF26EE756F82EF595EB0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				43F1D2364474EB9ACA1B98AD /* Pods_GUM_ios.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8BAF885CA3669625A4BF0FF2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				646937A97C037E5F19874EB0 /* Pods-GUM-ios.debug.xcconfig */,
-				ED8AC71CD0BF1CAAB966D386 /* Pods-GUM-ios.release.xcconfig */,
+				2658CCB9FAC20FBB9F047A1C /* Pods-GUM-ios.debug.xcconfig */,
+				B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E0251DCD4C025BDA65186150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2230B73F27BDF21600CEB996 /* Build configuration list for PBXNativeTarget "GUM-ios" */;
 			buildPhases = (
-				DF5CCBBFBCC078CABD7BCCE5 /* [CP] Check Pods Manifest.lock */,
+				8EC0D5630F29B1043BC0D256 /* [CP] Check Pods Manifest.lock */,
 				2230B72727BDF21000CEB996 /* Sources */,
 				2230B72827BDF21000CEB996 /* Frameworks */,
 				2230B72927BDF21000CEB996 /* Resources */,
-				B9FEBA930684E89F85EF3BF9 /* [CP] Copy Pods Resources */,
+				EE1765A5B689E1BC52B5F3E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,24 +260,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B9FEBA930684E89F85EF3BF9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF5CCBBFBCC078CABD7BCCE5 /* [CP] Check Pods Manifest.lock */ = {
+		8EC0D5630F29B1043BC0D256 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,6 +280,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1765A5B689E1BC52B5F3E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -487,7 +487,7 @@
 		};
 		2230B74027BDF21600CEB996 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646937A97C037E5F19874EB0 /* Pods-GUM-ios.debug.xcconfig */;
+			baseConfigurationReference = 2658CCB9FAC20FBB9F047A1C /* Pods-GUM-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,7 +519,7 @@
 		};
 		2230B74127BDF21600CEB996 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED8AC71CD0BF1CAAB966D386 /* Pods-GUM-ios.release.xcconfig */;
+			baseConfigurationReference = B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -49,10 +49,12 @@ class ExerciseVideoViewController: UIViewController{
                         self.desc = descTemp[count] as! String
 
                         let urls = data!["YtUrls"] as! NSArray
-                        self.playerView.loadVideoID(urls[count] as! String)
+                        self.playerView.loadVideoID("\(urls[count])")
                         self.playerView.play()
                         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
                         self.descriptionLabel.text = self.desc
+                        
+                        break
                     }
                     count += 1
                 }
