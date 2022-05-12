@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func agreementAction(_ sender: Any) {
+        performSegue(withIdentifier: "agreement", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

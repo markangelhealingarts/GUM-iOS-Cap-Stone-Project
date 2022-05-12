@@ -19,15 +19,14 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(email)
         let docRef = db.collection("Users").document(email)
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
-                
+                print(data)
                 let stringPoints = String(pointsStored as! Int)
                 
                 let avatar = data?["AvatarUrl"]

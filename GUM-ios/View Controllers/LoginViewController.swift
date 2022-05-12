@@ -39,8 +39,10 @@ class LoginViewController: UIViewController {
                     let passwordStored = data?["Password"] //get password
                     
                     if(password == passwordStored as? String){
-                        
+                        print("here")
                         //sends document to main page to access data for user
+                        print(document)
+                        
                         self.performSegue(withIdentifier: "loginToMain", sender: document)
                         
                     }else{
