@@ -10,7 +10,7 @@ import Firebase
 import youtube_ios_player_helper_swift
 import YouTubePlayer
 
-class ExerciseVideoViewController: UIViewController{
+class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
 
 
     @IBOutlet weak var countDown: UILabel!
@@ -33,6 +33,7 @@ class ExerciseVideoViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         finishedBtn.layer.opacity = 0
+        playerView.delegate = self
 
         db.collection("StartMoving").document(difficulty).getDocument { (document, error) in
             if let document = document, document.exists {
@@ -49,9 +50,11 @@ class ExerciseVideoViewController: UIViewController{
                         self.desc = descTemp[count] as! String
 
                         let urls = data!["YtUrls"] as! NSArray
-                        self.playerView.loadVideoID("\(urls[count])")
+                        print(urls[count] as! String)
+                        self.playerView.loadVideoID(urls[count] as! String)
+                        
                         self.playerView.play()
-                        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
+                        
                         self.descriptionLabel.text = self.desc
                         
                         break
@@ -63,6 +66,10 @@ class ExerciseVideoViewController: UIViewController{
                 print("Error: \(String(describing: error))")
             }
         }
+    }
+    
+    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
     }
 
     @objc func updateCountDown () {
