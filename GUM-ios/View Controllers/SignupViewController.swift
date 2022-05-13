@@ -17,8 +17,6 @@ class SignupViewController: UIViewController {
         print("helo")
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
-        print(email)
-        print(password)
       // checks if email / password is valid then adds user
         if(email != "" && isValidEmail(emailID: email!) && password != "") {
 
@@ -40,7 +38,8 @@ class SignupViewController: UIViewController {
                         "FitnessLvl": " ",
                         "AvatarUrl": "orange_avatar.png",
                         "UnlockedAvatars": ["orange_avatar.png"],
-                        "Schedule": ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"]
+                        "Schedule": ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"],
+                        "Groups": [],
                     ]) { (err) in
                         if let err = err {
                             print("Error writing document: \(err)")

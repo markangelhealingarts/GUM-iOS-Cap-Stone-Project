@@ -54,8 +54,9 @@ class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
                         self.playerView.loadVideoID(urls[count] as! String)
                         
                         self.playerView.play()
-                        
                         self.descriptionLabel.text = self.desc
+                        
+                        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
                         
                         break
                     }
@@ -68,9 +69,9 @@ class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
         }
     }
     
-    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
-    }
+//    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
+//
+//    }
 
     @objc func updateCountDown () {
 

@@ -56,7 +56,7 @@ class SurveryQuestionsViewController: UIViewController{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "homePage"){
-            let destinationVC = segue.destination as! MainPageViewController
+            let destinationVC = (segue.destination as! UINavigationController).topViewController as! MainPageViewController
             destinationVC.email = email
         }
     }

@@ -37,18 +37,6 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
             memberPointsTitle.layer.opacity = 0
             memberPointsLabel.layer.opacity = 0
             leaveGroupBtn.tintColor = UIColor.clear
-        } else {
-            let personRef = self.db.collection("Users").document(self.email)
-            personRef.getDocument { (document, error) in
-                if let document = document, document.exists {
-                    
-                    let data = document.data()
-                    self.userPoints = data!["Points"] as! Int
-
-                } else {
-                    print("ERROR: \(String(describing: error))")
-                }
-            }
         }
         
         let docRef = db.collection("Groups").document(groupName)
@@ -59,14 +47,24 @@ class ClickedGroupViewController: UIViewController, UITableViewDelegate, UITable
                 let data = document.data()
                 self.groupNameLabel.text = data!["Group Name"] as? String
                 self.pointGoal = data!["Point Goal"] as! Int
-                self.memberPointsLabel.text = "\(self.userPoints)/\(self.pointGoal)"
-                
+
+                let personRef = self.db.collection("Users").document(self.email)
+                personRef.getDocument { (personDocument, error) in
+                    if let personDocument = personDocument, personDocument.exists {
+                        
+                        let data = personDocument.data()
+                        self.userPoints = data!["Points"] as! Int
+                        self.memberPointsLabel.text = "\(self.userPoints)/\(self.pointGoal)"
+
+                    } else {
+                        print("ERROR: \(String(describing: error))")
+                    }
+                }
+
                 let members = data!["Members"] as! NSArray
                 for member in members {
                     self.members.append(member as! String)
                 }
-                
-                print(self.members)
                 
                 self.tableView.delegate = self
                 self.tableView.dataSource = self
