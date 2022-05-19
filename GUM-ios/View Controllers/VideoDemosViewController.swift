@@ -6,9 +6,10 @@
 //
 
 import UIKit
-import youtube_ios_player_helper_swift
+//import youtube_ios_player_helper_swift
 import Firebase
-import YouTubePlayer
+//import YouTubePlayer
+import youtube_ios_player_helper
 class VideoDemosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var email: String = ""

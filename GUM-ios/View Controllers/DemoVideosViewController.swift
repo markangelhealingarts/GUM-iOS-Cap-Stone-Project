@@ -6,8 +6,7 @@
 //
 import Foundation
 import UIKit
-import youtube_ios_player_helper_swift
-import YouTubePlayer
+import youtube_ios_player_helper
 import Firebase
 
 class DemoVideosViewController: UIViewController{
@@ -15,17 +14,14 @@ class DemoVideosViewController: UIViewController{
     var timer: Timer?
     var email: String = ""
     let db = Firestore.firestore()
-    @IBOutlet var youtubePlayer: YouTubePlayerView!
+    
+    @IBOutlet weak var youtubePlayer: YTPlayerView!
+    
+    
     override func viewDidLoad() {
         if once {
-            youtubePlayer.loadVideoID("frFlcZ1Xnno")
+            youtubePlayer.load(withVideoId: "frFlcZ1Xnno")
             once = false
-            print(email)
-            //youtubePlayer.seekTo(60, seekAhead: false)
-            //115 time
-//            timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-            
-            
         }else{
             print("close")
             once = false

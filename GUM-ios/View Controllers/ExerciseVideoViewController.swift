@@ -7,14 +7,13 @@
 
 import UIKit
 import Firebase
-import youtube_ios_player_helper_swift
-import YouTubePlayer
+import youtube_ios_player_helper
 
-class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
+class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
 
 
     @IBOutlet weak var countDown: UILabel!
-    @IBOutlet var playerView: YouTubePlayerView!
+    @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var finishedBtn: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
 
@@ -51,9 +50,8 @@ class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
 
                         let urls = data!["YtUrls"] as! NSArray
                         print(urls[count] as! String)
-                        self.playerView.loadVideoID(urls[count] as! String)
-                        
-                        self.playerView.play()
+                        self.playerView.load(withVideoId: urls[count] as! String)
+                        self.playerView.playVideo()
                         self.descriptionLabel.text = self.desc
                         
                         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
@@ -68,10 +66,6 @@ class ExerciseVideoViewController: UIViewController, YouTubePlayerDelegate{
             }
         }
     }
-    
-//    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
-//
-//    }
 
     @objc func updateCountDown () {
 

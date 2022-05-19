@@ -14,18 +14,39 @@ class JoinGroupViewController: UIViewController {
     
     let db = Firestore.firestore()
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    var isExpand: Bool = false
+    @objc func keyboardAppear () {
+        if !isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
+            isExpand = true
+        }
+    }
+    
+    @objc func keyboardDisappear () {
+        if isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
+            isExpand = false
+        }
+    }
     
     @IBAction func onJoin(_ sender: Any) {
         
         let code = codeTextField.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
+        
+        self.view.endEditing(true)
         
         if code == "" {
             let alert = UIAlertController(title: "Error", message: "Enter invite code!", preferredStyle: UIAlertController.Style.alert)

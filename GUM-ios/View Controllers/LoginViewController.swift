@@ -2,6 +2,8 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -12,11 +14,31 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.becomeFirstResponder()
+//        emailTextField.becomeFirstResponder()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    var isExpand: Bool = false
+    @objc func keyboardAppear () {
+        if !isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
+            isExpand = true
+            print("HERE")
+        }
+    }
+    
+    @objc func keyboardDisappear () {
+        if isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
+            isExpand = false
+        }
     }
 
     @IBAction func login(_ sender: Any) {
-
+        self.view.endEditing(true)
         let email = emailTextField.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
 

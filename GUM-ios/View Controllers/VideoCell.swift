@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 import YouTubePlayer
+import WebKit
 class VideoCell: UITableViewCell{
     
-    @IBOutlet weak var webView: UIWebView!
+    
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var DemoYoutubeVideo: YouTubePlayerView!
     @IBOutlet weak var demoVideo: UIView!
     @IBOutlet weak var videoDescription: UILabel!

@@ -13,6 +13,8 @@ class CreateGroupViewController: UIViewController {
     var email: String = ""
     var randomCode: String = ""
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var pointGoalTextField: UITextField!
@@ -21,8 +23,27 @@ class CreateGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         // Do any additional setup after loading the view.
+    }
+    
+    var isExpand: Bool = false
+    @objc func keyboardAppear () {
+        if !isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
+            isExpand = true
+        }
+    }
+    
+    @objc func keyboardDisappear () {
+        if isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
+            isExpand = false
+        }
     }
     
     
@@ -30,6 +51,8 @@ class CreateGroupViewController: UIViewController {
         let groupName = groupNameTextField.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
         let goal = (pointGoalTextField.text?.trimmingCharacters(in: .whitespaces))!
+        
+        self.view.endEditing(true)
         
         
         if groupName == "" {

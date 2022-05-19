@@ -3,18 +3,40 @@ import Firebase
 
 class SignupViewController: UIViewController {
 
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var passwordTextView: UITextField!
     let db = Firestore.firestore()
     var emailinfo: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextView.becomeFirstResponder()
+//        emailTextView.becomeFirstResponder()
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    var isExpand: Bool = false
+    @objc func keyboardAppear () {
+        if !isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
+            isExpand = true
+        }
+    }
+    
+    @objc func keyboardDisappear () {
+        if isExpand {
+            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
+            isExpand = false
+        }
     }
 
     @IBAction func createAccount(_ sender: Any) {
-       // makeAccount()
-        print("helo")
+        self.view.endEditing(true)
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
         let password = passwordTextView.text?.trimmingCharacters(in: .whitespaces)
       // checks if email / password is valid then adds user
@@ -50,32 +72,17 @@ class SignupViewController: UIViewController {
                                 if let document = document, document.exists {
                                     self.emailinfo = email!
                                     print(document)
-                            self.performSegue(withIdentifier: "introVideo", sender: document)
+                                    self.performSegue(withIdentifier: "introVideo", sender: document)
                                 }
                            }
-
-
-
-
                 }
             }
 
-        } //else {
-//
-//            if(email == "" || password == ""){
-//                let alert = UIAlertController(title: "Error", message: "Email/Password is empty", preferredStyle: UIAlertController.Style.alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                self.present(alert, animated: true, completion: nil)
-//            }else{
-//                let alert = UIAlertController(title: "Error", message: "Not valid email", preferredStyle: UIAlertController.Style.alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                self.present(alert, animated: true, completion: nil)
-//            }
-//        }
-      //}
+        }
             }
         }
     }
+    
     func isValidEmail(emailID:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

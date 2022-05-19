@@ -783,7 +783,6 @@ PODS:
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
   - youtube-ios-player-helper (1.0.4)
-  - youtube-ios-player-helper-swift (1.1)
   - YouTubePlayer (0.7.2)
 
 DEPENDENCIES:
@@ -793,7 +792,6 @@ DEPENDENCIES:
   - Firebase/Firestore
   - FirebaseCore
   - youtube-ios-player-helper
-  - youtube-ios-player-helper-swift
   - YouTubePlayer
 
 SPEC REPOS:
@@ -820,7 +818,6 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - youtube-ios-player-helper
-    - youtube-ios-player-helper-swift
     - YouTubePlayer
 
 SPEC CHECKSUMS:
@@ -846,9 +843,8 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
-  youtube-ios-player-helper-swift: 51a3c5325317c8271d0c7985c1bbe5a252ffb2fd
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: 8d55f3b8a2007083149e8e6637053fbe682a3b20
+PODFILE CHECKSUM: 136b4aa3aca0a5576f1166723b3a9f135d246eec
 
 COCOAPODS: 1.11.2
