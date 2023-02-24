@@ -51,11 +51,19 @@ class DemoVideosViewController: UIViewController{
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//        if(segue.identifier == "pickerLevel"){
+//            let destinationVC = segue.destination as! SurveyViewController
+//            destinationVC.email = email
+//        }
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if(segue.identifier == "pickerLevel"){
-            let destinationVC = segue.destination as! SurveyViewController
+        if(segue.identifier == "pickerLevel2"){
+            let destinationVC = (segue.destination as! UINavigationController).topViewController as! MainPageViewController
             destinationVC.email = email
         }
     }
+    
     
 }

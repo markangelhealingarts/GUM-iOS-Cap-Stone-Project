@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 //import YouTubePlayer
 import youtube_ios_player_helper
+
+
+
+
+
 class VideoDemosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var email: String = ""
@@ -35,6 +40,7 @@ class VideoDemosViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videoDescription.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell") as! VideoCell
@@ -68,7 +74,6 @@ class VideoDemosViewController: UIViewController, UITableViewDataSource, UITable
         let docRef = db.collection("Videos").document(x)
         docRef.getDocument{ [self] (document,error) in
             if let document = document, document.exists {
-//                let data = document.data().map(String.init(describing:)) ?? "nil"
                 let data = document.data()!["video_description"]! as! [Any]
                 let video = document.data()!["videos_list"]! as! [Any]
                 videoDescription = data
