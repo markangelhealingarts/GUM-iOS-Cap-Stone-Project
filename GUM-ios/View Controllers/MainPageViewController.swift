@@ -104,8 +104,9 @@ class MainPageViewController: UIViewController {
             }
 
         }
+        
     }
-
+        
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -128,19 +129,42 @@ class MainPageViewController: UIViewController {
 
     //send email to other viewControllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mainToGroup" {
+//        if segue.identifier == "mainToGroup" {
+////            print("prepare group")
+//            let destinationVC = segue.destination as! GroupLandingViewController
+//            destinationVC.email = email
+//        } else if segue.identifier == "mainToUpdateScheduleV2" {
+//            let destinationVC = segue.destination as! UpdateScheduleViewControllerV2
+//            destinationVC.email = email
+//        } else if segue.identifier == "mainToMove" {
+////            print("prepare move")
+//            let destinationVC = segue.destination as! StartMovingViewController
+//            destinationVC.email = email
+//        } else if segue.identifier == "mainToDemo" {
+////            print("prepare demo")
+//            let destinationVC = segue.destination as! VideoDemosViewController
+//            destinationVC.email = email
+//        }
+        
+        
+        switch segue.identifier {
+        case "mainToGroup":
             let destinationVC = segue.destination as! GroupLandingViewController
             destinationVC.email = email
-        } else if segue.identifier == "mainToSchedule" {
-            let destinationVC = segue.destination as! UpdateScheduleViewController
+            break;
+        case "mainToUpdateScheduleV2":
+            let destinationVC = segue.destination as! UpdateScheduleViewControllerV2
             destinationVC.email = email
-        } else if segue.identifier == "mainToMove" {
+        case "mainToMove":
             let destinationVC = segue.destination as! StartMovingViewController
             destinationVC.email = email
-        } else if segue.identifier == "mainToDemo" {
+        case "mainToDemo":
             let destinationVC = segue.destination as! VideoDemosViewController
             destinationVC.email = email
+        default:
+            print("MainPageVC Switch Block Error")
         }
+        
     }
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {

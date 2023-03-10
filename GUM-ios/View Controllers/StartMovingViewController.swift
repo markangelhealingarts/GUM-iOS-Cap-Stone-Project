@@ -26,7 +26,8 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var moderateButton: UIButton!
     @IBOutlet weak var vigorousButton: UIButton!
     @IBOutlet weak var intervalButton: UIButton!
-
+    @IBOutlet weak var navBarButtonStart: UIBarButtonItem!
+    
     var email: String = ""
     var pickerData: [String] = []
 
@@ -73,6 +74,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     @IBAction func onEasyBtn(_ sender: Any) {
         // highlight button and save which button has been pressed
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
 
         selectedBtn = easyButton.tag
         selectedType = "Beginner"
@@ -83,6 +85,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     @IBAction func onModerateBtn(_ sender: Any) {
         // highlight button and save which button has been pressed
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
 
         selectedBtn = moderateButton.tag
         selectedType = "Moderate"
@@ -93,6 +96,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     @IBAction func onVigorousBtn(_ sender: Any) {
         // highlight button and save which button has been pressed
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
 
         selectedBtn = vigorousButton.tag
         selectedType = "Advance"
@@ -103,6 +107,7 @@ class StartMovingViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     @IBAction func onIntervalBtn(_ sender: Any) {
         // highlight button and save which button has been pressed
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
 
         selectedBtn = intervalButton.tag
         selectedType = "Interval"

@@ -40,6 +40,7 @@
 		5D4F7B0B2809F49F000B411A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F7B0A2809F49F000B411A /* Question.swift */; };
 		5D4F7B0D2809F4CD000B411A /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F7B0C2809F4CD000B411A /* QuestionBank.swift */; };
 		5DC3376C282BB0F40073F3EF /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3376B282BB0F40073F3EF /* VideoCell.swift */; };
+		649372A829B939F900C1436D /* UpdateScheduleViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */; };
 		EC8A9673827F83D351B32736 /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		5D4F7B0C2809F4CD000B411A /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		5DC3376B282BB0F40073F3EF /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		5DD50E7F2802BF2D007FEFF1 /* GUM-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GUM-ios.entitlements"; sourceTree = "<group>"; };
+		649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheduleViewControllerV2.swift; sourceTree = "<group>"; };
 		B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,11 +102,12 @@
 		221EAA3427C6FFAA00F8791D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
+				649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */,
+				2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */,
 				221EAA3027C6FDBC00F8791D /* LoginViewController.swift */,
 				221EAA3227C6FF7700F8791D /* SignupViewController.swift */,
 				221EAA3527C7005700F8791D /* SurveyViewController.swift */,
-				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
-				2254457A27D2B47E00FA8FCB /* UpdateScheduleViewController.swift */,
 				2254457C27D2B72400FA8FCB /* StartMovingViewController.swift */,
 				2254457E27D2B86F00FA8FCB /* VideoDemosViewController.swift */,
 				22E42E6C27E8FFD80064D7DA /* ExerciseVideoViewController.swift */,
@@ -312,6 +315,7 @@
 				22DD3B6D282335490022B7D1 /* ClickedGroupViewController.swift in Sources */,
 				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
 				221428502810B807005A83F6 /* CreateDetailViewController.swift in Sources */,
+				649372A829B939F900C1436D /* UpdateScheduleViewControllerV2.swift in Sources */,
 				2254457F27D2B86F00FA8FCB /* VideoDemosViewController.swift in Sources */,
 				2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */,
 				2214284E2810B2C5005A83F6 /* CurrentGroupsViewController.swift in Sources */,
