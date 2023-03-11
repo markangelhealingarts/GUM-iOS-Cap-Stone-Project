@@ -79,6 +79,7 @@ class UpdateScheduleViewControllerV2: UIViewController {
         if timePicker.isHidden == true {
             timePicker.isHidden = false
             buttonAddTime.isHidden = false
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
         }
     }
     
@@ -105,12 +106,12 @@ class UpdateScheduleViewControllerV2: UIViewController {
     @IBAction func onTime5Tap(_ sender: Any) {
         checkTimePickerVisibility()
         currentTimeSelected = "time5"
-        buttonTime5.setTitle(time1, for: .normal)
+        buttonTime5.setTitle(time5, for: .normal)
     }
     @IBAction func onTime6Tap(_ sender: Any) {
         checkTimePickerVisibility()
         currentTimeSelected = "time6"
-        buttonTime6.setTitle(time1, for: .normal)
+        buttonTime6.setTitle(time6, for: .normal)
 
     }
     
@@ -315,5 +316,13 @@ class UpdateScheduleViewControllerV2: UIViewController {
         timeArray = [time1, time2, time3, time4, time5, time6]
         print("panda10")
         print(timeArray)
+    }
+}
+
+extension UIViewController {
+    func showAlert(name: String, message: String) {
+        let alertController = UIAlertController(title: name, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in}))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
