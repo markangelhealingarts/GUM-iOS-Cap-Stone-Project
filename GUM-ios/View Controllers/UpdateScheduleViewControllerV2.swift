@@ -122,6 +122,7 @@ class UpdateScheduleViewControllerV2: UIViewController {
         
 //        print("nav bar update button clicked")
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "h:mm a"
         
         let tempTime1 = dateFormatter.date(from: time1)
