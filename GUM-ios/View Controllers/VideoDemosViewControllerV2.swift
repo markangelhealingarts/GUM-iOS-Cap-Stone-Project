@@ -27,6 +27,7 @@ class VideoDemosViewControllerV2: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        overrideUserInterfaceStyle = .light
     }
     
     @IBAction func selectCategoryAction(_ sender: Any) {
@@ -85,7 +86,6 @@ class VideoDemosViewControllerV2: UIViewController, UITableViewDataSource, UITab
 
         if(count < videoDescriptionList.count){
             cell.labelVideoTitle.text = videoDescriptionList[count] as? String
-//            cell.ytPlayerView.loadVideo(byURL: videosList[count] as! String, startSeconds: 0.0)
             cell.ytPlayerView.load(withVideoId: videoIDList[count] as! String)
             count += 1
 

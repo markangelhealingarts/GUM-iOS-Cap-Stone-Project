@@ -14,27 +14,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        emailTextField.becomeFirstResponder()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    var isExpand: Bool = false
-    @objc func keyboardAppear () {
-        if !isExpand {
-            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
-            isExpand = true
-            print("HERE")
-        }
-    }
-    
-    @objc func keyboardDisappear () {
-        if isExpand {
-            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
-            isExpand = false
-        }
+        self.hideKeyboardWhenTappedAround()
+        overrideUserInterfaceStyle = .light
     }
 
     @IBAction func login(_ sender: Any) {
@@ -119,5 +100,17 @@ class LoginViewController: UIViewController {
             destinationVC.email = emailInfo
         }
 
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

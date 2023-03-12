@@ -2,9 +2,6 @@ import UIKit
 import Firebase
 
 class SignupViewController: UIViewController {
-
-    
-    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var passwordTextView: UITextField!
@@ -12,29 +9,8 @@ class SignupViewController: UIViewController {
     var emailinfo: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-//        emailTextView.becomeFirstResponder()
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.hideKeyboardWhenTappedAround()
     }
-    
-    var isExpand: Bool = false
-    @objc func keyboardAppear () {
-        if !isExpand {
-            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height + 300)
-            isExpand = true
-        }
-    }
-    
-    @objc func keyboardDisappear () {
-        if isExpand {
-            self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.scrollView.frame.height - 300)
-            isExpand = false
-        }
-    }
-
     @IBAction func createAccount(_ sender: Any) {
         self.view.endEditing(true)
         let email = emailTextView.text?.trimmingCharacters(in: .whitespaces)
