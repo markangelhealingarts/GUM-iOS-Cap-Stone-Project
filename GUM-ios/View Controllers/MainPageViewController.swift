@@ -158,8 +158,8 @@ class MainPageViewController: UIViewController {
         case "mainToMove":
             let destinationVC = segue.destination as! StartMovingViewController
             destinationVC.email = email
-        case "mainToDemo":
-            let destinationVC = segue.destination as! VideoDemosViewController
+        case "mainToVideoDemosV2":
+            let destinationVC = segue.destination as! VideoDemosViewControllerV2
             destinationVC.email = email
         default:
             print("MainPageVC Switch Block Error")

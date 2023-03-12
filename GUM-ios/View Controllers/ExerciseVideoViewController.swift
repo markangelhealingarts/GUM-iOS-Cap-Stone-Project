@@ -51,7 +51,7 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                         let urls = data!["YtUrls"] as! NSArray
                         print(urls[count] as! String)
                         self.playerView.load(withVideoId: urls[count] as! String)
-                        self.playerView.playVideo()
+//                        self.playerView.playVideo()
                         self.descriptionLabel.text = self.desc
                         
                         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
@@ -65,6 +65,10 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 print("Error: \(String(describing: error))")
             }
         }
+    }
+    
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        playerView.playVideo()
     }
 
     @objc func updateCountDown () {
