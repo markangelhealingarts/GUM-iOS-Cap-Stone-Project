@@ -208,6 +208,8 @@
 			dependencies = (
 			);
 			name = "GUM-ios";
+			packageProductDependencies = (
+			);
 			productName = "GUM-ios";
 			productReference = 2230B72B27BDF21000CEB996 /* GUM-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +238,8 @@
 				Base,
 			);
 			mainGroup = 2230B72227BDF21000CEB996;
+			packageReferences = (
+			);
 			productRefGroup = 2230B72C27BDF21000CEB996 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -493,7 +497,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				CURRENT_PROJECT_VERSION = 1.9.2;
+=======
+				CURRENT_PROJECT_VERSION = 1.9.1;
+>>>>>>> Stashed changes
 				DEVELOPMENT_TEAM = X8B84J85VP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
@@ -508,7 +516,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 1.9.2;
+=======
+				MARKETING_VERSION = 1.9.1;
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSUMB.GUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -529,7 +541,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				CURRENT_PROJECT_VERSION = 1.9.2;
+=======
+				CURRENT_PROJECT_VERSION = 1.9.1;
+>>>>>>> Stashed changes
 				DEVELOPMENT_TEAM = X8B84J85VP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
@@ -544,7 +560,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 1.9.2;
+=======
+				MARKETING_VERSION = 1.9.1;
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSUMB.GUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
