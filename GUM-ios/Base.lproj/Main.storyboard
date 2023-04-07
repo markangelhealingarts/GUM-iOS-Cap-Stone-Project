@@ -79,10 +79,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pEh-8a-3op"/>
+                    <connections>
+                        <segue destination="Gel-Lp-k4b" kind="presentation" identifier="skipLogin" id="dw0-Ze-T68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.13953488372093" y="67.596566523605148"/>
+            <point key="canvasLocation" x="-9" y="-23"/>
         </scene>
         <!--Terms-->
         <scene sceneID="yWr-Ga-AVn">
@@ -106,54 +109,48 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIs-4d-sju">
                                                 <rect key="frame" x="8" y="40" width="398" height="100.5"/>
-                                                <string key="text">The purpose of this DISCLAIMER AND NOTICE is to make you aware of the potential risks connected with activity in any exercise, physical fitness or training program. It is also to help you make an informed decision as to whether or not you should participate in “Get Up and Move” and the activities associated with it.</string>
+                                                <string key="text">The purpose of this DISCLAIMER AND NOTICE is to make you aware of the potential risks connected with activity in any exercise, physical fitness or training program. It is also to help you make an informed decision as to whether or not you should participate in Get Up and Move and the activities associated with it. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDi-Ul-QXC">
                                                 <rect key="frame" x="8" y="152.5" width="398" height="167.5"/>
-                                                <string key="text">DISCLAIMER OF LIABILITY. Injuries of all types can occur when participating in exercise, physical fitness and training programs, hence “Get Up and Move” strongly encourages all users to obtain a comprehensive physical examination by a licensed physician BEFORE undertaking any exercise or training demonstrated on this website, and/or any of videos, MP4s, MP3s and training materials offered on this website. If you choose to participate in any of the “Get Up and Move” programs or any associated program, you fully assume the risk of any resulting injury.  </string>
+                                                <mutableString key="text">DISCLAIMER OF LIABILITY: Injuries of all types can occur when participating in exercise, physical fitness and training programs, hence Get Up and Move strongly encourages all users to obtain a comprehensive physical examination by a licensed physician BEFORE undertaking any exercise or training demonstrated on this website, and/or any of videos, MP4s, MP3s and training materials offered on this website. If you choose to participate in any of the Get Up and Move program or any associated program, you fully assume the risk of any resulting injury.  
+</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMN-BC-ade">
-                                                <rect key="frame" x="8" y="424" width="398" height="117"/>
+                                                <rect key="frame" x="8" y="442" width="398" height="117"/>
                                                 <string key="text">“GET UP AND MOVE” DISCLAIMS ANY LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES AND ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY LOSS, INJURY OR DAMAGE SUFFERED BY ANY PERSON AS A RESULT OF THE USE OR MISUSE OF ANY INFORMATION, VIDEOS, MPSs OR TRAINING MATERIALS MADE AVAILABLE ON THIS WEBSITE.”</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-Jx-qeC">
-                                                <rect key="frame" x="8" y="553" width="398" height="167.5"/>
-                                                <string key="text">In consideration of performing or participating in these types of activities, you hereby agree to indemnify and hold harmless Mark C. Angel and others associated with developing the “Get Up and Move” program, and its officers, directors, agents, and their respective successors and assignees, against any loss, liability, damage, cause of action, cost, or expense of any nature whatsoever, including without limitation reasonable attorneys’ fees and other legal costs, even if said injuries or losses are the direct result of our negligence.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-fV-Yfm">
-                                                <rect key="frame" x="8" y="780.5" width="398" height="50.5"/>
+                                                <rect key="frame" x="8" y="787" width="398" height="50.5"/>
                                                 <string key="text">The content, information, videos, MP4s, MP3s and training materials offered and made available on this website are for informational purposes only.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="USE THIS PROGRAM AND ALL INFORMATION CONTAINED WITHIN IT AT YOUR OWN RISK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-3U-x3G">
-                                                <rect key="frame" x="8" y="861" width="398" height="33.5"/>
+                                                <rect key="frame" x="8" y="860" width="398" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Check the box below to assure you have agree'd with everything listed above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-sc-U4M">
-                                                <rect key="frame" x="8" y="954.5" width="398" height="33.5"/>
+                                                <rect key="frame" x="8" y="923" width="398" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38C-ZH-GeH">
-                                                <rect key="frame" x="8" y="361.5" width="398" height="50.5"/>
-                                                <string key="text">•Bruising, cuts and general soreness\n•Muscle and tendon injuries\n•Ligament and skeletal injuries\n•Fractured or broken bones\n•Concussions\n•Heart attack</string>
+                                                <rect key="frame" x="8" y="361" width="398" height="50.5"/>
+                                                <string key="text">Bruising, cuts and general soreness Muscle and tendon injuries Ligament and skeletal injuries Fractured or broken bones Concussions Heart attack </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -209,6 +206,14 @@
                                                     <action selector="checkAgreement:" destination="HU2-xm-qGC" eventType="touchUpInside" id="3Fk-s8-49t"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-Jx-qeC">
+                                                <rect key="frame" x="8" y="604" width="398" height="175"/>
+                                                <mutableString key="text">In consideration of performing or participating in these types of activities, you hereby agree to indemnify and hold harmless Mark C. Angel and other associated with developing the Get Up and Move program, and its officers, directors, and agents, and their respective successors and assigns, against any loss, liability, damage, cause of action, cost, or expense of any nature whatsoever, including without limitation reasonable attorneys’ fees and other legal costs, even if said injuries or losses are the direct result of our negligence.
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.086274504660000001" green="0.63137257099999999" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -242,7 +247,7 @@
                                             <constraint firstItem="tMN-BC-ade" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="lR5-8M-fE7"/>
                                             <constraint firstItem="ocM-fV-Yfm" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="lus-r9-7BY"/>
                                             <constraint firstItem="cIs-4d-sju" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="mpt-2Y-mav"/>
-                                            <constraint firstItem="ocM-fV-Yfm" firstAttribute="top" secondItem="JuF-Jx-qeC" secondAttribute="bottom" constant="60" id="nGy-7F-fyS"/>
+                                            <constraint firstItem="ocM-fV-Yfm" firstAttribute="top" secondItem="JuF-Jx-qeC" secondAttribute="bottom" constant="30" id="nGy-7F-fyS"/>
                                             <constraint firstAttribute="trailing" secondItem="38C-ZH-GeH" secondAttribute="trailing" constant="8" id="nnc-rD-8xJ"/>
                                             <constraint firstItem="JOR-gT-C6H" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="ooH-De-lkC"/>
                                             <constraint firstItem="7q6-sc-U4M" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="qE6-Yc-BPK"/>
@@ -286,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkF-rF-thQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="17"/>
+            <point key="canvasLocation" x="792.75362318840587" y="16.304347826086957"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="D17-Po-F1C">
@@ -1698,13 +1703,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Logout" style="done" id="rXT-61-j11">
                             <color key="tintColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="vdS-KM-ZW0" kind="showDetail" id="U6c-pM-9uW"/>
+                                <action selector="logoutButton:" destination="s86-R6-w2j" id="6ir-bX-kwb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pointsLabel" destination="XdX-l0-xWh" id="ugH-eH-3ln"/>
+                        <segue destination="vdS-KM-ZW0" kind="presentation" identifier="toLogin" id="o8s-7Y-wDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXI-0T-JRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1875,7 +1881,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntp-yn-4nT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781" y="1629"/>
+            <point key="canvasLocation" x="872" y="1629"/>
         </scene>
         <!--Demo Videos View Controller-->
         <scene sceneID="Whm-if-gb5">
@@ -1951,10 +1957,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WYC-s0-Pjl"/>
+        <segue reference="dw0-Ze-T68"/>
         <segue reference="9DQ-f5-RQn"/>
-        <segue reference="290-zh-2bg"/>
-        <segue reference="jEx-Xq-Cex"/>
+        <segue reference="XP9-nT-Aa0"/>
+        <segue reference="HZk-X7-1OL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
