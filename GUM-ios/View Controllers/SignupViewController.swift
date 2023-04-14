@@ -10,6 +10,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        overrideUserInterfaceStyle = .light
     }
     @IBAction func createAccount(_ sender: Any) {
         self.view.endEditing(true)
@@ -38,6 +39,9 @@ class SignupViewController: UIViewController {
                         "UnlockedAvatars": ["orange_avatar.png"],
                         "Schedule": ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"],
                         "Groups": [],
+                        "EasyVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
+                        "ModerateVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
+                        "VigorousVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false]
                     ]) { (err) in
                         if let err = err {
                             print("Error writing document: \(err)")

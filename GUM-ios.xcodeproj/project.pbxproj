@@ -40,6 +40,7 @@
 		64862FFA29BBD85B0027DE2F /* VideoDemosViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */; };
 		649372A829B939F900C1436D /* UpdateScheduleViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */; };
 		64B3F5EB29BC4E7B00D67E14 /* VideoCellV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */; };
+		64F77B9529E7B4B300D154A2 /* AboutGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F77B9429E7B4B300D154A2 /* AboutGroupsViewController.swift */; };
 		EC8A9673827F83D351B32736 /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewControllerV2.swift; sourceTree = "<group>"; };
 		649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheduleViewControllerV2.swift; sourceTree = "<group>"; };
 		64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellV2.swift; sourceTree = "<group>"; };
+		64F77B9429E7B4B300D154A2 /* AboutGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGroupsViewController.swift; sourceTree = "<group>"; };
 		B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 		221EAA3427C6FFAA00F8791D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				64F77B9429E7B4B300D154A2 /* AboutGroupsViewController.swift */,
 				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
 				64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */,
 				64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */,
@@ -318,6 +321,7 @@
 				22CACAEC282CD504007699C6 /* LandingViewController.swift in Sources */,
 				22D8F35528204D99003A9452 /* GroupCell.swift in Sources */,
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
+				64F77B9529E7B4B300D154A2 /* AboutGroupsViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
 				2214284A2810B282005A83F6 /* CreateGroupViewController.swift in Sources */,
 				221428482810A8B3005A83F6 /* GroupLandingViewController.swift in Sources */,

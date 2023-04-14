@@ -170,15 +170,10 @@ class UpdateScheduleViewControllerV2: UIViewController {
 
         var check = false;
         if (Int(time1_24)! + 100) <= Int(time2_24)! {
-            print("panda1" + time1)
             if (Int(time2_24)! + 100) <= Int(time3_24)!{
-                print("panda2")
                 if (Int(time3_24)! + 100) <= Int(time4_24)! {
-                    print("panda3")
                     if (Int(time4_24)! + 100) <= Int(time5_24)! {
-                        print("panda4")
                         if (Int(time5_24)! + 100) <= Int(time6_24)! {
-                            print("panda5")
                             check = true
                         } else {
                             showAlert(name: "Error", message: "Your 5th must be spaced out by at least 1 hour!")

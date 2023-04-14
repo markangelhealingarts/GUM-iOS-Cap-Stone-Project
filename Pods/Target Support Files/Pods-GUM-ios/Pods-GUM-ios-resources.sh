@@ -97,11 +97,13 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework/DropDownCell.nib"
   install_resource "${PODS_ROOT}/YouTubePlayer/YouTubePlayer/YouTubePlayer/YTPlayer.html"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/youtube-ios-player-helper/Assets.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework/DropDownCell.nib"
   install_resource "${PODS_ROOT}/YouTubePlayer/YouTubePlayer/YouTubePlayer/YTPlayer.html"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/youtube-ios-player-helper/Assets.bundle"
