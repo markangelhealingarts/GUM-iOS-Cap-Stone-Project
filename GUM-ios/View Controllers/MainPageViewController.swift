@@ -37,7 +37,16 @@ extension String {
 }
 
 class MainPageViewController: UIViewController {
+
+    @IBAction func logoutButton(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "storedEmail")
+        UserDefaults.standard.set(nil, forKey: "storedPassword")
+        self.performSegue(withIdentifier: "toLogin", sender: nil)
+        
+    }
     
+    var email: String = "" // this is the users email that will be used to pull info about them
+
     @IBOutlet weak var pointsLabel: UILabel!
     
     // this is the users email that will be used to pull info about them
