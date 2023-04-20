@@ -618,6 +618,9 @@ PODS:
   - Firebase/Firestore (9.0.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 9.0.0)
+  - Firebase/Messaging (9.0.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 9.0.0)
   - FirebaseAnalytics (9.0.0):
     - FirebaseAnalytics/AdIdSupport (= 9.0.0)
     - FirebaseCore (~> 9.0)
@@ -674,6 +677,15 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/UserDefaults (~> 7.7)
     - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (9.0.0):
+    - FirebaseCore (~> 9.0)
+    - FirebaseInstallations (~> 9.0)
+    - GoogleDataTransport (~> 9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/Reachability (~> 7.7)
+    - GoogleUtilities/UserDefaults (~> 7.7)
+    - nanopb (~> 2.30908.0)
   - GoogleAppMeasurement (9.0.0):
     - GoogleAppMeasurement/AdIdSupport (= 9.0.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -790,6 +802,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Firestore
+  - Firebase/Messaging
   - FirebaseCore
   - youtube-ios-player-helper
   - YouTubePlayer
@@ -807,6 +820,7 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseMessaging
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -832,6 +846,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: c7bb29fefd9196f719164452ebe287bc8f5976dd
   FirebaseFirestore: 3ff0784d61f9a0faa3d67c5a8b1e4fb0b828c6b1
   FirebaseInstallations: e693c0dfe404af44afbd553de42498b2ca1ca189
+  FirebaseMessaging: 411a61cde991cbd00b5b11c7a25e0c8f28c44990
   GoogleAppMeasurement: 2c2792d43ebdea0524adbc90cba9139721f3039b
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
@@ -845,6 +860,6 @@ SPEC CHECKSUMS:
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: 136b4aa3aca0a5576f1166723b3a9f135d246eec
+PODFILE CHECKSUM: 9964869e26b462adb0355cb769e914426d6cbdcf
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

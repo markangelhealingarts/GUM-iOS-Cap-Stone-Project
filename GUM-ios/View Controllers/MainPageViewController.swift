@@ -40,6 +40,7 @@ class MainPageViewController: UIViewController {
     @IBAction func logoutButton(_ sender: Any) {
         UserDefaults.standard.set(nil, forKey: "storedEmail")
         UserDefaults.standard.set(nil, forKey: "storedPassword")
+        //UIApplication.shared.unregisterForRemoteNotifications()
         self.performSegue(withIdentifier: "toLogin", sender: nil)
         
     }
@@ -52,7 +53,7 @@ class MainPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let docRef = db.collection("Users").document(email)
 
         docRef.getDocument { (document, error) in
@@ -67,7 +68,7 @@ class MainPageViewController: UIViewController {
 
                 let schedule = data?["Schedule"] as! NSArray
                 let center = UNUserNotificationCenter.current()
-
+                center.removeAllPendingNotificationRequests()
                 for time in schedule{
                     let randomIdentifier = UUID().uuidString
 
@@ -117,8 +118,17 @@ class MainPageViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for _ in requests {
+                print(requests.count)
+                //print("testing")
+                //print(request)
+            }
+        })
+        
         let docRef = db.collection("Users").document(email)
-
+        
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
 
