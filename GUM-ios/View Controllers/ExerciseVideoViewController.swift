@@ -112,6 +112,8 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 let data = document.data()
                 let pointsStored = data?["Points"]
 
+                
+                
                 docRef.updateData([
                     "Points": pointsStored as! Int + 10
                 ])
