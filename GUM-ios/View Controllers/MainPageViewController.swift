@@ -44,8 +44,6 @@ class MainPageViewController: UIViewController {
         self.performSegue(withIdentifier: "toLogin", sender: nil)
         
     }
-    
-    var email: String = "" // this is the users email that will be used to pull info about them
 
     @IBOutlet weak var pointsLabel: UILabel!
     
@@ -157,7 +155,7 @@ class MainPageViewController: UIViewController {
             },
             UIAction(title: "About", image: UIImage(systemName: "questionmark")) { (_) in
                 print("About")
-                let vc = SFSafariViewController(url: URL(string: "https://getupandmove.net/index.html")!)
+                let vc = SFSafariViewController(url: URL(string: "https://www.markangelhealingarts.com/about.html")!)
                 self.present(vc, animated: true)
             },
             UIAction(title: "Donate", image: UIImage(systemName: "dollarsign")) { (_) in

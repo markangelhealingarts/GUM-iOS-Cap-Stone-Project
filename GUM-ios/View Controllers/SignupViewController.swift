@@ -41,7 +41,8 @@ class SignupViewController: UIViewController {
                         "Groups": [],
                         "EasyVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
                         "ModerateVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
-                        "VigorousVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false]
+                        "VigorousVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
+                        
                     ]) { (err) in
                         if let err = err {
                             print("Error writing document: \(err)")
