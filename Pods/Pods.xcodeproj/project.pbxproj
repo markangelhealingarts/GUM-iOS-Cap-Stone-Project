@@ -14057,7 +14057,11 @@
 		3F6913093AF68DF7672B93A16EC5C1D4 /* binder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = binder.h; path = src/core/ext/transport/binder/wire_format/binder.h; sourceTree = "<group>"; };
 		3F71EC5A60E7795DFBC30A92B92A6533 /* config_dump.upbdefs.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = config_dump.upbdefs.c; path = "src/core/ext/upbdefs-generated/envoy/admin/v3/config_dump.upbdefs.c"; sourceTree = "<group>"; };
 		3F91C50ECE9C57D22CFB7DCF910D9D89 /* test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = test.h; path = third_party/re2/util/test.h; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GUM-ios"; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUM_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> Stashed changes
 		3FA1C3B1A3CDC345DC3FD63292C26CA0 /* tls.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tls.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/extensions/transport_sockets/tls/v3/tls.upbdefs.h"; sourceTree = "<group>"; };
 		3FBE81FD355815584D047A7F391CFAD3 /* ring_hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ring_hash.h; path = src/core/ext/filters/client_channel/lb_policy/ring_hash/ring_hash.h; sourceTree = "<group>"; };
 		3FC1DCDAFD49FADBD416BDCA0C89EB26 /* google_c2p_resolver.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = google_c2p_resolver.cc; path = src/core/ext/filters/client_channel/resolver/google_c2p/google_c2p_resolver.cc; sourceTree = "<group>"; };
@@ -15331,7 +15335,11 @@
 		8558EF041629FF35234E8E4046E101A7 /* builtins.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = builtins.h; path = src/core/lib/surface/builtins.h; sourceTree = "<group>"; };
 		8568852C9DEF9396DC6466CCECF7E2CA /* tcp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = src/unix/tcp.c; sourceTree = "<group>"; };
 		856A2325636D6AE25012CC3737A9A0EC /* Libuv-gRPC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Libuv-gRPC-Info.plist"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleDataTransport; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> Stashed changes
 		857D83E4F682AF6F90B3D51957E91E65 /* percent_encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = percent_encoding.h; path = src/core/lib/slice/percent_encoding.h; sourceTree = "<group>"; };
 		8597F6B631EA9980C157AA36DF60331A /* client_context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = client_context.h; path = include/grpcpp/impl/codegen/client_context.h; sourceTree = "<group>"; };
 		85A8E9F9697196B116FC2B4849D751CF /* is_boringssl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = is_boringssl.h; path = src/include/openssl/is_boringssl.h; sourceTree = "<group>"; };
@@ -15737,7 +15745,11 @@
 		9C5AC5816367A3EB90595A49C11EE4BC /* target_data.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = target_data.cc; path = Firestore/core/src/local/target_data.cc; sourceTree = "<group>"; };
 		9C6705CC1A40828B2BF6FF276CF50E89 /* matchers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = matchers.h; path = src/core/lib/matchers/matchers.h; sourceTree = "<group>"; };
 		9C78FAD26945E9A7AE6B0BE2CBA1E50B /* subchannel_pool_interface.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = subchannel_pool_interface.cc; path = src/core/ext/filters/client_channel/subchannel_pool_interface.cc; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "gRPC-C++-gRPCCertificates-Cpp"; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> Stashed changes
 		9C81DCED6D256BD48DA2442E0A11D3EB /* stat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stat.h; path = src/core/lib/gprpp/stat.h; sourceTree = "<group>"; };
 		9C86F52B86A6162E2E362060898E06FC /* buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buf.h; path = src/include/openssl/buf.h; sourceTree = "<group>"; };
 		9C89D18CC22EEBC222DDAC36A19F7882 /* validate.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = validate.upb.h; path = "src/core/ext/upb-generated/validate/validate.upb.h"; sourceTree = "<group>"; };
@@ -16715,7 +16727,11 @@
 		D64FDC6BB4E8AD850B880BEB5CE94218 /* channel_stack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_stack.h; path = src/core/lib/channel/channel_stack.h; sourceTree = "<group>"; };
 		D657065CBFFBF24789E90FA73AAF7B63 /* socket_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socket_utils.h; path = src/core/lib/iomgr/socket_utils.h; sourceTree = "<group>"; };
 		D66F280CF98721892C37EB069C18EDCA /* printf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = printf.c; path = src/crypto/bio/printf.c; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		D674200BB0575198145B5455CF13275F /* Assets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "youtube-ios-player-helper-Assets"; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> Stashed changes
 		D6853E0F9618C9CBB107DF644DA2ECC3 /* FView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FView.m; path = FirebaseDatabase/Sources/Core/View/FView.m; sourceTree = "<group>"; };
 		D68B5436667DB7C3FB0ED1FABDA4AFAF /* get_current_time_posix.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = get_current_time_posix.inc; path = absl/time/internal/get_current_time_posix.inc; sourceTree = "<group>"; };
 		D691CC1938FAC94C31B6A00EA57EB977 /* alts_counter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alts_counter.h; path = src/core/tsi/alts/frame_protector/alts_counter.h; sourceTree = "<group>"; };
@@ -22259,19 +22275,19 @@
 				51671C73F008B5C0C3751B3855999213 /* FirebaseDatabase */,
 				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore */,
 				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */,
-				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */,
+				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
 				1911113E0FBF13CFF9132E5FF7685228 /* gRPC-C++ */,
-				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
+				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */,
 				B471867C535B02FA55D87E260F6480F8 /* gRPC-Core */,
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
 				0A9F46A999C47653013D3AD854352507 /* leveldb-library */,
 				6BC54C3D03DEBF9C3A40965E69CAE039 /* Libuv-gRPC */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
-				3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */,
+				3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */,
 				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
 				8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */,
-				D674200BB0575198145B5455CF13275F /* Assets.bundle */,
+				D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */,
 				1F11C9EDAF3E6BE69DD2D28341260193 /* YouTubePlayer */,
 			);
 			name = Products;
@@ -26586,7 +26602,7 @@
 			);
 			name = "youtube-ios-player-helper-Assets";
 			productName = Assets;
-			productReference = D674200BB0575198145B5455CF13275F /* Assets.bundle */;
+			productReference = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */;
 			productType = "com.apple.product-type.bundle";
 		};
 		3B8CAC3956E59F928387D0C6310E3B37 /* gRPC-C++-gRPCCertificates-Cpp */ = {
@@ -26603,7 +26619,7 @@
 			);
 			name = "gRPC-C++-gRPCCertificates-Cpp";
 			productName = "gRPCCertificates-Cpp";
-			productReference = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */;
+			productReference = 9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPC-C++-gRPCCertificates-Cpp */;
 			productType = "com.apple.product-type.bundle";
 		};
 		4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */ = {
@@ -26905,7 +26921,7 @@
 			);
 			name = GoogleDataTransport;
 			productName = GoogleDataTransport;
-			productReference = 856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */;
+			productReference = 856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		620E05868772C10B4920DC7E324F2C87 /* FirebaseCoreDiagnostics */ = {
@@ -27213,7 +27229,7 @@
 			);
 			name = "Pods-GUM-ios";
 			productName = Pods_GUM_ios;
-			productReference = 3FA0822806FC9424CDB7785F4783276F /* Pods-GUM-ios */;
+			productReference = 3FA0822806FC9424CDB7785F4783276F /* Pods_GUM_ios.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DBA2B63E3A5FE83FE89E731664C9269F /* FirebaseFirestore */ = {
@@ -30048,9 +30064,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D1B5817F3868E40158C0C922EB5B646 /* gRPC-C++.debug.xcconfig */;
 			buildSettings = {
+<<<<<<< Updated upstream
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				DEVELOPMENT_TEAM = X8B84J85VP;
+=======
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
+>>>>>>> Stashed changes
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -30471,9 +30491,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BC972368116E20DD29E2E83F43AA0A9 /* gRPC-C++.release.xcconfig */;
 			buildSettings = {
+<<<<<<< Updated upstream
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				DEVELOPMENT_TEAM = X8B84J85VP;
+=======
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
+>>>>>>> Stashed changes
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -30718,7 +30742,10 @@
 			baseConfigurationReference = D90AB3BADD2EC6F835604EEFEA685947 /* youtube-ios-player-helper.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = X8B84J85VP;
+=======
+>>>>>>> Stashed changes
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -31519,7 +31546,10 @@
 			baseConfigurationReference = A3802980FD51FE04EBE98FEEADEEE28F /* youtube-ios-player-helper.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = X8B84J85VP;
+=======
+>>>>>>> Stashed changes
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

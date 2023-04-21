@@ -1962,31 +1962,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< Updated upstream
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please watch this brief introduction video on Get Up And Move before proceeding." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-X8-Wld">
                                 <rect key="frame" x="15" y="75" width="384" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="iIR-lu-ZuL"/>
                                 </constraints>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-X8-Wld">
+                                <rect key="frame" x="15" y="75" width="384" height="106.33333333333331"/>
+                                <string key="text">Please watch this brief introduction video on Get Up And Move before proceeding. Once the video is complete you be directed to begin the on boarding survey. Also to enlarge the video, please click on the title of the video. </string>
+>>>>>>> Stashed changes
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-TF-7uG" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="1696" height="60"/>
-                                <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="du6-Ul-On6"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-Z2-0ts" customClass="YTPlayerView">
-                                <rect key="frame" x="15" y="206" width="384" height="275"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-Z2-0ts" customClass="YTPlayerView">
+                                <rect key="frame" x="15" y="191.33333333333337" width="384" height="225"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="275" id="LWD-8H-mWG"/>
+                                    <constraint firstAttribute="height" constant="225" id="ucx-C9-Hez"/>
                                 </constraints>
                             </view>
+<<<<<<< Updated upstream
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjy-mk-lbu">
                                 <rect key="frame" x="150" y="606" width="114" height="37"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjy-mk-lbu">
+                                <rect key="frame" x="169.66666666666666" y="466.33333333333331" width="75" height="28.333333333333314"/>
+>>>>>>> Stashed changes
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
@@ -2002,21 +2006,29 @@
                         <viewLayoutGuide key="safeArea" id="USz-Ko-k74"/>
                         <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="01l-GD-4zH"/>
                             <constraint firstAttribute="trailing" secondItem="gYT-Z2-0ts" secondAttribute="trailing" constant="15" id="2t3-2N-Grr"/>
-                            <constraint firstItem="hjy-mk-lbu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="USz-Ko-k74" secondAttribute="leading" constant="150" id="4xa-AJ-nEI"/>
                             <constraint firstAttribute="trailing" secondItem="yAe-X8-Wld" secondAttribute="trailing" constant="15" id="7Md-gb-Ez4"/>
+<<<<<<< Updated upstream
                             <constraint firstItem="hjy-mk-lbu" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="Dmb-ZD-sze"/>
+=======
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="8Uq-YL-tdV"/>
+>>>>>>> Stashed changes
                             <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="FC8-hk-LNy"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="10" id="GjM-sB-CXx"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="HdQ-Rv-dUX"/>
                             <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="20" id="LnC-mP-uVc"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="Nh6-uS-Kmy"/>
                             <constraint firstItem="gYT-Z2-0ts" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="Noz-nh-smE"/>
-                            <constraint firstItem="yAe-X8-Wld" firstAttribute="top" secondItem="tAx-TF-7uG" secondAttribute="bottom" constant="23" id="R1I-Y4-4UX"/>
-                            <constraint firstItem="yAe-X8-Wld" firstAttribute="top" secondItem="tAx-TF-7uG" secondAttribute="bottom" constant="15" id="TMb-I6-mXo"/>
-                            <constraint firstItem="tAx-TF-7uG" firstAttribute="leading" secondItem="LI5-OL-5Kb" secondAttribute="leading" id="aO8-Ue-AuE"/>
+                            <constraint firstItem="hjy-mk-lbu" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="WW1-7Q-3LN"/>
+                            <constraint firstItem="USz-Ko-k74" firstAttribute="trailing" secondItem="yAe-X8-Wld" secondAttribute="trailing" constant="15" id="dCb-Jp-OeY"/>
+                            <constraint firstItem="USz-Ko-k74" firstAttribute="trailing" secondItem="gYT-Z2-0ts" secondAttribute="trailing" constant="15" id="ezp-ZI-fml"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="10" id="hKY-48-GwK"/>
                             <constraint firstItem="hjy-mk-lbu" firstAttribute="top" secondItem="gYT-Z2-0ts" secondAttribute="bottom" constant="50" id="jRu-RH-IUI"/>
-                            <constraint firstItem="USz-Ko-k74" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hjy-mk-lbu" secondAttribute="trailing" constant="150" id="mLD-aR-Vp0"/>
                             <constraint firstItem="yAe-X8-Wld" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="nYZ-ZQ-nnw"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="oCr-HR-936"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="top" secondItem="USz-Ko-k74" secondAttribute="top" constant="75" id="pPk-Vo-apD"/>
                             <constraint firstItem="yAe-X8-Wld" firstAttribute="leading" secondItem="LI5-OL-5Kb" secondAttribute="leading" constant="15" id="pln-nj-AP5"/>
-                            <constraint firstItem="tAx-TF-7uG" firstAttribute="top" secondItem="LI5-OL-5Kb" secondAttribute="top" id="tcd-2P-pH5"/>
                         </constraints>
                     </view>
                     <connections>
