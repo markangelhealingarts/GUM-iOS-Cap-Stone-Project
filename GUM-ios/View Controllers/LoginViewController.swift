@@ -1,8 +1,7 @@
 import UIKit
 import Firebase
-import FirebaseMessaging
 
-class LoginViewController: UIViewController, MessagingDelegate, UNUserNotificationCenterDelegate {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
 
@@ -65,9 +64,6 @@ class LoginViewController: UIViewController, MessagingDelegate, UNUserNotificati
                     if(self.password == passwordStored as? String){
                         UserDefaults.standard.set(self.email, forKey: "storedEmail")
                         UserDefaults.standard.set(self.password, forKey: "storedPassword")
-                        //UIApplication.shared.registerForRemoteNotifications()
-                        //Messaging.messaging().delegate = self
-                        //UNUserNotificationCenter.current().delegate = self
                         self.performSegue(withIdentifier: "loginToMain", sender: document)
 
                     }else{
