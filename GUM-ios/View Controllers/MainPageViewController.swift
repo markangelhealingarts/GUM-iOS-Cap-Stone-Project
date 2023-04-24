@@ -41,6 +41,7 @@ class MainPageViewController: UIViewController {
         UserDefaults.standard.set(nil, forKey: "storedEmail")
         UserDefaults.standard.set(nil, forKey: "storedPassword")
         //UIApplication.shared.unregisterForRemoteNotifications()
+        NotificationCenter.default.removeObserver(self)
         self.performSegue(withIdentifier: "toLogin", sender: nil)
         
     }
@@ -53,7 +54,10 @@ class MainPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleAppDidBecomeActiveNotification(notification:)),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
         let docRef = db.collection("Users").document(email)
 
         docRef.getDocument { (document, error) in
@@ -109,28 +113,34 @@ class MainPageViewController: UIViewController {
                     let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
                     center.add(request)
                 }
+                //print("NOTIFICATION TEST \(UserDefaults.standard.string(forKey: "notifTest") as Any)")
+                
             }
 
         }
         
     }
+    
+
         
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let center = UNUserNotificationCenter.current()
-        center.getPendingNotificationRequests(completionHandler: { requests in
-            for _ in requests {
-                print(requests.count)
-                //print("testing")
-                //print(request)
-            }
-        })
+//  This was for Notification Testing
+//        let center = UNUserNotificationCenter.current()
+//        center.getPendingNotificationRequests(completionHandler: { requests in
+//            for _ in requests {
+//                print(requests.count)
+//                //print("testing")
+//                //print(request)
+//            }
+//        })
         
         let docRef = db.collection("Users").document(email)
-        
+        var notifPressed = UserDefaults.standard.string(forKey: "notifPressed")
+        print("notif pressed = \(String(describing: notifPressed))")
         docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
+                   if let document = document, document.exists {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
@@ -138,9 +148,19 @@ class MainPageViewController: UIViewController {
                 let stringPoints = String(pointsStored as! Int)
 
                 self.pointsLabel.text = stringPoints
+                
+                
+
+                if (notifPressed != nil)
+                {
+                    UserDefaults.standard.set(nil, forKey: "notifPressed")
+                    notifPressed = nil;
+                    self.performSegue(withIdentifier: "mainToMove", sender: document)
+                }
             }
 
         }
+        
     }
 
 
@@ -183,7 +203,30 @@ class MainPageViewController: UIViewController {
         }
         
     }
+    
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
+    
+    @objc func handleAppDidBecomeActiveNotification(notification: Notification) {
+        print("App reopened")
+        let docRef = db.collection("Users").document(email)
+        var notifPressed = UserDefaults.standard.string(forKey: "notifPressed")
+        print("notif pressed = \(String(describing: notifPressed))")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if (notifPressed != nil)
+                {
+                    UserDefaults.standard.set(nil, forKey: "notifPressed")
+                    notifPressed = nil;
+                    self.performSegue(withIdentifier: "mainToMove", sender: document)
+                }
+            }
+        }
+    }
+    deinit {
+        print("Uninitialized")
+       NotificationCenter.default.removeObserver(self)
+    }
+    
 }

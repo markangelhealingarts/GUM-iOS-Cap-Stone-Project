@@ -8,11 +8,11 @@
 import UIKit
 import Firebase
 import FirebaseCore
-import FirebaseMessaging
 import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,  UNUserNotificationCenterDelegate {
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,10 +25,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
                 print("Error: \(String(describing: error))")
             }
         }
-
+        
+        UNUserNotificationCenter.current().delegate = self
+        print("Delegate set to \(String(describing: UNUserNotificationCenter.current().delegate))")
+        
+        if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
+               // The app was opened via a notification
+            UserDefaults.standard.set(true, forKey: "notifPressed")
+            print("Launched with remote Notification: \(notification)")
+            UserDefaults.standard.set("ViaRemoteNotif", forKey: "notifTest")
+           } else {
+               // The app was launched normally
+               UserDefaults.standard.set(nil, forKey: "notifPressed")
+               print("Launched normally")
+               UserDefaults.standard.set("ViaNormal", forKey: "notifTest")
+           }
         
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -44,14 +59,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        messaging.token { token, error in
-            guard let token = token else {
-                return
-            }
-            print("Token: \(token)")
-        }
+    
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        UserDefaults.standard.set(true, forKey: "notifPressed")
+        UserDefaults.standard.set("ViaNotif", forKey: "notifTest")
+        print("Launched via notification")
+        completionHandler()
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        UserDefaults.standard.set(true, forKey: "notifPressed")
+        UserDefaults.standard.set("ReopViaNotif", forKey: "notifTest")
+        print("Reopened via notification")
+        // Display a banner or alert to the user
+        completionHandler([.sound, .badge])
+    }
+
+
 
 
 }
