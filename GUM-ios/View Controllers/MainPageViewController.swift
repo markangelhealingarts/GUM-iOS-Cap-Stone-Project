@@ -7,6 +7,7 @@
 import UIKit
 import UserNotifications
 import Firebase
+import SafariServices
 
 extension String {
 
@@ -38,10 +39,9 @@ extension String {
 class MainPageViewController: UIViewController {
 
     var email: String = "" // this is the users email that will be used to pull info about them
-
-    @IBOutlet weak var pointsLabel: UILabel!
-
     let db = Firestore.firestore()
+    
+    @IBOutlet weak var pointsLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +105,7 @@ class MainPageViewController: UIViewController {
 
         }
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), primaryAction: nil, menu: menuItems())
     }
         
     override func viewDidAppear(_ animated: Bool) {
@@ -125,28 +126,44 @@ class MainPageViewController: UIViewController {
 
         }
     }
+    
+    func menuItems() -> UIMenu {
 
+            let addMenuItems = UIMenu(title: "", options: .displayInline, children: [
+
+                UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { (_) in
+                    print("Logout")
+                    self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+                },
+                UIAction(title: "GUM Website", image: UIImage(systemName: "safari")) { (_) in
+                    print("Website")
+                    let vc = SFSafariViewController(url: URL(string: "https://getupandmove.net/index.html")!)
+                    self.present(vc, animated: true)
+                },
+                UIAction(title: "Contact", image: UIImage(systemName: "person")) { (_) in
+                    print("Contact")
+                    let vc = SFSafariViewController(url: URL(string: "https://getupandmove.net/pages/contact.html")!)
+                    self.present(vc, animated: true)
+                },
+                UIAction(title: "About", image: UIImage(systemName: "questionmark")) { (_) in
+                    print("About")
+                    let vc = SFSafariViewController(url: URL(string: "https://getupandmove.net/index.html")!)
+                    self.present(vc, animated: true)
+                },
+                UIAction(title: "Donate", image: UIImage(systemName: "dollarsign")) { (_) in
+                    print("Donate")
+                    let vc = SFSafariViewController(url: URL(string: "https://getupandmove.net/pages/contact.html")!)
+                    self.present(vc, animated: true)
+                }
+
+            ])
+
+            return addMenuItems
+
+        }
 
     //send email to other viewControllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "mainToGroup" {
-////            print("prepare group")
-//            let destinationVC = segue.destination as! GroupLandingViewController
-//            destinationVC.email = email
-//        } else if segue.identifier == "mainToUpdateScheduleV2" {
-//            let destinationVC = segue.destination as! UpdateScheduleViewControllerV2
-//            destinationVC.email = email
-//        } else if segue.identifier == "mainToMove" {
-////            print("prepare move")
-//            let destinationVC = segue.destination as! StartMovingViewController
-//            destinationVC.email = email
-//        } else if segue.identifier == "mainToDemo" {
-////            print("prepare demo")
-//            let destinationVC = segue.destination as! VideoDemosViewController
-//            destinationVC.email = email
-//        }
-        
-        
         switch segue.identifier {
         case "mainToGroup":
             let destinationVC = segue.destination as! GroupLandingViewController

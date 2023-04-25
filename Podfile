@@ -18,5 +18,5 @@ target 'GUM-ios' do
   pod "youtube-ios-player-helper"
 #  pod 'youtube-ios-player-helper-swift'
   pod 'YouTubePlayer'
-#  pod 'DropDown', '2.3.2'
+  pod 'DropDown'
 end

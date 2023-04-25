@@ -40,6 +40,7 @@
 		64862FFA29BBD85B0027DE2F /* VideoDemosViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */; };
 		649372A829B939F900C1436D /* UpdateScheduleViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */; };
 		64B3F5EB29BC4E7B00D67E14 /* VideoCellV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */; };
+		64B9F3D429F76FCE0052EA60 /* AboutTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9F3D329F76FCE0052EA60 /* AboutTeamsViewController.swift */; };
 		EC8A9673827F83D351B32736 /* Pods_GUM_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE28DD87005362E3E0C6B7 /* Pods_GUM_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemosViewControllerV2.swift; sourceTree = "<group>"; };
 		649372A729B939F900C1436D /* UpdateScheduleViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheduleViewControllerV2.swift; sourceTree = "<group>"; };
 		64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellV2.swift; sourceTree = "<group>"; };
+		64B9F3D329F76FCE0052EA60 /* AboutTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTeamsViewController.swift; sourceTree = "<group>"; };
 		B6E61F68A06AE2AD8CDD0F7E /* Pods-GUM-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUM-ios.release.xcconfig"; path = "Target Support Files/Pods-GUM-ios/Pods-GUM-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				5D2B34C328242BA200BFB693 /* surveryPicker2.swift */,
 				5D2B34C72824525000BFB693 /* SurveryQuestionsViewController.swift */,
 				22CACAEB282CD504007699C6 /* LandingViewController.swift */,
+				64B9F3D329F76FCE0052EA60 /* AboutTeamsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				2214284C2810B2A4005A83F6 /* JoinGroupViewController.swift in Sources */,
 				5D2B34C02823B66900BFB693 /* PickerView.swift in Sources */,
 				64862FFA29BBD85B0027DE2F /* VideoDemosViewControllerV2.swift in Sources */,
+				64B9F3D429F76FCE0052EA60 /* AboutTeamsViewController.swift in Sources */,
 				5D2B34C428242BA200BFB693 /* surveryPicker2.swift in Sources */,
 				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
 				64B3F5EB29BC4E7B00D67E14 /* VideoCellV2.swift in Sources */,
