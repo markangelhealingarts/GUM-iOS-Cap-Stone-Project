@@ -104,6 +104,7 @@ The release process is as follows:
   fields with the latest version. In addition, reference the [Release Notes](./CHANGELOG.md) in the release's description.
 
   See [this release](https://github.com/google/GoogleUtilities/releases/edit/7.7.0) for an example.
+  See [this release](https://github.com/google/GoogleUtilities/releases/edit/7.7.0) for an example.
 
   *Don't forget to perform the [post release cleanup](#post-release-cleanup)!*
 
@@ -168,7 +169,7 @@ GitHub Actions will verify that any code changes are done in a style compliant
 way. Install `clang-format` and `mint`:
 
 ```console
-brew install clang-format@15
+brew install clang-format@16
 brew install mint
 ```
 

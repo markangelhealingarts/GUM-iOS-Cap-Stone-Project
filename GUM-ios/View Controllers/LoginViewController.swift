@@ -11,31 +11,51 @@ class LoginViewController: UIViewController {
     let db = Firestore.firestore()
 
     var emailInfo: String = ""
-
+    var email: String?
+    var password: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         overrideUserInterfaceStyle = .light
+        email = UserDefaults.standard.string(forKey: "storedEmail")
+        password = UserDefaults.standard.string(forKey: "storedPassword")
+        if(email != nil)
+        {
+            emailTextField.text = email
+            passwordTextField.text = password
+        }
     }
 
     @IBAction func login(_ sender: Any) {
         self.view.endEditing(true)
-        var email = emailTextField.text?.trimmingCharacters(in: .whitespaces)
-        var password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
-        
+        email = emailTextField.text?.trimmingCharacters(in: .whitespaces)
+        password = passwordTextField.text?.trimmingCharacters(in: .whitespaces)
 //----------------------------------------------------
 // HARDCODED LOGIN -- COMMENT OUT BEFORE PUBLISHING
 // COMMENT OUT LINES 49-59
 // for development to skip login
+<<<<<<< Updated upstream
 //        class Test {
 //            var email: String?
 //            var password: String?
 //        }
-//
+//        
 //        let test = Test()
+//        test.email = ""
+//        test.password = "12345"
+//        
+=======
+        class Test {
+            var email: String?
+            var password: String?
+        }
+        
+        let test = Test()
 //        test.email = "test0@gmail.com"
 //        test.password = "12345"
 //
+>>>>>>> Stashed changes
 //        email = test.email
 //        password = test.password
 //-----------------------------------------------------
@@ -49,11 +69,13 @@ class LoginViewController: UIViewController {
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
 
-                    self.emailInfo = email! //send this info to MainViewController
+                    self.emailInfo = self.email! //send this info to MainViewController
                     let data = document.data() //access the data
                     let passwordStored = data?["Password"] //get password
-
-                    if(password == passwordStored as? String){
+                    
+                    if(self.password == passwordStored as? String){
+                        UserDefaults.standard.set(self.email, forKey: "storedEmail")
+                        UserDefaults.standard.set(self.password, forKey: "storedPassword")
                         self.performSegue(withIdentifier: "loginToMain", sender: document)
 
                     }else{

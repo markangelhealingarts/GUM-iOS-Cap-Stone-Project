@@ -102,6 +102,7 @@
 		221EAA3427C6FFAA00F8791D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				64F77B9429E7B4B300D154A2 /* AboutGroupsViewController.swift */,
 				2254457627D13FB100FA8FCB /* MainPageViewController.swift */,
 				64862FF929BBD85B0027DE2F /* VideoDemosViewControllerV2.swift */,
 				64B3F5EA29BC4E7B00D67E14 /* VideoCellV2.swift */,
@@ -325,6 +326,7 @@
 				22CACAEC282CD504007699C6 /* LandingViewController.swift in Sources */,
 				22D8F35528204D99003A9452 /* GroupCell.swift in Sources */,
 				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
+				64F77B9529E7B4B300D154A2 /* AboutGroupsViewController.swift in Sources */,
 				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
 				2214284A2810B282005A83F6 /* CreateGroupViewController.swift in Sources */,
 				221428482810A8B3005A83F6 /* GroupLandingViewController.swift in Sources */,
@@ -501,11 +503,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< Updated upstream
-				CURRENT_PROJECT_VERSION = 1.9.2;
-=======
-				CURRENT_PROJECT_VERSION = 1.9.1;
->>>>>>> Stashed changes
+				CURRENT_PROJECT_VERSION = 1.9.5;
 				DEVELOPMENT_TEAM = X8B84J85VP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
@@ -520,11 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< Updated upstream
-				MARKETING_VERSION = 1.9.2;
-=======
-				MARKETING_VERSION = 1.9.1;
->>>>>>> Stashed changes
+				MARKETING_VERSION = 1.9.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSUMB.GUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -545,11 +539,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< Updated upstream
-				CURRENT_PROJECT_VERSION = 1.9.2;
-=======
-				CURRENT_PROJECT_VERSION = 1.9.1;
->>>>>>> Stashed changes
+				CURRENT_PROJECT_VERSION = 1.9.5;
 				DEVELOPMENT_TEAM = X8B84J85VP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GUM-ios/Info.plist";
@@ -564,11 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< Updated upstream
-				MARKETING_VERSION = 1.9.2;
-=======
-				MARKETING_VERSION = 1.9.1;
->>>>>>> Stashed changes
+				MARKETING_VERSION = 1.9.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CSUMB.GUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

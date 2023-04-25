@@ -17,16 +17,16 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "GoogleAppMeasurementIdentitySupport.xcframework/ios-arm64_i386_x86_64-simulator")
-    echo "simulator"
+  "GoogleAppMeasurementIdentitySupport.xcframework/ios-arm64_armv7")
+    echo ""
     ;;
-  "GoogleAppMeasurementIdentitySupport.xcframework/tvos-arm64_x86_64-simulator")
+  "GoogleAppMeasurementIdentitySupport.xcframework/ios-arm64_i386_x86_64-simulator")
     echo "simulator"
     ;;
   "GoogleAppMeasurementIdentitySupport.xcframework/ios-arm64_x86_64-maccatalyst")
     echo "maccatalyst"
     ;;
-  "GoogleAppMeasurementIdentitySupport.xcframework/ios-arm64_armv7")
+  "GoogleAppMeasurementIdentitySupport.xcframework/macos-arm64_x86_64")
     echo ""
     ;;
   "GoogleAppMeasurementIdentitySupport.xcframework/tvos-arm64")

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-<<<<<<< Updated upstream
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
 =======
     <device id="retina6_1" orientation="portrait" appearance="light"/>
 >>>>>>> Stashed changes
     <dependencies>
         <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,6 +24,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Your Journey to Better Health Now!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-30-eQM">
                                 <rect key="frame" x="15" y="400" width="384" height="60"/>
+                                <rect key="frame" x="15" y="400" width="384" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +35,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEI-VZ-hrn"/>
@@ -83,10 +84,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pEh-8a-3op"/>
+                    <connections>
+                        <segue destination="Gel-Lp-k4b" kind="presentation" identifier="skipLogin" id="dw0-Ze-T68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.13953488372093" y="67.596566523605148"/>
+            <point key="canvasLocation" x="-9" y="-23"/>
         </scene>
         <!--Terms-->
         <scene sceneID="yWr-Ga-AVn">
@@ -118,54 +122,48 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIs-4d-sju">
                                                 <rect key="frame" x="8" y="40" width="398" height="100.5"/>
-                                                <string key="text">The purpose of this DISCLAIMER AND NOTICE is to make you aware of the potential risks connected with activity in any exercise, physical fitness or training program. It is also to help you make an informed decision as to whether or not you should participate in “Get Up and Move” and the activities associated with it.</string>
+                                                <string key="text">The purpose of this DISCLAIMER AND NOTICE is to make you aware of the potential risks connected with activity in any exercise, physical fitness or training program. It is also to help you make an informed decision as to whether or not you should participate in Get Up and Move and the activities associated with it. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDi-Ul-QXC">
                                                 <rect key="frame" x="8" y="152.5" width="398" height="167.5"/>
-                                                <string key="text">DISCLAIMER OF LIABILITY. Injuries of all types can occur when participating in exercise, physical fitness and training programs, hence “Get Up and Move” strongly encourages all users to obtain a comprehensive physical examination by a licensed physician BEFORE undertaking any exercise or training demonstrated on this website, and/or any of videos, MP4s, MP3s and training materials offered on this website. If you choose to participate in any of the “Get Up and Move” programs or any associated program, you fully assume the risk of any resulting injury.  </string>
+                                                <string key="text">DISCLAIMER OF LIABILITY: Injuries of all types can occur when participating in exercise, physical fitness and training programs, hence Get Up and Move strongly encourages all users to obtain a comprehensive physical examination by a licensed physician BEFORE undertaking any exercise or training demonstrated on this website, and/or any of videos, MP4s, MP3s and training materials offered on this website. If you choose to participate in any of the Get Up and Move program or any associated program, you fully assume the risk of any resulting injury.  
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMN-BC-ade">
-                                                <rect key="frame" x="8" y="424" width="398" height="117"/>
+                                                <rect key="frame" x="8" y="442" width="398" height="117"/>
                                                 <string key="text">“GET UP AND MOVE” DISCLAIMS ANY LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES AND ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY LOSS, INJURY OR DAMAGE SUFFERED BY ANY PERSON AS A RESULT OF THE USE OR MISUSE OF ANY INFORMATION, VIDEOS, MPSs OR TRAINING MATERIALS MADE AVAILABLE ON THIS WEBSITE.”</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-Jx-qeC">
-                                                <rect key="frame" x="8" y="553" width="398" height="167.5"/>
-                                                <string key="text">In consideration of performing or participating in these types of activities, you hereby agree to indemnify and hold harmless Mark C. Angel and others associated with developing the “Get Up and Move” program, and its officers, directors, agents, and their respective successors and assignees, against any loss, liability, damage, cause of action, cost, or expense of any nature whatsoever, including without limitation reasonable attorneys’ fees and other legal costs, even if said injuries or losses are the direct result of our negligence.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-fV-Yfm">
-                                                <rect key="frame" x="8" y="780.5" width="398" height="50.5"/>
+                                                <rect key="frame" x="8" y="787" width="398" height="50.5"/>
                                                 <string key="text">The content, information, videos, MP4s, MP3s and training materials offered and made available on this website are for informational purposes only.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="USE THIS PROGRAM AND ALL INFORMATION CONTAINED WITHIN IT AT YOUR OWN RISK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-3U-x3G">
-                                                <rect key="frame" x="8" y="861" width="398" height="33.5"/>
+                                                <rect key="frame" x="8" y="860" width="398" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Check the box below to assure you have agree'd with everything listed above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-sc-U4M">
-                                                <rect key="frame" x="8" y="954.5" width="398" height="33.5"/>
+                                                <rect key="frame" x="8" y="923" width="398" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38C-ZH-GeH">
-                                                <rect key="frame" x="8" y="361.5" width="398" height="50.5"/>
-                                                <string key="text">•Bruising, cuts and general soreness\n•Muscle and tendon injuries\n•Ligament and skeletal injuries\n•Fractured or broken bones\n•Concussions\n•Heart attack</string>
+                                                <rect key="frame" x="8" y="361" width="398" height="50.5"/>
+                                                <string key="text">Bruising, cuts and general soreness Muscle and tendon injuries Ligament and skeletal injuries Fractured or broken bones Concussions Heart attack </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -225,6 +223,14 @@
                                                     <action selector="checkAgreement:" destination="HU2-xm-qGC" eventType="touchUpInside" id="3Fk-s8-49t"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-Jx-qeC">
+                                                <rect key="frame" x="8" y="604" width="398" height="175"/>
+                                                <string key="text">In consideration of performing or participating in these types of activities, you hereby agree to indemnify and hold harmless Mark C. Angel and other associated with developing the Get Up and Move program, and its officers, directors, and agents, and their respective successors and assigns, against any loss, liability, damage, cause of action, cost, or expense of any nature whatsoever, including without limitation reasonable attorneys’ fees and other legal costs, even if said injuries or losses are the direct result of our negligence.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.086274504660000001" green="0.63137257099999999" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -258,7 +264,7 @@
                                             <constraint firstItem="tMN-BC-ade" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="lR5-8M-fE7"/>
                                             <constraint firstItem="ocM-fV-Yfm" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="lus-r9-7BY"/>
                                             <constraint firstItem="cIs-4d-sju" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="mpt-2Y-mav"/>
-                                            <constraint firstItem="ocM-fV-Yfm" firstAttribute="top" secondItem="JuF-Jx-qeC" secondAttribute="bottom" constant="60" id="nGy-7F-fyS"/>
+                                            <constraint firstItem="ocM-fV-Yfm" firstAttribute="top" secondItem="JuF-Jx-qeC" secondAttribute="bottom" constant="30" id="nGy-7F-fyS"/>
                                             <constraint firstAttribute="trailing" secondItem="38C-ZH-GeH" secondAttribute="trailing" constant="8" id="nnc-rD-8xJ"/>
                                             <constraint firstItem="JOR-gT-C6H" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="ooH-De-lkC"/>
                                             <constraint firstItem="7q6-sc-U4M" firstAttribute="leading" secondItem="Thj-aC-cGs" secondAttribute="leading" constant="8" id="qE6-Yc-BPK"/>
@@ -302,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkF-rF-thQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="17"/>
+            <point key="canvasLocation" x="792.75362318840587" y="16.304347826086957"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="D17-Po-F1C">
@@ -320,10 +326,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-2J-S0j">
                                 <rect key="frame" x="110.33333333333333" y="570.33333333333326" width="193.66666666666669" height="34.333333333333371"/>
+                                <color key="backgroundColor" name="MainAppColor1"/>
+                                <color key="tintColor" name="MainAppColor1"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="New to GUM? Sign Up">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="7I6-9W-Khr" kind="show" id="290-zh-2bg"/>
@@ -485,7 +493,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="login:" destination="vdS-KM-ZW0" eventType="touchUpInside" id="BWU-Jp-BLy"/>
@@ -493,7 +501,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DNd-Z6-1pd"/>
-                        <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470587" green="0.62745098039215685" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PgI-Vf-TFj" firstAttribute="centerX" secondItem="L5E-eI-5CK" secondAttribute="centerX" id="5W3-B9-g2b"/>
                             <constraint firstItem="mcX-QE-KMF" firstAttribute="top" secondItem="PgI-Vf-TFj" secondAttribute="bottom" constant="25" id="9Vo-Cx-vmH"/>
@@ -538,7 +546,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="MainAppColor2"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="createAccount:" destination="7I6-9W-Khr" eventType="touchUpInside" id="8RS-st-pwq"/>
@@ -582,8 +590,9 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4ZR-dB-z9T">
                                         <rect key="frame" x="0.0" y="54" width="354" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
 =======
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEx-1R-mzW">
@@ -722,6 +731,7 @@
                     <connections>
                         <outlet property="emailTextView" destination="rbb-st-zBr" id="4lw-Jc-bI1"/>
                         <outlet property="passwordTextView" destination="4ZR-dB-z9T" id="roQ-ax-XvI"/>
+                        <segue destination="qLF-1y-U8g" kind="presentation" identifier="introVideo" id="2Xl-zx-rMz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3a-kP-eKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -744,7 +754,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Create Team">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCreateGroup:" destination="xpb-QS-LlU" eventType="touchUpInside" id="MK5-m6-6cs"/>
@@ -997,6 +1007,7 @@
 <<<<<<< Updated upstream
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="N2T-uZ-BkI">
                                 <rect key="frame" x="111" y="20" width="192" height="192"/>
+                                <rect key="frame" x="111" y="20" width="192" height="192"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-Fu-vac">
                                 <rect key="frame" x="150.66666666666666" y="410.66666666666669" width="112.99999999999997" height="38"/>
@@ -1005,7 +1016,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Join Team">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onJoin:" destination="8rU-QB-CtM" eventType="touchUpInside" id="Bbf-TI-Haa"/>
@@ -1158,6 +1169,7 @@
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nv2-6L-RZ7">
                                 <rect key="frame" x="0.0" y="67" width="414" height="620"/>
+                                <rect key="frame" x="0.0" y="67" width="414" height="620"/>
                                 <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1213,12 +1225,11 @@
                         <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nv2-6L-RZ7" firstAttribute="bottom" secondItem="HeV-9l-fSX" secondAttribute="bottom" id="7XN-Vl-MOC"/>
-                            <constraint firstItem="HeV-9l-fSX" firstAttribute="trailing" secondItem="iib-Tz-HKv" secondAttribute="trailing" constant="93" id="Eym-7Y-QAR"/>
                             <constraint firstItem="nv2-6L-RZ7" firstAttribute="leading" secondItem="HeV-9l-fSX" secondAttribute="leading" id="Fig-3k-YUy"/>
                             <constraint firstItem="iib-Tz-HKv" firstAttribute="top" secondItem="HeV-9l-fSX" secondAttribute="top" constant="8" id="SHs-Q1-IKC"/>
                             <constraint firstItem="nv2-6L-RZ7" firstAttribute="trailing" secondItem="HeV-9l-fSX" secondAttribute="trailing" id="Tza-1K-WFo"/>
-                            <constraint firstItem="iib-Tz-HKv" firstAttribute="leading" secondItem="HeV-9l-fSX" secondAttribute="leading" constant="93" id="Z5T-20-jZI"/>
                             <constraint firstItem="nv2-6L-RZ7" firstAttribute="top" secondItem="iib-Tz-HKv" secondAttribute="bottom" constant="8" id="sNB-jC-MYC"/>
+                            <constraint firstItem="iib-Tz-HKv" firstAttribute="centerX" secondItem="dSJ-qp-oLa" secondAttribute="centerX" id="vb7-zv-soF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Current Groups" id="lcf-q0-hXp"/>
@@ -1295,11 +1306,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQE-IW-Z8c">
                                 <rect key="frame" x="8" y="28" width="398" height="36"/>
+                                <rect key="frame" x="8" y="28" width="398" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mFR-p9-BbB">
+                                <rect key="frame" x="0.0" y="184.33333333333331" width="414" height="551.66666666666674"/>
                                 <rect key="frame" x="0.0" y="184.33333333333331" width="414" height="551.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1438,7 +1451,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Join Team">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onJoinGroup:" destination="AyZ-Mi-YFS" eventType="touchUpInside" id="4JU-O6-eom"/>
@@ -1458,7 +1471,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Current Teams">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCurrentGroups:" destination="AyZ-Mi-YFS" eventType="touchUpInside" id="Dk1-vN-qH4"/>
@@ -1478,7 +1491,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Create Team">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470590000005" green="0.86274509799999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCreateGroup:" destination="AyZ-Mi-YFS" eventType="touchUpInside" id="wak-yy-ANs"/>
@@ -1523,6 +1536,7 @@
                             <constraint firstItem="Feq-78-Fqx" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1pb-zJ-Wb6" secondAttribute="bottom" constant="25" id="Fht-mP-jZ5"/>
                             <constraint firstItem="Feq-78-Fqx" firstAttribute="trailing" secondItem="DbZ-Th-Du9" secondAttribute="trailing" constant="15" id="KbD-RW-Daj"/>
                             <constraint firstItem="8Hg-dm-xkq" firstAttribute="top" secondItem="DbZ-Th-Du9" secondAttribute="bottom" constant="25" id="LAY-yT-Iwz"/>
+                            <constraint firstItem="8Hg-dm-xkq" firstAttribute="top" secondItem="DbZ-Th-Du9" secondAttribute="bottom" constant="25" id="LAY-yT-Iwz"/>
                             <constraint firstItem="J4v-KR-he4" firstAttribute="centerX" secondItem="ADy-na-cU8" secondAttribute="centerX" id="LnU-Bc-JZ6"/>
                             <constraint firstItem="8Hg-dm-xkq" firstAttribute="leading" secondItem="Feq-78-Fqx" secondAttribute="leading" constant="15" id="Mmn-9s-nL6"/>
                             <constraint firstItem="wGT-Cx-YPN" firstAttribute="top" secondItem="J4v-KR-he4" secondAttribute="bottom" constant="25" id="RAe-1r-auA"/>
@@ -1532,6 +1546,7 @@
                             <constraint firstItem="wGT-Cx-YPN" firstAttribute="centerX" secondItem="ADy-na-cU8" secondAttribute="centerX" id="foo-wd-Ne3"/>
                             <constraint firstItem="Feq-78-Fqx" firstAttribute="trailing" secondItem="Ww5-Sy-D1R" secondAttribute="trailing" constant="15" id="hlb-od-Acx"/>
                             <constraint firstItem="Feq-78-Fqx" firstAttribute="trailing" secondItem="8Hg-dm-xkq" secondAttribute="trailing" constant="15" id="m3m-UP-W7B"/>
+                            <constraint firstItem="Feq-78-Fqx" firstAttribute="trailing" secondItem="JYZ-Xe-Wvw" secondAttribute="trailing" constant="15" id="nWR-yz-xKm"/>
                             <constraint firstItem="J4v-KR-he4" firstAttribute="top" secondItem="Feq-78-Fqx" secondAttribute="top" constant="15" id="nYc-Ku-8CD"/>
                             <constraint firstItem="1pb-zJ-Wb6" firstAttribute="centerX" secondItem="ADy-na-cU8" secondAttribute="centerX" id="qto-7R-dQc"/>
                             <constraint firstItem="DbZ-Th-Du9" firstAttribute="top" secondItem="wGT-Cx-YPN" secondAttribute="bottom" constant="25" id="t0d-Wh-P3f"/>
@@ -1662,6 +1677,7 @@
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-hP-vyp">
                                 <rect key="frame" x="50" y="60.333333333333343" width="314" height="262.66666666666663"/>
+                                <rect key="frame" x="50" y="60.333333333333343" width="314" height="262.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0as-Nz-LFC" userLabel="Stack 1">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
@@ -1688,14 +1704,17 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-Ag-tcY" userLabel="Stack 2">
                                         <rect key="frame" x="0.0" y="34" width="314" height="36.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="34" width="314" height="36.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" ambiguous="YES" text="Workout 2: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shq-Rl-sgw">
+                                                <rect key="frame" x="0.0" y="0.0" width="226.66666666666666" height="36.666666666666664"/>
                                                 <rect key="frame" x="0.0" y="0.0" width="226.66666666666666" height="36.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ana-PP-QTQ">
+                                                <rect key="frame" x="226.66666666666671" y="0.0" width="87.333333333333343" height="36.666666666666664"/>
                                                 <rect key="frame" x="226.66666666666671" y="0.0" width="87.333333333333343" height="36.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Time 2">
@@ -1843,7 +1862,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gts-zs-8d1">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Update" id="dh0-OA-txc">
-                            <color key="tintColor" name="MainAppColor2"/>
+                            <color key="tintColor" red="0.81176470590000005" green="0.86274509799999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onNavBarItemUpdateTap:" destination="jpW-8Q-tJL" id="pUv-XV-zPW"/>
                             </connections>
@@ -2354,7 +2373,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="man-dancing" imagePlacement="top" title="Start Moving">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="TGd-mE-qot" kind="show" identifier="mainToMove" id="ogf-Hw-K66"/>
@@ -2369,7 +2388,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="video" catalog="system" imagePlacement="top" title=" Video Demos">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="tTB-aw-a5r" kind="show" identifier="mainToVideoDemosV2" id="0d6-Ra-o3m"/>
@@ -2392,7 +2411,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="calendar.badge.plus" catalog="system" imagePlacement="top" title=" Update Schedule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="jpW-8Q-tJL" kind="show" identifier="mainToUpdateScheduleV2" id="t4w-lq-WVJ"/>
@@ -2407,7 +2426,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="people (1)" imagePlacement="top" title="Teams">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.81176470588235294" green="0.86274509803921573" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="AyZ-Mi-YFS" kind="show" identifier="mainToGroup" id="jIv-hv-2Dj"/>
@@ -2434,7 +2453,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsc-0j-CUx"/>
-                        <color key="backgroundColor" red="0.22352941176470587" green="0.62745098039215685" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainAppColor1"/>
                         <constraints>
                             <constraint firstItem="tsc-0j-CUx" firstAttribute="bottom" secondItem="RIY-uF-yqQ" secondAttribute="bottom" priority="250" constant="10" id="8zO-Mh-PMq"/>
                             <constraint firstItem="RIY-uF-yqQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="POt-GN-2My" secondAttribute="bottom" constant="10" id="FgT-vR-Ra2"/>
@@ -2458,13 +2477,15 @@
                         <barButtonItem key="rightBarButtonItem" title="Logout" style="done" id="rXT-61-j11">
                             <color key="tintColor" red="0.81090575460000003" green="0.86314195390000004" blue="0.45770794149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="vdS-KM-ZW0" kind="showDetail" id="U6c-pM-9uW"/>
+                                <action selector="logoutButton:" destination="s86-R6-w2j" id="6ir-bX-kwb"/>
+                                <segue destination="vdS-KM-ZW0" kind="showDetail" identifier="logoutSegue" id="U6c-pM-9uW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pointsLabel" destination="XdX-l0-xWh" id="ugH-eH-3ln"/>
+                        <segue destination="vdS-KM-ZW0" kind="presentation" identifier="toLogin" id="o8s-7Y-wDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXI-0T-JRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3179,12 +3200,97 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntp-yn-4nT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781" y="1629"/>
+            <point key="canvasLocation" x="872" y="1629"/>
+        </scene>
+        <!--Demo Videos View Controller-->
+        <scene sceneID="Whm-if-gb5">
+            <objects>
+                <viewController storyboardIdentifier="DemosVideosViewController" modalPresentationStyle="fullScreen" id="qLF-1y-U8g" customClass="DemoVideosViewController" customModule="GUM_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LI5-OL-5Kb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+<<<<<<< Updated upstream
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please watch this brief introduction video on Get Up And Move before proceeding." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-X8-Wld">
+                                <rect key="frame" x="15" y="75" width="384" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="iIR-lu-ZuL"/>
+                                </constraints>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-X8-Wld">
+                                <rect key="frame" x="15" y="75" width="384" height="106.33333333333331"/>
+                                <string key="text">Please watch this brief introduction video on Get Up And Move before proceeding. Once the video is complete you be directed to begin the on boarding survey. Also to enlarge the video, please click on the title of the video. </string>
+>>>>>>> Stashed changes
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-Z2-0ts" customClass="YTPlayerView">
+                                <rect key="frame" x="15" y="191.33333333333337" width="384" height="225"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="ucx-C9-Hez"/>
+                                </constraints>
+                            </view>
+<<<<<<< Updated upstream
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjy-mk-lbu">
+                                <rect key="frame" x="150" y="606" width="114" height="37"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjy-mk-lbu">
+                                <rect key="frame" x="169.66666666666666" y="466.33333333333331" width="75" height="28.333333333333314"/>
+>>>>>>> Stashed changes
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.81176470590000005" green="0.86274509799999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="surveyPage:" destination="qLF-1y-U8g" eventType="touchUpInside" id="a55-LP-w48"/>
+                                    <segue destination="Gel-Lp-k4b" kind="presentation" identifier="pickerLevel2" id="WYC-s0-Pjl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="USz-Ko-k74"/>
+                        <color key="backgroundColor" red="0.2237415314" green="0.62577611209999995" blue="0.9623597264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="01l-GD-4zH"/>
+                            <constraint firstAttribute="trailing" secondItem="gYT-Z2-0ts" secondAttribute="trailing" constant="15" id="2t3-2N-Grr"/>
+                            <constraint firstAttribute="trailing" secondItem="yAe-X8-Wld" secondAttribute="trailing" constant="15" id="7Md-gb-Ez4"/>
+<<<<<<< Updated upstream
+                            <constraint firstItem="hjy-mk-lbu" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="Dmb-ZD-sze"/>
+=======
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="8Uq-YL-tdV"/>
+>>>>>>> Stashed changes
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="FC8-hk-LNy"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="10" id="GjM-sB-CXx"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="HdQ-Rv-dUX"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="20" id="LnC-mP-uVc"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="Nh6-uS-Kmy"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="leading" secondItem="USz-Ko-k74" secondAttribute="leading" constant="15" id="Noz-nh-smE"/>
+                            <constraint firstItem="hjy-mk-lbu" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="WW1-7Q-3LN"/>
+                            <constraint firstItem="USz-Ko-k74" firstAttribute="trailing" secondItem="yAe-X8-Wld" secondAttribute="trailing" constant="15" id="dCb-Jp-OeY"/>
+                            <constraint firstItem="USz-Ko-k74" firstAttribute="trailing" secondItem="gYT-Z2-0ts" secondAttribute="trailing" constant="15" id="ezp-ZI-fml"/>
+                            <constraint firstItem="gYT-Z2-0ts" firstAttribute="top" secondItem="yAe-X8-Wld" secondAttribute="bottom" constant="10" id="hKY-48-GwK"/>
+                            <constraint firstItem="hjy-mk-lbu" firstAttribute="top" secondItem="gYT-Z2-0ts" secondAttribute="bottom" constant="50" id="jRu-RH-IUI"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="nYZ-ZQ-nnw"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="centerX" secondItem="LI5-OL-5Kb" secondAttribute="centerX" id="oCr-HR-936"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="top" secondItem="USz-Ko-k74" secondAttribute="top" constant="75" id="pPk-Vo-apD"/>
+                            <constraint firstItem="yAe-X8-Wld" firstAttribute="leading" secondItem="LI5-OL-5Kb" secondAttribute="leading" constant="15" id="pln-nj-AP5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="youtubePlayer" destination="gYT-Z2-0ts" id="Aea-TE-zNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odn-IP-rwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695.6521739130435" y="792.39130434782612"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< Updated upstream
-        <segue reference="9DQ-f5-RQn"/>
+        <segue reference="V2E-Q2-muO"/>
+        <segue reference="iFA-8P-1Z2"/>
         <segue reference="290-zh-2bg"/>
         <segue reference="jEx-Xq-Cex"/>
 =======
@@ -3206,10 +3312,7 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainAppColor1">
-            <color red="0.22400000691413879" green="0.62699997425079346" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MainAppColor2">
-            <color red="0.81199997663497925" green="0.86299997568130493" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13300000131130219" green="0.63899999856948853" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

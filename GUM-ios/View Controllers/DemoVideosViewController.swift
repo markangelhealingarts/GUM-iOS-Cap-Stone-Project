@@ -30,13 +30,13 @@ class DemoVideosViewController: UIViewController{
 
     }
     @IBAction func startOrientationVideo(_ sender: Any) {
-        UIApplication.shared.openURL(NSURL(string: "https://getupandmove.net/GUM/GUM_Orientation/index.html")! as URL)
+        UIApplication.shared.open(NSURL(string: "https://getupandmove.net/GUM/GUM_Orientation/index.html")! as URL)
     }
     @objc func update(){
         let docRef = db.collection("Users").document(email)
         docRef.getDocument{ (document,error) in
             if let document = document, document.exists {
-                self.performSegue(withIdentifier: "pickerLevel", sender: document)
+                //self.performSegue(withIdentifier: "pickerLevel", sender: document)
             }
             
         }
@@ -45,18 +45,11 @@ class DemoVideosViewController: UIViewController{
         let docRef = db.collection("Users").document(email)
         docRef.getDocument{ (document,error) in
             if let document = document, document.exists {
-                self.performSegue(withIdentifier: "pickerLevel", sender: document)
+                //self.performSegue(withIdentifier: "pickerLevel", sender: document)
             }
             
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//        if(segue.identifier == "pickerLevel"){
-//            let destinationVC = segue.destination as! SurveyViewController
-//            destinationVC.email = email
-//        }
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "pickerLevel2"){

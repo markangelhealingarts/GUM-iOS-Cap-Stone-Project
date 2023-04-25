@@ -163,7 +163,7 @@ gdt_cct_LogEvent GDTCCTConstructLogEvent(GDTCOREvent *event) {
   return logEvent;
 }
 
-gdt_cct_ClientInfo GDTCCTConstructClientInfo() {
+gdt_cct_ClientInfo GDTCCTConstructClientInfo(void) {
   gdt_cct_ClientInfo clientInfo = gdt_cct_ClientInfo_init_default;
   clientInfo.client_type = gdt_cct_ClientInfo_ClientType_IOS_FIREBASE;
   clientInfo.has_client_type = 1;
@@ -173,11 +173,13 @@ gdt_cct_ClientInfo GDTCCTConstructClientInfo() {
 #elif TARGET_OS_OSX
   clientInfo.mac_client_info = GDTCCTConstructMacClientInfo();
   clientInfo.has_mac_client_info = 1;
+  clientInfo.mac_client_info = GDTCCTConstructMacClientInfo();
+  clientInfo.has_mac_client_info = 1;
 #endif
   return clientInfo;
 }
 
-gdt_cct_IosClientInfo GDTCCTConstructiOSClientInfo() {
+gdt_cct_IosClientInfo GDTCCTConstructiOSClientInfo(void) {
   gdt_cct_IosClientInfo iOSClientInfo = gdt_cct_IosClientInfo_init_default;
 #if TARGET_OS_IOS || TARGET_OS_TV
   UIDevice *device = [UIDevice currentDevice];
@@ -252,7 +254,7 @@ NSData *GDTCCTConstructNetworkConnectionInfoData() {
   return networkConnectionInfoData;
 }
 
-gdt_cct_NetworkConnectionInfo_MobileSubtype GDTCCTNetworkConnectionInfoNetworkMobileSubtype() {
+gdt_cct_NetworkConnectionInfo_MobileSubtype GDTCCTNetworkConnectionInfoNetworkMobileSubtype(void) {
   NSNumber *networkMobileSubtypeMessage = @(GDTCORNetworkMobileSubTypeMessage());
   if (!networkMobileSubtypeMessage.intValue) {
     return gdt_cct_NetworkConnectionInfo_MobileSubtype_UNKNOWN_MOBILE_SUBTYPE;

@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-GUM-ios/Pods-GUM-ios-resources.sh
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework/DropDownCell.nib
 ${PODS_ROOT}/YouTubePlayer/YouTubePlayer/YouTubePlayer/YTPlayer.html
 ${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/youtube-ios-player-helper/Assets.bundle
