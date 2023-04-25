@@ -170,6 +170,10 @@ class MainPageViewController: UIViewController {
             
             UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { (_) in
                 print("Logout")
+                UserDefaults.standard.set(nil, forKey: "storedEmail")
+                UserDefaults.standard.set(nil, forKey: "storedPassword")
+                //UIApplication.shared.unregisterForRemoteNotifications()
+                NotificationCenter.default.removeObserver(self)
                 self.performSegue(withIdentifier: "logoutSegue", sender: nil)
             },
             UIAction(title: "GUM Website", image: UIImage(systemName: "safari")) { (_) in

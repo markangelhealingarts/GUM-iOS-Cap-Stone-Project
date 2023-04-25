@@ -669,7 +669,7 @@ PODS:
     - FirebaseCore (~> 9.0)
     - "gRPC-C++ (~> 1.44.0)"
     - leveldb-library (~> 1.22)
-    - nanopb (~> 2.30908.0)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseInstallations (9.6.0):
     - FirebaseCore (~> 9.0)
     - GoogleUtilities/Environment (~> 7.7)
@@ -849,6 +849,6 @@ SPEC CHECKSUMS:
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: 136b4aa3aca0a5576f1166723b3a9f135d246eec
+PODFILE CHECKSUM: ecf23d059f23758f3a4d8600d599f5cf51c3e7c3
 
 COCOAPODS: 1.12.1

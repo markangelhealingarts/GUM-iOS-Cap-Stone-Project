@@ -88,3 +88,11 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement-xcframeworks.sh
+Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics-xcframeworks.sh
+Pods/Target Support Files/DropDown/DropDown.release.xcconfig
+Pods/Target Support Files/DropDown/DropDown.debug.xcconfig
+Pods/Target Support Files/DropDown/DropDown-Info.plist
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Manifest.lock
+Podfile.lock
