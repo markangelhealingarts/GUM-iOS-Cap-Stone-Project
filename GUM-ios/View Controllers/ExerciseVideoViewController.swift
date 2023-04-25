@@ -123,6 +123,8 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 var newFinishedVideosArray = [Any]()
                 //newFinishedVideosArray = self.finishedVideosArray.append(currVideoID)
 
+                
+                
                 docRef.updateData([
                     "Points": pointsStored as! Int + 10,
                     "Finished Videos": newFinishedVideosArray

@@ -173,6 +173,8 @@ gdt_cct_ClientInfo GDTCCTConstructClientInfo(void) {
 #elif TARGET_OS_OSX
   clientInfo.mac_client_info = GDTCCTConstructMacClientInfo();
   clientInfo.has_mac_client_info = 1;
+  clientInfo.mac_client_info = GDTCCTConstructMacClientInfo();
+  clientInfo.has_mac_client_info = 1;
 #endif
   return clientInfo;
 }
@@ -203,7 +205,7 @@ gdt_cct_IosClientInfo GDTCCTConstructiOSClientInfo(void) {
   return iOSClientInfo;
 }
 
-gdt_cct_MacClientInfo GDTCCTConstructMacClientInfo(void) {
+gdt_cct_MacClientInfo GDTCCTConstructMacClientInfo() {
   gdt_cct_MacClientInfo macOSClientInfo = gdt_cct_MacClientInfo_init_default;
 
   NSOperatingSystemVersion osVersion = [NSProcessInfo processInfo].operatingSystemVersion;
@@ -231,7 +233,7 @@ gdt_cct_MacClientInfo GDTCCTConstructMacClientInfo(void) {
   return macOSClientInfo;
 }
 
-NSData *GDTCCTConstructNetworkConnectionInfoData(void) {
+NSData *GDTCCTConstructNetworkConnectionInfoData() {
   gdt_cct_NetworkConnectionInfo networkConnectionInfo = gdt_cct_NetworkConnectionInfo_init_default;
   NSInteger currentNetworkType = GDTCORNetworkTypeMessage();
   if (currentNetworkType) {
