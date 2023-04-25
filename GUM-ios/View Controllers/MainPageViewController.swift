@@ -8,6 +8,7 @@ import UIKit
 import UserNotifications
 import Firebase
 import SafariServices
+import SafariServices
 
 extension String {
 
@@ -119,6 +120,7 @@ class MainPageViewController: UIViewController {
 
         }
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), primaryAction: nil, menu: menuItems())
     }
     
 
