@@ -120,7 +120,7 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 let finishedVideosArray = [Any]()
                 self.finishedVideosArray = data?["Finished Videos"] as! [Any]
                 var newFinishedVideosArray = [Any]()
-                newFinishedVideosArray = self.finishedVideosArray.append(currVideoID as! [Any])
+                //newFinishedVideosArray = self.finishedVideosArray.append(currVideoID)
 
                 
                 
@@ -131,7 +131,7 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 
                 
                 
-                if(
+                //if()
 
                 self.performSegue(withIdentifier: "exerciseToFinished", sender: nil)
             }

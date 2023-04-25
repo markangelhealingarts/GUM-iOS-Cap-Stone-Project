@@ -226,7 +226,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					2230B72A27BDF21000CEB996 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -338,15 +338,9 @@
 				64862FFA29BBD85B0027DE2F /* VideoDemosViewControllerV2.swift in Sources */,
 				64B9F3D429F76FCE0052EA60 /* AboutTeamsViewController.swift in Sources */,
 				5D2B34C428242BA200BFB693 /* surveryPicker2.swift in Sources */,
-				2254457D27D2B72400FA8FCB /* StartMovingViewController.swift in Sources */,
 				64B3F5EB29BC4E7B00D67E14 /* VideoCellV2.swift in Sources */,
-				2254457727D13FB100FA8FCB /* MainPageViewController.swift in Sources */,
 				5D2B34C82824525000BFB693 /* SurveryQuestionsViewController.swift in Sources */,
-				221EAA3327C6FF7700F8791D /* SignupViewController.swift in Sources */,
-				2230B72F27BDF21000CEB996 /* AppDelegate.swift in Sources */,
 				5D2B34C228241AE000BFB693 /* SurveryPicker.swift in Sources */,
-				221EAA3627C7005700F8791D /* SurveyViewController.swift in Sources */,
-				22E42E6D27E8FFD80064D7DA /* ExerciseVideoViewController.swift in Sources */,
 				5D2B34BE28239BC800BFB693 /* agreement.swift in Sources */,
 				2230B73127BDF21000CEB996 /* SceneDelegate.swift in Sources */,
 				5D4F7B0D2809F4CD000B411A /* QuestionBank.swift in Sources */,
