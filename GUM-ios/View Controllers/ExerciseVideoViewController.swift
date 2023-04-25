@@ -24,6 +24,9 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
     var desc: String = ""
 
     let db = Firestore.firestore()
+    let currVideoID = ""
+    var videoIDList = [Any]()
+    var finishedVideosArray = [Any]()
 
     var timer: Timer!
     var secondsRemaining = 59
@@ -39,6 +42,8 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 let data = document.data()
 
                 let videos = data!["Titles"] as! NSArray
+                let tempVideoIDList = document.data()!["youtubeID"] as! [Any]
+                self.videoIDList = tempVideoIDList
 
                 var count = 0
 
@@ -50,8 +55,8 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
 
                         let urls = data!["YtUrls"] as! NSArray
                         print(urls[count] as! String)
-                        self.playerView.load(withVideoId: urls[count] as! String)
-//                        self.playerView.playVideo()
+//                        self.playerView.load(withVideoId: urls[count] as! String)
+                        self.playerView.load(withVideoId: self.videoIDList[count] as! String)
                         self.descriptionLabel.text = self.desc
                         
                         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCountDown), userInfo: nil, repeats: true)
@@ -111,10 +116,20 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
 
                 let data = document.data()
                 let pointsStored = data?["Points"]
+                
+                let finishedVideosArray = [Any]()
+                self.finishedVideosArray = data?["Finished Videos"] as! [Any]
+                var newFinishedVideosArray = [Any]()
+                newFinishedVideosArray = self.finishedVideosArray.append(currVideoID as! [Any])
 
                 docRef.updateData([
-                    "Points": pointsStored as! Int + 10
+                    "Points": pointsStored as! Int + 10,
+                    "Finished Videos": newFinishedVideosArray
                 ])
+                
+                
+                
+                if(
 
                 self.performSegue(withIdentifier: "exerciseToFinished", sender: nil)
             }

@@ -17,7 +17,7 @@
 #error "This file requires ARC support."
 #endif
 
-#import "GTMSessionUploadFetcher.h"
+#import "GTMSessionFetcher/GTMSessionUploadFetcher.h"
 
 #if TARGET_OS_OSX && GTMSESSION_RECONNECT_BACKGROUND_SESSIONS_ON_LAUNCH
 // To reconnect background sessions on Mac outside +load requires importing and linking
@@ -513,8 +513,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
     int hasFileHandle = (_uploadFileHandle != nil) ? 1 : 0;
     int hasFileURL = (_uploadFileURL != nil) ? 1 : 0;
     int hasUploadDataProvider = (_uploadDataProvider != nil) ? 1 : 0;
-    int numberOfSources = hasData + hasFileHandle + hasFileURL + hasUploadDataProvider;
-#pragma unused(numberOfSources)
+    __unused int numberOfSources = hasData + hasFileHandle + hasFileURL + hasUploadDataProvider;
     GTMSESSION_ASSERT_DEBUG(numberOfSources == 1, @"Need just one upload source (%d)",
                             numberOfSources);
   }  // @synchronized(self)
@@ -982,8 +981,8 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
   // resumable request/response.
   if (self.downloadedData.length > 0) {
     NSData *downloadedData = self.downloadedData;
-    NSString *str = [[NSString alloc] initWithData:downloadedData encoding:NSUTF8StringEncoding];
-#pragma unused(str)
+    __unused NSString *str = [[NSString alloc] initWithData:downloadedData
+                                                   encoding:NSUTF8StringEncoding];
     GTMSESSION_ASSERT_DEBUG(NO, @"unexpected response data (uploading to the wrong URL?)\n%@", str);
   }
 #endif
@@ -1060,6 +1059,8 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
 - (void)invokeFinalCallbackWithData:(NSData *)data
                               error:(NSError *)error
            shouldInvalidateLocation:(BOOL)shouldInvalidateLocation {
+  dispatch_queue_t queue;
+  GTMSessionFetcherCompletionHandler handler;
   @synchronized(self) {
     GTMSessionMonitorSynchronized(self);
 
@@ -1067,18 +1068,26 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
       _uploadLocationURL = nil;
     }
 
-    dispatch_queue_t queue = _delegateCallbackQueue;
-    GTMSessionFetcherCompletionHandler handler = _delegateCompletionHandler;
-    if (queue && handler) {
-      [self invokeOnCallbackQueue:queue
-                 afterUserStopped:NO
-                            block:^{
-                              handler(data, error);
-                            }];
-    }
+    // Wait to dispatch the completion handler until after releasing callbacks. Because
+    // action on the upload fetcher often takes place on a background queue, there can
+    // be issues with CI tests failing due to load making the dispatched callback to
+    // execute and the tests resume and assert callbacks have been released prior to that
+    // actually occurring.
+    //
+    // However under normal operation this should also be a perfectly fine change.
+    queue = _delegateCallbackQueue;
+    handler = _delegateCompletionHandler;
   }  // @synchronized(self)
 
   [self releaseUploadAndBaseCallbacks:!self.userStoppedFetching];
+
+  if (queue && handler) {
+    [self invokeOnCallbackQueue:queue
+               afterUserStopped:NO
+                          block:^{
+                            handler(data, error);
+                          }];
+  }
 }
 
 - (void)releaseUploadAndBaseCallbacks:(BOOL)shouldReleaseCancellation {
@@ -1250,7 +1259,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
                                     // dont allow the updating of fileLength for uploads not using a
                                     // data provider as they should know the file length before the
                                     // upload starts.
-                                    if (self->_uploadDataProvider != nil && uploadFileLength > 0) {
+                                    if (self.uploadDataProvider != nil && uploadFileLength > 0) {
                                       [self setUploadFileLength:uploadFileLength];
                                       // Update the command and content-length headers if this is
                                       // the last chunk to be sent.
@@ -1507,9 +1516,8 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
 #if DEBUG
     // Verify that if we think all of the uploading data has been sent, the server responded with
     // the "final" upload status.
-    BOOL hasUploadAllData = (newOffset == [self fullUploadLength]);
-    BOOL isFinalStatus = (uploadStatus == kStatusFinal);
-#pragma unused(hasUploadAllData, isFinalStatus)
+    __unused BOOL hasUploadAllData = (newOffset == [self fullUploadLength]);
+    __unused BOOL isFinalStatus = (uploadStatus == kStatusFinal);
     GTMSESSION_ASSERT_DEBUG(hasUploadAllData == isFinalStatus || !hasKnownChunkSize,
                             @"uploadStatus:%@  newOffset:%lld (%lld + %lld)  fullUploadLength:%lld"
                             @" chunkFetcher:%@ requestHeaders:%@ responseHeaders:%@",
