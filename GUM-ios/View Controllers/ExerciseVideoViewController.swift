@@ -42,7 +42,8 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 let data = document.data()
 
                 let videos = data!["Titles"] as! NSArray
-                let tempVideoIDList = document.data()!["youtubeID"] as! [Any]
+                print(videos)
+                let tempVideoIDList = data!["YtUrls"] as! [Any]
                 self.videoIDList = tempVideoIDList
 
                 var count = 0
