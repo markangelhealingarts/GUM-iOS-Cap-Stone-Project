@@ -27,17 +27,17 @@ class LoginViewController: UIViewController {
 // HARDCODED LOGIN -- COMMENT OUT BEFORE PUBLISHING
 // COMMENT OUT LINES 49-59
 // for development to skip login
-        class Test {
-            var email: String?
-            var password: String?
-        }
-        
-        let test = Test()
-        test.email = "test0@gmail.com"
-        test.password = "12345"
-        
-        email = test.email
-        password = test.password
+//        class Test {
+//            var email: String?
+//            var password: String?
+//        }
+//
+//        let test = Test()
+//        test.email = "test0@gmail.com"
+//        test.password = "12345"
+//
+//        email = test.email
+//        password = test.password
 //-----------------------------------------------------
         
 
