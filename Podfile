@@ -16,7 +16,7 @@ target 'GUM-ios' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod "youtube-ios-player-helper"
-  pod 'Firebase/Messaging'
+ # pod 'Firebase/Messaging'
 #  pod 'youtube-ios-player-helper-swift'
   pod 'YouTubePlayer'
 #  pod 'DropDown', '2.3.2'
