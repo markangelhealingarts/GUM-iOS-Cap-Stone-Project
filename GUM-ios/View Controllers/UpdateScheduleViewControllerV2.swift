@@ -255,11 +255,17 @@ class UpdateScheduleViewControllerV2: UIViewController {
                         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
 
                         let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
+                        //print("test")
+                        
                         center.add(request)
+                        print("added request")
+                        
                     }
 
                     center.getPendingNotificationRequests(completionHandler: { requests in
                         for request in requests {
+                            print(requests.count)
+                            //print("testing")
                             print(request)
                         }
                     })

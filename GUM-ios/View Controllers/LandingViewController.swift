@@ -16,6 +16,7 @@ class LandingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if (email != nil)
         {
         let docRef = db.collection("Users").document(email!)
