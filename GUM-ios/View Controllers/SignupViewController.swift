@@ -42,6 +42,8 @@ class SignupViewController: UIViewController {
                         "EasyVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
                         "ModerateVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
                         "VigorousVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
+                        "Last Update": "",
+                        "Streak": 0
                         
                     ]) { (err) in
                         if let err = err {

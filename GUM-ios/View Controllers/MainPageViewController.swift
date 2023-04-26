@@ -49,6 +49,7 @@ class MainPageViewController: UIViewController {
     }
 
     @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
     
     // this is the users email that will be used to pull info about them
     var email: String = ""
@@ -66,10 +67,13 @@ class MainPageViewController: UIViewController {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
+                let streak = data?["Streak"]
 
                 let stringPoints = String(pointsStored as! Int)
+                let stringStreak = String(streak as! Int)
 
                 self.pointsLabel.text = stringPoints
+                self.streakLabel.text = stringStreak
 
                 let schedule = data?["Schedule"] as! NSArray
                 let center = UNUserNotificationCenter.current()
