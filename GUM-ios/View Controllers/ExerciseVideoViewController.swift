@@ -128,19 +128,38 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
                 if (!(previousDate.isEmpty)){
                     print("Previous Date: \(String(describing: previousDate))")
                     let prevDay = self.getDayFromDate(tempDate: previousDate)
+                    let prevMonth = self.getMonthFromDate(tempDate: previousDate)
                     print("Prev day: \(prevDay)")
+                    print("Prev month: \(prevMonth)")
                     let currDay = self.getDayFromDate(tempDate: todaysDate)
+                    let currMonth = self.getMonthFromDate(tempDate: todaysDate)
                     
-                    if ((currDay - prevDay) == 1){
-                        docRef.updateData(["Streak": streak as! Int + 1])
-                    }else if(prevDay==currDay){
-                        print("SAME DAY")
+                    if(currMonth - prevMonth == 0){
+                        if ((currDay - prevDay) == 1){
+                            docRef.updateData(["Streak": streak as! Int + 1])
+                        }else if(prevDay==currDay){
+                            print("SAME DAY")
+                        }
+                        else {
+                            docRef.updateData(["Streak": 1])
+                        }
                     }
-                    else {
+                    else if (currMonth - prevMonth == 1){
+                        if ((currDay - prevDay) <= -27){
+                            docRef.updateData(["Streak": streak as! Int + 1])
+                        }
+                        else {
+                            print("Streak: Month Changed Streak Reset")
+                            docRef.updateData(["Streak": 1])
+                        }
+                    }
+                    else{
+                        print("Streak: Months Passed Streak Reset")
                         docRef.updateData(["Streak": 1])
                     }
                 }
                 else{
+                    print("Streak: New To App")
                     docRef.updateData(["Streak": 1])
                 }
                 docRef.updateData([
@@ -161,6 +180,11 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
     func getDayFromDate(tempDate: String) -> Int{
         print(tempDate.dropLast(6))
         return Int(tempDate.dropLast(6))!
+    }
+    
+    func getMonthFromDate(tempDate: String) -> Int{
+        print(tempDate)
+        return Int(tempDate.dropLast(3).dropFirst(3))!
     }
 
 

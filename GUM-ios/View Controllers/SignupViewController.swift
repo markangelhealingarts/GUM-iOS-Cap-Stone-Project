@@ -30,6 +30,8 @@ class SignupViewController: UIViewController {
 
                 } else {
                     // add email and password
+                    UserDefaults.standard.set(email, forKey: "storedEmail")
+                    UserDefaults.standard.set(password, forKey: "storedPassword")
                     self.db.collection("Users").document(self.emailTextView.text!).setData([
                         "Password": password!,
                         "Points": 0,
@@ -39,9 +41,6 @@ class SignupViewController: UIViewController {
                         "UnlockedAvatars": ["orange_avatar.png"],
                         "Schedule": ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"],
                         "Groups": [],
-                        "EasyVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
-                        "ModerateVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
-                        "VigorousVideosWatched": [false, false, false, false, false, false, false, false, false, false, false, false, false],
                         "Last Update": "",
                         "Streak": 0
                         

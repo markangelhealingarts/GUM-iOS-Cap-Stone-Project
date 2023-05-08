@@ -67,7 +67,53 @@ class MainPageViewController: UIViewController {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
-                let streak = data?["Streak"]
+                
+            //check streaks for continuity
+                var streak = data?["Streak"]
+                let formatter: DateFormatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yy"
+                let todaysDate : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date)
+                var previousDate: String = ""
+                previousDate = data?["Last Update"] as! String
+                if (!(previousDate.isEmpty)){
+                    print("Previous Date: \(String(describing: previousDate))")
+                    let prevDay = self.getDayFromDate(tempDate: previousDate)
+                    let prevMonth = self.getMonthFromDate(tempDate: previousDate)
+                    let currDay = self.getDayFromDate(tempDate: todaysDate)
+                    let currMonth = self.getMonthFromDate(tempDate: todaysDate)
+                    if(currMonth - prevMonth == 0){
+                        if ((currDay - prevDay) != 1 && (currDay - prevDay) != 0){
+                            print("Streak: Multiple days have passed Streak reset")
+                            docRef.updateData(["Streak": 0])
+                            streak = 0
+                        }else if(prevDay==currDay){
+                            print("Streak: SAME DAY")
+                        }
+                        else {
+                            print("Streak: Within 1 day")
+                        }
+                    }else if (currMonth - prevMonth == 1){
+                        if ((currDay - prevDay) <= -27){ //Some leniance between months, too lazy to fix
+                            print("Streak: Month Changed but Streak continued")
+                        }
+                        else {
+                            print("Streak: Month Changed Streak Reset")
+                            docRef.updateData(["Streak": 0])
+                            streak = 0
+                        }
+                    }
+                    else{
+                        print("Streak: Months Passed Streak Reset")
+                        docRef.updateData(["Streak": 0])
+                        streak = 0 //these are just insurance
+                    }
+                }
+                else{
+                    print("Streak: New To App")
+                    docRef.updateData(["Streak": 0])
+                }
+            //end streak check
+
 
                 let stringPoints = String(pointsStored as! Int)
                 let stringStreak = String(streak as! Int)
@@ -127,6 +173,16 @@ class MainPageViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), primaryAction: nil, menu: menuItems())
     }
     
+    //For streak check
+    func getDayFromDate(tempDate: String) -> Int{
+        print(tempDate.dropLast(6))
+        return Int(tempDate.dropLast(6))!
+    }
+    func getMonthFromDate(tempDate: String) -> Int{
+        print(tempDate)
+        return Int(tempDate.dropLast(3).dropFirst(3))!
+    }
+
 
         
     override func viewDidAppear(_ animated: Bool) {
@@ -144,16 +200,19 @@ class MainPageViewController: UIViewController {
         
         let docRef = db.collection("Users").document(email)
         var notifPressed = UserDefaults.standard.string(forKey: "notifPressed")
-        print("notif pressed = \(String(describing: notifPressed))")
+        print("check notif pressed = \(String(describing: notifPressed))")
         docRef.getDocument { (document, error) in
                    if let document = document, document.exists {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]//access points for user
+                let streak = data?["Streak"]
 
                 let stringPoints = String(pointsStored as! Int)
+                let stringStreak = String(streak as! Int)
 
                 self.pointsLabel.text = stringPoints
+                       self.streakLabel.text = stringStreak
                 
                 
 
