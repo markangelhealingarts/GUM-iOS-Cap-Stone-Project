@@ -14,6 +14,7 @@ class FinishedExerciseViewController: UIViewController {
     let db = Firestore.firestore()
 
     @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,13 @@ class FinishedExerciseViewController: UIViewController {
 
                 let data = document.data()
                 let pointsStored = data?["Points"]
+                let streak = data?["Streak"]
                 
                 let stringPoints = String(pointsStored as! Int)
+                let stringStreak = String(streak as! Int)
 
                 self.pointsLabel.text = stringPoints
+                self.streakLabel.text = stringStreak
 
             }
             

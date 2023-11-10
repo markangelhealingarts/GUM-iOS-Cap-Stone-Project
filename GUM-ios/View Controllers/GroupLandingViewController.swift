@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import SafariServices
 
 class GroupLandingViewController: UIViewController {
-    
     var email: String = ""
 
     override func viewDidLoad() {
@@ -19,7 +19,16 @@ class GroupLandingViewController: UIViewController {
 
     
     @IBAction func onCreateGroup(_ sender: Any) {
-        performSegue(withIdentifier: "groupToCreate", sender: nil)
+
+                
+                if(UserDefaults.standard.string(forKey: "storedEmail") == "markangelhealingarts@gmail.com"){
+                    performSegue(withIdentifier: "groupToCreate", sender: nil)
+                }
+                else {
+                    let vc = SFSafariViewController(url: URL(string: "https://www.paypal.com/paypalme/getupandmove?country.x=US&locale.x=en_US")!)
+                    present(vc, animated: true)
+                }
+        
     }
     
     
@@ -32,8 +41,12 @@ class GroupLandingViewController: UIViewController {
         performSegue(withIdentifier: "groupToCurrent", sender: nil)
     }
     
+    @IBAction func buttonTapped() {
+        let vc = SFSafariViewController(url: URL(string: "https://www.paypal.com/paypalme/getupandmove?country.x=US&locale.x=en_US")!)
+        present(vc, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         if segue.identifier == "groupToCreate" {
             let destinationVC = segue.destination as! CreateGroupViewController
             destinationVC.email = email

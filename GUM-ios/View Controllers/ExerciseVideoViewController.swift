@@ -110,6 +110,10 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
 
     @IBAction func onFinishedExercise(_ sender: Any) {
         //add points to user
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yy"
+        let todaysDate : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date)
+        print(todaysDate)
         let docRef = db.collection("Users").document(email)
 
         docRef.getDocument { (document, error) in
@@ -117,17 +121,50 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
 
                 let data = document.data()
                 let pointsStored = data?["Points"]
+                let streak = data?["Streak"]
                 
-                let finishedVideosArray = [Any]()
-                self.finishedVideosArray = data?["Finished Videos"] as! [Any]
-                var newFinishedVideosArray = [Any]()
-                //newFinishedVideosArray = self.finishedVideosArray.append(currVideoID)
-
-                
-                
+                var previousDate: String = ""
+                previousDate = data?["Last Update"] as! String
+                if (!(previousDate.isEmpty)){
+                    print("Previous Date: \(String(describing: previousDate))")
+                    let prevDay = self.getDayFromDate(tempDate: previousDate)
+                    let prevMonth = self.getMonthFromDate(tempDate: previousDate)
+                    print("Prev day: \(prevDay)")
+                    print("Prev month: \(prevMonth)")
+                    let currDay = self.getDayFromDate(tempDate: todaysDate)
+                    let currMonth = self.getMonthFromDate(tempDate: todaysDate)
+                    
+                    if(currMonth - prevMonth == 0){
+                        if ((currDay - prevDay) == 1){
+                            docRef.updateData(["Streak": streak as! Int + 1])
+                        }else if(prevDay==currDay){
+                            print("SAME DAY")
+                        }
+                        else {
+                            docRef.updateData(["Streak": 1])
+                        }
+                    }
+                    else if (currMonth - prevMonth == 1){
+                        if ((currDay - prevDay) <= -27){
+                            docRef.updateData(["Streak": streak as! Int + 1])
+                        }
+                        else {
+                            print("Streak: Month Changed Streak Reset")
+                            docRef.updateData(["Streak": 1])
+                        }
+                    }
+                    else{
+                        print("Streak: Months Passed Streak Reset")
+                        docRef.updateData(["Streak": 1])
+                    }
+                }
+                else{
+                    print("Streak: New To App")
+                    docRef.updateData(["Streak": 1])
+                }
                 docRef.updateData([
                     "Points": pointsStored as! Int + 10,
-                    "Finished Videos": newFinishedVideosArray
+                    "Last Update": todaysDate
                 ])
                 
                 
@@ -138,6 +175,16 @@ class ExerciseVideoViewController: UIViewController, YTPlayerViewDelegate{
             }
 
         }
+    }
+    
+    func getDayFromDate(tempDate: String) -> Int{
+        print(tempDate.dropLast(6))
+        return Int(tempDate.dropLast(6))!
+    }
+    
+    func getMonthFromDate(tempDate: String) -> Int{
+        print(tempDate)
+        return Int(tempDate.dropLast(3).dropFirst(3))!
     }
 
 
